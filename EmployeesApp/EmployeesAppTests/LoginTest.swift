@@ -3,7 +3,6 @@
 //  Copyright © 2018 Lisa van der Goes. All rights reserved.
 //
 
-//test_(func name)_(conditions)_(results)
 
 import Foundation
 import XCTest
@@ -26,13 +25,13 @@ class LoginTest : XCTestCase{
         XCTAssertFalse(sut.compareInput())
     }
     
-    func test_compareInput_withoutCorrectLoginCredentials_IncorrectLoginCheck() {
+    func test_compareInput_withoutLoginCredentialsData_IncorrectLoginCheck() {
         let sut = makeSUT(username: "name", password: "password")
 
         XCTAssertFalse(sut.compareInput())
     }
     
-    func test_compareInput_withMultipleCorrectLoginCredentials_OneCorrectLoginCheck() {
+    func test_compareInput_withMultipleLoginCredentialsData_OneCorrectLoginCheck() {
         let sut = makeSUT(username: "name", password: "password", loginCredentials: [
             LoginCredentials(username: "name", password: "password"),
             LoginCredentials(username: "name2", password: "password2")])
@@ -41,7 +40,21 @@ class LoginTest : XCTestCase{
         XCTAssertTrue(sut.compareInput())
     }
     
-    //test with multiple users + same name (+ same password) dubble entry
+    func test_compareInput_withMultipleLoginCredentialsData_SameUsernamesAndDifferentPasswords_OneCorrectLoginCheck() {
+        let sut = makeSUT(username: "name", password: "password", loginCredentials: [
+            LoginCredentials(username: "name", password: "password"),
+            LoginCredentials(username: "name", password: "password2")])
+        
+        XCTAssertTrue(sut.compareInput())
+    }
+    
+    func test_compareInput_withMultipleLoginCredentialsData_SamePasswordAndDifferentUsername_OneCorrectLoginCheck() {
+        let sut = makeSUT(username: "name", password: "password", loginCredentials: [
+            LoginCredentials(username: "name", password: "password"),
+            LoginCredentials(username: "name2", password: "password")])
+        
+        XCTAssertTrue(sut.compareInput())
+    }
     
     
     //MARK: Helpers

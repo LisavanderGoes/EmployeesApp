@@ -23,7 +23,7 @@ class LoginCredentialsCheck{
     func compareInput() -> Bool{
         if !correctLoginCredentials.isEmpty{
             for loginCredentials in correctLoginCredentials{
-                if (inputLoginCredentials.username == loginCredentials.username && inputLoginCredentials.password == loginCredentials.password){return true}
+                if (inputLoginCredentials.username.elementsEqual(loginCredentials.username) && inputLoginCredentials.password.elementsEqual(loginCredentials.password)){return true}
             }
         }
         return false

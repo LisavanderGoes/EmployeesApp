@@ -10,6 +10,8 @@
 		97BEAF7F213E783400AAA342 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAF7E213E783400AAA342 /* AppDelegate.swift */; };
 		97BEAF86213E783500AAA342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97BEAF85213E783500AAA342 /* Assets.xcassets */; };
 		97BEAF89213E783500AAA342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BEAF87213E783500AAA342 /* LaunchScreen.storyboard */; };
+		97BEAF9F213E7A6300AAA342 /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAF9E213E7A6300AAA342 /* LoginTest.swift */; };
+		97BEAFA1213E7FFF00AAA342 /* LoginCredentialsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAFA0213E7FFF00AAA342 /* LoginCredentialsCheck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,8 @@
 		97BEAF8A213E783500AAA342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97BEAF8F213E783500AAA342 /* EmployeesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BEAF95213E783500AAA342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97BEAF9E213E7A6300AAA342 /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
+		97BEAFA0213E7FFF00AAA342 /* LoginCredentialsCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentialsCheck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 				97BEAF85213E783500AAA342 /* Assets.xcassets */,
 				97BEAF87213E783500AAA342 /* LaunchScreen.storyboard */,
 				97BEAF8A213E783500AAA342 /* Info.plist */,
+				97BEAFA0213E7FFF00AAA342 /* LoginCredentialsCheck.swift */,
 			);
 			path = EmployeesApp;
 			sourceTree = "<group>";
@@ -83,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				97BEAF95213E783500AAA342 /* Info.plist */,
+				97BEAF9E213E7A6300AAA342 /* LoginTest.swift */,
 			);
 			path = EmployeesAppTests;
 			sourceTree = "<group>";
@@ -140,6 +146,7 @@
 					};
 					97BEAF8E213E783500AAA342 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 						TestTargetID = 97BEAF7A213E783400AAA342;
 					};
 				};
@@ -188,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97BEAF7F213E783400AAA342 /* AppDelegate.swift in Sources */,
+				97BEAFA1213E7FFF00AAA342 /* LoginCredentialsCheck.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97BEAF9F213E7A6300AAA342 /* LoginTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +382,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = EmployeesAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -382,6 +392,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lisa.EmployeesAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmployeesApp.app/EmployeesApp";
@@ -393,6 +404,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = EmployeesAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

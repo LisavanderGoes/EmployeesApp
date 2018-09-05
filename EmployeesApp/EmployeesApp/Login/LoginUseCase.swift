@@ -8,16 +8,20 @@ import Foundation
 class LoginUseCase {
     
     private let loginService : LoginService
-    //private var loginUseCaseOutput : LoginUseCaseOutput
+    private var loginUseCaseOutput : LoginUseCaseOutput
     
     var checkHasSucceed : Bool!
     
-    init(loginService: LoginService){
+    init(loginService: LoginService, loginUseCaseOutput: LoginUseCaseOutput){
         self.loginService = loginService
-       // self.loginUseCaseOutput = loginUseCaseOutput
+        self.loginUseCaseOutput = loginUseCaseOutput
     }
     
     func loginCredentialsCheck (username: String, password: String){
         checkHasSucceed = loginService.loginCredentialsCheck(username: username, password: password)
+        
+        loginUseCaseOutput.checkHasSucceed(
+            checkHasSucceed: loginService.loginCredentialsCheck(username: username, password: password)
+        )
     }
 }

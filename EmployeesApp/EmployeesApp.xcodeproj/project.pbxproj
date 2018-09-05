@@ -11,6 +11,8 @@
 		9753A112213FD2A300DBC4C8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A111213FD2A300DBC4C8 /* LoginService.swift */; };
 		9753A114213FD73200DBC4C8 /* LoginUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A113213FD73200DBC4C8 /* LoginUseCaseTest.swift */; };
 		9753A116213FDB7B00DBC4C8 /* LoginUseCaseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A115213FDB7B00DBC4C8 /* LoginUseCaseOutput.swift */; };
+		9753A11C2140101E00DBC4C8 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A11B2140101E00DBC4C8 /* LoginPresenter.swift */; };
+		9753A11E2140114000DBC4C8 /* LoginPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A11D2140114000DBC4C8 /* LoginPresenterTest.swift */; };
 		9771ADC7213EB2C7003B2CA1 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771ADC6213EB2C7003B2CA1 /* LoginViewControllerTest.swift */; };
 		9771ADC9213EB524003B2CA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771ADC8213EB524003B2CA1 /* LoginViewController.swift */; };
 		9771ADCB213EB61A003B2CA1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9771ADCA213EB61A003B2CA1 /* LoginViewController.xib */; };
@@ -36,6 +38,8 @@
 		9753A111213FD2A300DBC4C8 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		9753A113213FD73200DBC4C8 /* LoginUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseTest.swift; sourceTree = "<group>"; };
 		9753A115213FDB7B00DBC4C8 /* LoginUseCaseOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseOutput.swift; sourceTree = "<group>"; };
+		9753A11B2140101E00DBC4C8 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		9753A11D2140114000DBC4C8 /* LoginPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTest.swift; sourceTree = "<group>"; };
 		9771ADC6213EB2C7003B2CA1 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		9771ADC8213EB524003B2CA1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9771ADCA213EB61A003B2CA1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 				97BEAFA0213E7FFF00AAA342 /* LoginCredentialsCheck.swift */,
 				9771ADC8213EB524003B2CA1 /* LoginViewController.swift */,
 				9753A10F213FCE2100DBC4C8 /* LoginUseCase.swift */,
+				9753A11B2140101E00DBC4C8 /* LoginPresenter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 				9771ADC6213EB2C7003B2CA1 /* LoginViewControllerTest.swift */,
 				97BEAF9E213E7A6300AAA342 /* LoginCredentialsCheckTest.swift */,
 				9753A113213FD73200DBC4C8 /* LoginUseCaseTest.swift */,
+				9753A11D2140114000DBC4C8 /* LoginPresenterTest.swift */,
 			);
 			path = EmployeesAppTests;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 			files = (
 				9753A116213FDB7B00DBC4C8 /* LoginUseCaseOutput.swift in Sources */,
 				9771ADC9213EB524003B2CA1 /* LoginViewController.swift in Sources */,
+				9753A11C2140101E00DBC4C8 /* LoginPresenter.swift in Sources */,
 				97BEAF7F213E783400AAA342 /* AppDelegate.swift in Sources */,
 				9753A112213FD2A300DBC4C8 /* LoginService.swift in Sources */,
 				97BEAFA1213E7FFF00AAA342 /* LoginCredentialsCheck.swift in Sources */,
@@ -253,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9753A11E2140114000DBC4C8 /* LoginPresenterTest.swift in Sources */,
 				9771ADC7213EB2C7003B2CA1 /* LoginViewControllerTest.swift in Sources */,
 				9753A114213FD73200DBC4C8 /* LoginUseCaseTest.swift in Sources */,
 				97BEAF9F213E7A6300AAA342 /* LoginCredentialsCheckTest.swift in Sources */,

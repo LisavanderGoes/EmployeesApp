@@ -10,6 +10,7 @@ import XCTest
 class LoginUseCaseTest : XCTestCase {
     
     var loginService : LoginServiceSpy!
+    //var loginUseCaseOutput : LoginUseCaseOutputSpy!
     
     var sut : LoginUseCase!
     
@@ -18,19 +19,35 @@ class LoginUseCaseTest : XCTestCase {
         sut = LoginUseCase(loginService: loginService)
     }
     
-    func test_loginCredentialCheck_correctUsernameAndPassword_checkHasSucceedIsTrue(){
+    func test_loginCredentialCheck_CouldGetUsername(){
         
         sut.loginCredentialsCheck(username: "name", password: "password")
         
-        XCTAssertTrue(sut.checkHasSucceed)
+        XCTAssertEqual(loginService.capturedUsername, "name")
     }
     
+    func test_loginCredentialCheck_CouldGetPassword(){
+        
+        sut.loginCredentialsCheck(username: "name", password: "password")
+        
+        XCTAssertEqual(loginService.capturedPassword, "password")
+    }
+    
+    func test_loginCredentialCheck_correctUsernameAndPassword_checkHasSucceedIsTrue(){
+
+        sut.loginCredentialsCheck(username: "name", password: "password")
+
+        XCTAssertTrue(sut.checkHasSucceed)
+    }
+
     func test_loginCredentialCheck_incorrectUsernameAndPassword_checkHasSucceedIsFalse(){
-        
+
         sut.loginCredentialsCheck(username: "name2", password: "password2")
-        
+
         XCTAssertFalse(sut.checkHasSucceed)
     }
+    
+    
 }
 
 
@@ -38,10 +55,18 @@ class LoginUseCaseTest : XCTestCase {
 
 class LoginServiceSpy : LoginService{
     
+    var capturedUsername : String = ""
+    var capturedPassword : String = ""
+
+    
     func loginCredentialsCheck(username: String, password: String) -> Bool {
         
-        let dataLoginCredentials : [LoginCredentials] = [LoginCredentials(username: "name", password: "password")]
+        capturedUsername = username
+        capturedPassword = password
+
         
+        let dataLoginCredentials : [LoginCredentials] = [LoginCredentials(username: "name", password: "password")]
+
         if !dataLoginCredentials.isEmpty{
             for loginCredentials in dataLoginCredentials{
                 if (username.elementsEqual(loginCredentials.username) && password.elementsEqual(loginCredentials.password)){return true}
@@ -50,3 +75,9 @@ class LoginServiceSpy : LoginService{
         return false
     }
 }
+
+//class LoginUseCaseOutputSpy : LoginUseCaseOutput {
+//    var checkHasSucceed: Bool
+//
+//
+//}

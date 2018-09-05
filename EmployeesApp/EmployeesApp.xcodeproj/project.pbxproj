@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9771ADC7213EB2C7003B2CA1 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771ADC6213EB2C7003B2CA1 /* LoginViewControllerTest.swift */; };
+		9771ADC9213EB524003B2CA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771ADC8213EB524003B2CA1 /* LoginViewController.swift */; };
+		9771ADCB213EB61A003B2CA1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9771ADCA213EB61A003B2CA1 /* LoginViewController.xib */; };
 		97BEAF7F213E783400AAA342 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAF7E213E783400AAA342 /* AppDelegate.swift */; };
 		97BEAF86213E783500AAA342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97BEAF85213E783500AAA342 /* Assets.xcassets */; };
 		97BEAF89213E783500AAA342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BEAF87213E783500AAA342 /* LaunchScreen.storyboard */; };
-		97BEAF9F213E7A6300AAA342 /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAF9E213E7A6300AAA342 /* LoginTest.swift */; };
+		97BEAF9F213E7A6300AAA342 /* LoginCredentialsCheckTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAF9E213E7A6300AAA342 /* LoginCredentialsCheckTest.swift */; };
 		97BEAFA1213E7FFF00AAA342 /* LoginCredentialsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAFA0213E7FFF00AAA342 /* LoginCredentialsCheck.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9771ADC6213EB2C7003B2CA1 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
+		9771ADC8213EB524003B2CA1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9771ADCA213EB61A003B2CA1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		97BEAF7B213E783400AAA342 /* EmployeesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BEAF7E213E783400AAA342 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97BEAF85213E783500AAA342 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,7 +38,7 @@
 		97BEAF8A213E783500AAA342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97BEAF8F213E783500AAA342 /* EmployeesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BEAF95213E783500AAA342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97BEAF9E213E7A6300AAA342 /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
+		97BEAF9E213E7A6300AAA342 /* LoginCredentialsCheckTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentialsCheckTest.swift; sourceTree = "<group>"; };
 		97BEAFA0213E7FFF00AAA342 /* LoginCredentialsCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentialsCheck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +86,8 @@
 				97BEAF87213E783500AAA342 /* LaunchScreen.storyboard */,
 				97BEAF8A213E783500AAA342 /* Info.plist */,
 				97BEAFA0213E7FFF00AAA342 /* LoginCredentialsCheck.swift */,
+				9771ADC8213EB524003B2CA1 /* LoginViewController.swift */,
+				9771ADCA213EB61A003B2CA1 /* LoginViewController.xib */,
 			);
 			path = EmployeesApp;
 			sourceTree = "<group>";
@@ -88,7 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				97BEAF95213E783500AAA342 /* Info.plist */,
-				97BEAF9E213E7A6300AAA342 /* LoginTest.swift */,
+				9771ADC6213EB2C7003B2CA1 /* LoginViewControllerTest.swift */,
+				97BEAF9E213E7A6300AAA342 /* LoginCredentialsCheckTest.swift */,
 			);
 			path = EmployeesAppTests;
 			sourceTree = "<group>";
@@ -177,6 +186,7 @@
 			files = (
 				97BEAF89213E783500AAA342 /* LaunchScreen.storyboard in Resources */,
 				97BEAF86213E783500AAA342 /* Assets.xcassets in Resources */,
+				9771ADCB213EB61A003B2CA1 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9771ADC9213EB524003B2CA1 /* LoginViewController.swift in Sources */,
 				97BEAF7F213E783400AAA342 /* AppDelegate.swift in Sources */,
 				97BEAFA1213E7FFF00AAA342 /* LoginCredentialsCheck.swift in Sources */,
 			);
@@ -203,7 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97BEAF9F213E7A6300AAA342 /* LoginTest.swift in Sources */,
+				9771ADC7213EB2C7003B2CA1 /* LoginViewControllerTest.swift in Sources */,
+				97BEAF9F213E7A6300AAA342 /* LoginCredentialsCheckTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,16 +13,16 @@ struct LoginCredentials{
 class LoginCredentialsCheck{
     
     let inputLoginCredentials : LoginCredentials
-    let correctLoginCredentials : [LoginCredentials]
+    let dataLoginCredentials : [LoginCredentials]
     
-    init(inputLoginCredentials: LoginCredentials, correctLoginCredentials : [LoginCredentials]){
+    init(inputLoginCredentials: LoginCredentials, dataLoginCredentials : [LoginCredentials]){
         self.inputLoginCredentials = inputLoginCredentials
-        self.correctLoginCredentials = correctLoginCredentials
+        self.dataLoginCredentials = dataLoginCredentials
     }
     
-    func compareInput() -> Bool{
-        if !correctLoginCredentials.isEmpty{
-            for loginCredentials in correctLoginCredentials{
+    func compareInputToData() -> Bool{
+        if !dataLoginCredentials.isEmpty{
+            for loginCredentials in dataLoginCredentials{
                 if (inputLoginCredentials.username.elementsEqual(loginCredentials.username) && inputLoginCredentials.password.elementsEqual(loginCredentials.password)){return true}
             }
         }

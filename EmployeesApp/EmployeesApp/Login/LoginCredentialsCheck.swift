@@ -12,6 +12,8 @@ struct LoginCredentials{
 
 class LoginCredentialsCheck: LoginService{
     
+    var dataLoginCredentials : [LoginCredentials] = []
+    
     func loginCredentialsCheck(username: String, password: String) -> Bool {
         if !dataLoginCredentials.isEmpty{
             for loginCredentials in dataLoginCredentials{
@@ -20,7 +22,4 @@ class LoginCredentialsCheck: LoginService{
         }
         return false
     }
-    
-    let dataLoginCredentials : [LoginCredentials] = [LoginCredentials(username: "name", password: "password")]
-    
 }

@@ -20,12 +20,16 @@ class LoginUseCaseTest : XCTestCase {
     
     func test_loginCredentialCheck_correctUsernameAndPassword_checkHasSucceedIsTrue(){
         
+        loginCredentialsCheck.dataLoginCredentials = [LoginCredentials(username: "name", password: "password")]
+        
         sut.loginCredentialsCheck(username: "name", password: "password")
         
         XCTAssertTrue(sut.checkHasSucceed)
     }
     
     func test_loginCredentialCheck_incorrectUsernameAndPassword_checkHasSucceedIsFalse(){
+        
+        loginCredentialsCheck.dataLoginCredentials = [LoginCredentials(username: "name", password: "password")]
         
         sut.loginCredentialsCheck(username: "name2", password: "password2")
         

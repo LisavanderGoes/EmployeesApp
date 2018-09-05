@@ -44,36 +44,32 @@ class LoginViewControllerTest : XCTestCase{
         XCTAssertTrue(isLoginClosureCalled)
     }
     
-    func test_loginClosure_loginClosureIsCalled_usernameIsCapturedUsername(){
+    func test_loginClosure_loginButtonTapped_usernameIsCapturedUsername(){
         var capturedUsername : String!
 
         sut.loginClosure = { (username, _ ) in
             capturedUsername = username
         }
 
-        let expectedUsername = "name"
-        sut.usernameTextField.text = expectedUsername
+        sut.usernameTextField.text = "name"
 
         sut.loginButton.sendActions(for: .touchUpInside)
 
         XCTAssertEqual(capturedUsername, "name")
     }
 
-    func test_loginClosure_loginClosureIsCalled_passwordIsCapturedPassword(){
+    func test_loginClosure_loginButtonTapped_passwordIsCapturedPassword(){
         var capturedPassword : String!
 
         sut.loginClosure = { (_, password ) in
             capturedPassword = password
         }
-
-        let expectedPassword = "password"
-        sut.passwordTextField.text = expectedPassword
+        
+        sut.passwordTextField.text = "password"
 
         sut.loginButton.sendActions(for: .touchUpInside)
 
         XCTAssertEqual(capturedPassword, "password")
     }
-
-
     
 }

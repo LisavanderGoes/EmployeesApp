@@ -9,18 +9,16 @@ import XCTest
 
 class LoginUseCaseTest : XCTestCase {
     
-    var loginCredentialsCheck : LoginCredentialsCheck!
+    var loginService : LoginServiceSpy!
     
     var sut : LoginUseCase!
     
     override func setUp() {
-        loginCredentialsCheck = LoginCredentialsCheck()
-        sut = LoginUseCase(loginService: loginCredentialsCheck)
+        loginService = LoginServiceSpy()
+        sut = LoginUseCase(loginService: loginService)
     }
     
     func test_loginCredentialCheck_correctUsernameAndPassword_checkHasSucceedIsTrue(){
-        
-        loginCredentialsCheck.dataLoginCredentials = [LoginCredentials(username: "name", password: "password")]
         
         sut.loginCredentialsCheck(username: "name", password: "password")
         
@@ -29,14 +27,26 @@ class LoginUseCaseTest : XCTestCase {
     
     func test_loginCredentialCheck_incorrectUsernameAndPassword_checkHasSucceedIsFalse(){
         
-        loginCredentialsCheck.dataLoginCredentials = [LoginCredentials(username: "name", password: "password")]
-        
         sut.loginCredentialsCheck(username: "name2", password: "password2")
         
         XCTAssertFalse(sut.checkHasSucceed)
     }
-    
-    
 }
 
+
 //MARK: Helpers
+
+class LoginServiceSpy : LoginService{
+    
+    func loginCredentialsCheck(username: String, password: String) -> Bool {
+        
+        let dataLoginCredentials : [LoginCredentials] = [LoginCredentials(username: "name", password: "password")]
+        
+        if !dataLoginCredentials.isEmpty{
+            for loginCredentials in dataLoginCredentials{
+                if (username.elementsEqual(loginCredentials.username) && password.elementsEqual(loginCredentials.password)){return true}
+            }
+        }
+        return false
+    }
+}

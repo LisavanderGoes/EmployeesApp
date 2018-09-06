@@ -16,6 +16,8 @@ class LoginCredentialsCheckTest : XCTestCase{
         sut = LoginCredentialsCheck()
     }
     
+    //MARK: Tests
+    
     func test_compareInput_withCorrectUsernameAndPassword_CorrectLoginCheck(){
         sut.dataLoginCredentials = [
             LoginCredentials(username: "name", password: "password")]

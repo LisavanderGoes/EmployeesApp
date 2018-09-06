@@ -12,4 +12,5 @@ class Strings {
     
     public static let dataLoginCredentialsIsEmptyMessage: String = "There are no users! Are you the first?"
     public static let loginCredentialsCheckFailed: String = "Something does not match!"
+    public static let checkHasSucceedMessage: String = "Succes"
 }

@@ -7,14 +7,14 @@ import Foundation
 
 class LoginPresenter : LoginUseCaseOutput {
     
-    let loginView : LoginView!
+    private let loginView : LoginView!
     
     init(loginView: LoginView){
         self.loginView = loginView
     }
     
     func checkHasSucceed() {
-        loginView.show(message: "Succes")
+        loginView.show(message: Strings.checkHasSucceedMessage)
     }
     
     func checkHasFailed(reason: String) {

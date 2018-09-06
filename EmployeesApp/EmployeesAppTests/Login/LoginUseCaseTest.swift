@@ -24,41 +24,41 @@ class LoginUseCaseTest : XCTestCase {
     
     //MARK: Tests
     
-    func test_loginCredentialCheck_couldGetUsernameAndPassword(){
+    func test_loginService_couldGetUsernameAndPassword(){
         
-        loginService.dataLoginCredentials = [LoginCredentials(username: "name", password: "password")]
         sut.loginCredentialsCheck(username: "name", password: "password")
         
         XCTAssertEqual(loginService.capturedUsername, "name")
         XCTAssertEqual(loginService.capturedPassword, "password")
-
     }
     
-//    func test_loginCredentialsCheckFailed_couldSetFailMessage(){
-//        
-//        loginService.setFailReason = "My bad!"
-//        loginService.dataLoginCredentials = [LoginCredentials(username: "name", password: "password")]
-//        sut.loginCredentialsCheck(username: "name", password: "password")
-//        
-//        XCTAssertEqual(loginUseCaseOutput.capturedFailReason, "My bad!")
-//    }
-    
-    func test_loginCredentialCheck_correctUsernameAndPassword_(){
+    func test_loginUseCaseOutput_correctLogin(){
+        
+        loginService.succeeds = 1
 
-        loginService.dataLoginCredentials = [LoginCredentials(username: "name", password: "password")]
         sut.loginCredentialsCheck(username: "name", password: "password")
 
         XCTAssertTrue(loginUseCaseOutput.capturedSucces)
     }
-
-    func test_loginCredentialCheck_incorrectUsernameAndPassword_(){
+    
+    func test_loginUseCaseOutput_incorrectLogin(){
         
-        loginService.dataLoginCredentials = [LoginCredentials(username: "name", password: "password")]
-        sut.loginCredentialsCheck(username: "name2", password: "password2")
+        loginService.succeeds = 0
+        
+        sut.loginCredentialsCheck(username: "name", password: "password")
         
         XCTAssertFalse(loginUseCaseOutput.capturedSucces)
     }
     
+    func test_loginUseCaseOutput_couldGetFailMessage(){
+        
+        loginService.setFailReason = "My bad!"
+        loginService.succeeds = 0
+        
+        sut.loginCredentialsCheck(username: "name", password: "password")
+        
+        XCTAssertEqual(loginUseCaseOutput.capturedFailReason, "My bad!")
+    }
 }
 
 
@@ -66,32 +66,24 @@ class LoginUseCaseTest : XCTestCase {
 
 class LoginServiceSpy : LoginService{
     
-    var capturedUsername : String = ""
-    var capturedPassword : String = ""
+    var capturedUsername : String!
+    var capturedPassword : String!
     
     var setFailReason : String = ""
-    var dataLoginCredentials : [LoginCredentials]!
+    var succeeds = 0
     
     func loginCredentialsCheck(username: String, password: String, succeed: () -> Void, failed: (String) -> Void) {
         capturedUsername = username
         capturedPassword = password
         
-        
-        if !dataLoginCredentials.isEmpty{
-            for loginCredentials in dataLoginCredentials{
-                if (username.elementsEqual(loginCredentials.username) && password.elementsEqual(loginCredentials.password)){succeed()}
-            }
-        } else {
-            failed(setFailReason)
-        }
+        if self.succeeds > 0 {succeed()}else{failed(setFailReason)}
     }
 }
 
 class LoginUseCaseOutputSpy : LoginUseCaseOutput {
     
     var capturedFailReason : String!
-    
-    var capturedSucces : Bool = false
+    var capturedSucces : Bool!
     
     func checkHasSucceed() {
         capturedSucces = true
@@ -99,5 +91,7 @@ class LoginUseCaseOutputSpy : LoginUseCaseOutput {
     
     func checkHasFailed(reason: String) {
         capturedFailReason = reason
+        capturedSucces = false
+
     }
 }

@@ -94,6 +94,17 @@
 			path = Values;
 			sourceTree = "<group>";
 		};
+		974111F821413515000C8B56 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9771ADC6213EB2C7003B2CA1 /* LoginViewControllerTest.swift */,
+				97BEAF9E213E7A6300AAA342 /* LoginCredentialsCheckTest.swift */,
+				9753A113213FD73200DBC4C8 /* LoginUseCaseTest.swift */,
+				9753A11D2140114000DBC4C8 /* LoginPresenterTest.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		9753A117213FDBF000DBC4C8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,11 +171,8 @@
 		97BEAF92213E783500AAA342 /* EmployeesAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				974111F821413515000C8B56 /* Login */,
 				97BEAF95213E783500AAA342 /* Info.plist */,
-				9771ADC6213EB2C7003B2CA1 /* LoginViewControllerTest.swift */,
-				97BEAF9E213E7A6300AAA342 /* LoginCredentialsCheckTest.swift */,
-				9753A113213FD73200DBC4C8 /* LoginUseCaseTest.swift */,
-				9753A11D2140114000DBC4C8 /* LoginPresenterTest.swift */,
 			);
 			path = EmployeesAppTests;
 			sourceTree = "<group>";

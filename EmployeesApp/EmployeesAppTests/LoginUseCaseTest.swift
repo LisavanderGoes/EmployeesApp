@@ -10,43 +10,54 @@ import XCTest
 class LoginUseCaseTest : XCTestCase {
     
     var loginService : LoginServiceSpy!
-    //var loginUseCaseOutput : LoginUseCaseOutputSpy!
+    var loginUseCaseOutput : LoginUseCaseOutputSpy!
     
     var sut : LoginUseCase!
     
     override func setUp() {
         loginService = LoginServiceSpy()
-        sut = LoginUseCase(loginService: loginService)
+        loginUseCaseOutput = LoginUseCaseOutputSpy()
+        
+        sut = LoginUseCase(loginService: loginService, loginUseCaseOutput : loginUseCaseOutput)
     }
     
-    func test_loginCredentialCheck_CouldGetUsername(){
+    
+    //MARK: Tests
+    
+    func test_loginCredentialCheck_couldGetUsernameAndPassword(){
         
+        loginService.dataLoginCredentials = [LoginCredentials(username: "name", password: "password")]
         sut.loginCredentialsCheck(username: "name", password: "password")
         
         XCTAssertEqual(loginService.capturedUsername, "name")
-    }
-    
-    func test_loginCredentialCheck_CouldGetPassword(){
-        
-        sut.loginCredentialsCheck(username: "name", password: "password")
-        
         XCTAssertEqual(loginService.capturedPassword, "password")
+
     }
     
-    func test_loginCredentialCheck_correctUsernameAndPassword_checkHasSucceedIsTrue(){
+//    func test_loginCredentialsCheckFailed_couldSetFailMessage(){
+//        
+//        loginService.setFailReason = "My bad!"
+//        loginService.dataLoginCredentials = [LoginCredentials(username: "name", password: "password")]
+//        sut.loginCredentialsCheck(username: "name", password: "password")
+//        
+//        XCTAssertEqual(loginUseCaseOutput.capturedFailReason, "My bad!")
+//    }
+    
+    func test_loginCredentialCheck_correctUsernameAndPassword_(){
 
+        loginService.dataLoginCredentials = [LoginCredentials(username: "name", password: "password")]
         sut.loginCredentialsCheck(username: "name", password: "password")
 
-        XCTAssertTrue(sut.checkHasSucceed)
+        XCTAssertTrue(loginUseCaseOutput.capturedSucces)
     }
 
-    func test_loginCredentialCheck_incorrectUsernameAndPassword_checkHasSucceedIsFalse(){
-
+    func test_loginCredentialCheck_incorrectUsernameAndPassword_(){
+        
+        loginService.dataLoginCredentials = [LoginCredentials(username: "name", password: "password")]
         sut.loginCredentialsCheck(username: "name2", password: "password2")
-
-        XCTAssertFalse(sut.checkHasSucceed)
+        
+        XCTAssertFalse(loginUseCaseOutput.capturedSucces)
     }
-    
     
 }
 
@@ -57,27 +68,36 @@ class LoginServiceSpy : LoginService{
     
     var capturedUsername : String = ""
     var capturedPassword : String = ""
-
     
-    func loginCredentialsCheck(username: String, password: String) -> Bool {
-        
+    var setFailReason : String = ""
+    var dataLoginCredentials : [LoginCredentials]!
+    
+    func loginCredentialsCheck(username: String, password: String, succeed: () -> Void, failed: (String) -> Void) {
         capturedUsername = username
         capturedPassword = password
-
         
-        let dataLoginCredentials : [LoginCredentials] = [LoginCredentials(username: "name", password: "password")]
-
+        
         if !dataLoginCredentials.isEmpty{
             for loginCredentials in dataLoginCredentials{
-                if (username.elementsEqual(loginCredentials.username) && password.elementsEqual(loginCredentials.password)){return true}
+                if (username.elementsEqual(loginCredentials.username) && password.elementsEqual(loginCredentials.password)){succeed()}
             }
+        } else {
+            failed(setFailReason)
         }
-        return false
     }
 }
 
-//class LoginUseCaseOutputSpy : LoginUseCaseOutput {
-//    var checkHasSucceed: Bool
-//
-//
-//}
+class LoginUseCaseOutputSpy : LoginUseCaseOutput {
+    
+    var capturedFailReason : String!
+    
+    var capturedSucces : Bool = false
+    
+    func checkHasSucceed() {
+        capturedSucces = true
+    }
+    
+    func checkHasFailed(reason: String) {
+        capturedFailReason = reason
+    }
+}

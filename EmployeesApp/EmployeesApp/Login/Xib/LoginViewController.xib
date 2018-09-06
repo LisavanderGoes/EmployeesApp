@@ -13,9 +13,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="EmployeesApp" customModuleProvider="target">
             <connections>
                 <outlet property="loginButton" destination="dRu-ms-DVM" id="RPv-B8-dVu"/>
+                <outlet property="messageLabel" destination="Jxl-da-jUW" id="Ylm-OD-fqI"/>
                 <outlet property="passwordTextField" destination="UeW-HJ-Qh5" id="cnP-Xg-8eH"/>
                 <outlet property="usernameTextField" destination="JyV-Oh-Ifu" id="cSt-eN-nhV"/>
-                <outlet property="view" destination="iN0-l3-epB" id="nlF-zf-CTI"/>
+                <outlet property="view" destination="iN0-l3-epB" id="NKw-4p-Uqa"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -52,6 +53,13 @@
                         <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="Yzh-PP-0kC"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxl-da-jUW">
+                    <rect key="frame" x="166" y="117" width="42" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

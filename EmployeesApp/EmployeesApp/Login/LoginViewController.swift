@@ -10,6 +10,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameTextField : UITextField!
     @IBOutlet weak var passwordTextField : UITextField!
+    @IBOutlet weak var messageLabel : UILabel!
     @IBOutlet weak var loginButton  : UIButton!
     @IBAction func loginButtonTapped(_ sender: Any) {
         let capturedUsername = usernameTextField.text ?? ""
@@ -23,4 +24,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    func show(message: String) {
+        messageLabel.text = message
+    }
 }
+
+extension LoginViewController : LoginView {}

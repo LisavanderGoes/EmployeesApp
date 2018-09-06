@@ -28,6 +28,10 @@ class LoginViewControllerTest : XCTestCase{
         XCTAssertNotNil(sut.passwordTextField)
     }
     
+    func test_viewDidLoad_messageLabelIsConnected(){
+        XCTAssertNotNil(sut.messageLabel)
+    }
+    
     func test_viewDidLoad_loginButtonIsConnected(){
         XCTAssertNotNil(sut.loginButton)
     }
@@ -36,9 +40,7 @@ class LoginViewControllerTest : XCTestCase{
         var isLoginClosureCalled = false
         
         sut.loginClosure = { (_, _) in
-            isLoginClosureCalled = true
-        }
-        
+            isLoginClosureCalled = true}
         sut.loginButton.sendActions(for: .touchUpInside)
         
         XCTAssertTrue(isLoginClosureCalled)
@@ -48,11 +50,8 @@ class LoginViewControllerTest : XCTestCase{
         var capturedUsername : String!
 
         sut.loginClosure = { (username, _ ) in
-            capturedUsername = username
-        }
-
+            capturedUsername = username}
         sut.usernameTextField.text = "name"
-
         sut.loginButton.sendActions(for: .touchUpInside)
 
         XCTAssertEqual(capturedUsername, "name")
@@ -62,14 +61,17 @@ class LoginViewControllerTest : XCTestCase{
         var capturedPassword : String!
 
         sut.loginClosure = { (_, password ) in
-            capturedPassword = password
-        }
-        
+            capturedPassword = password}
         sut.passwordTextField.text = "password"
-
         sut.loginButton.sendActions(for: .touchUpInside)
 
         XCTAssertEqual(capturedPassword, "password")
+    }
+    
+    func test_show_doesShowMessage(){
+        
+        sut.show(message: "My message")
+        XCTAssertEqual(sut.messageLabel.text, "My message")
     }
     
 }

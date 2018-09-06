@@ -11,5 +11,7 @@ import Foundation
 protocol LoginService {
     func loginCredentialsCheck(
         username: String,
-        password: String) -> Bool
+        password: String,
+        succeed: () -> Void,
+        failed: (String) -> Void) -> Void
 }

@@ -7,10 +7,17 @@ import Foundation
 
 class LoginPresenter : LoginUseCaseOutput {
     
-    var checkHasSecceed : Bool!
+    let loginView : LoginView!
     
-    func checkHasSucceed(checkHasSucceed: Bool) {
-        self.checkHasSecceed = checkHasSucceed
+    init(loginView: LoginView){
+        self.loginView = loginView
     }
     
+    func checkHasSucceed() {
+        loginView.show(message: "Succes")
+    }
+    
+    func checkHasFailed(reason: String) {
+        loginView.show(message: reason)
+    }
 }

@@ -9,9 +9,4 @@ import XCTest
 
 class LoginPresenterTest : XCTestCase{
     
-    func test_checkHasSucceedIsNotNil(){
-        let sut = LoginPresenter()
-        
-        XCTAssertNotNil(sut.checkHasSucceed)
-    }
 }

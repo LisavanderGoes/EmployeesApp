@@ -5,5 +5,6 @@
 import Foundation
 
 protocol LoginUseCaseOutput {
-    func checkHasSucceed(checkHasSucceed: Bool)
+    func checkHasSucceed()
+    func checkHasFailed(reason: String)
 }

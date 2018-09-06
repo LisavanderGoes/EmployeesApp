@@ -5,7 +5,7 @@
 
 import Foundation
 
-class LoginPresenter : LoginUseCaseOutput {
+class LoginPresenter: UserAuthenticationUseCaseOutput {
     
     private let loginView : LoginView!
     
@@ -13,11 +13,11 @@ class LoginPresenter : LoginUseCaseOutput {
         self.loginView = loginView
     }
     
-    func checkHasSucceed() {
+    func authenticationSucceded() {
         loginView.show(message: Strings.checkHasSucceedMessage)
     }
     
-    func checkHasFailed(reason: String) {
+    func authenticationFailed(reason: String) {
         loginView.show(message: reason)
     }
 }

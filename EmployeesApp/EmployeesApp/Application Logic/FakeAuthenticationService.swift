@@ -5,11 +5,16 @@
 
 import UIKit
 
-class LoginCredentialsCheck: LoginService{
+class FakeAuthenticationService: AuthenticationService {
     
-    var dataLoginCredentials : [LoginCredentials] = []
+    var dataLoginCredentials: [LoginCredentials] = []
     
-    func loginCredentialsCheck(username: String, password: String, succeed: () -> Void, failed: (String) -> Void) {
+    func authenticateUser(
+        username: String,
+        password: String,
+        succeed: @escaping () -> Void,
+        failed: @escaping (String) -> Void
+    ) -> ServiceTask {
         
         var succeeds = 0
         
@@ -21,5 +26,11 @@ class LoginCredentialsCheck: LoginService{
         } else {
             failed(Strings.dataLoginCredentialsIsEmptyMessage)
         }
+        
+        return FakeServiceTask()
     }
+}
+
+class FakeServiceTask: ServiceTask {
+    func cancel() {}
 }

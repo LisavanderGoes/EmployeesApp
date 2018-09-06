@@ -38,7 +38,6 @@ class LoginViewControllerTest : XCTestCase{
     
     func test_viewDidLoad_loginClosureIsCalled(){
         var isLoginClosureCalled = false
-        
         sut.loginClosure = { (_, _) in
             isLoginClosureCalled = true}
         sut.loginButton.sendActions(for: .touchUpInside)

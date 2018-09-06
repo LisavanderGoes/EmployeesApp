@@ -21,16 +21,18 @@ class LoginPresenterTest : XCTestCase{
     
     func test_checkHasSucceed_couldGetMessage() {
         
-        sut.checkHasSucceed()
+//        sut.checkHasSucceed()
         
-        XCTAssertEqual(loginView.capturedMessage, "Succes")
+//        XCTAssertEqual(loginView.capturedMessage, "Succes")
+        XCTFail()
     }
     
     func test_checkHasFailed_couldGetMessage() {
-        
-        sut.checkHasFailed(reason: "You failed!")
-        
-        XCTAssertEqual(loginView.capturedMessage, "You failed!")
+//
+//        sut.checkHasFailed(reason: "You failed!")
+//
+//        XCTAssertEqual(loginView.capturedMessage, "You failed!")
+        XCTFail()
     }
 }
 

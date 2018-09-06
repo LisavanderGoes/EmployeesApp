@@ -4,7 +4,7 @@
 
 import Foundation
 
-protocol LoginUseCaseOutput {
-    func checkHasSucceed()
-    func checkHasFailed(reason: String)
+protocol UserAuthenticationUseCaseOutput {
+    func authenticationSucceded()
+    func authenticationFailed(reason: String)
 }

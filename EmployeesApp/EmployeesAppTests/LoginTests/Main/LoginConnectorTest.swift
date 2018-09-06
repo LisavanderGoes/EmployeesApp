@@ -11,9 +11,9 @@ class LoginConnectorTest : XCTestCase {
     
     func test_connectViewControllerWithUseCase_connectionSucceed(){
         
-        LoginConnector()connectViewControllerWithUseCase()
+//        LoginConnector()connectViewControllerWithUseCase()
         
-        XCTAssertEqual(LoginViewController().messageLabel.text, "Succes")
+//        XCTAssertEqual(LoginViewController().messageLabel.text, "Succes")
+        XCTFail()
     }
-    
 }

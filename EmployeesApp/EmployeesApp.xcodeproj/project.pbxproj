@@ -10,6 +10,8 @@
 		974111F021410475000C8B56 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111EF21410475000C8B56 /* LoginView.swift */; };
 		974111F3214114C8000C8B56 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111F2214114C8000C8B56 /* LoginCredentials.swift */; };
 		974111F621412809000C8B56 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111F521412809000C8B56 /* Strings.swift */; };
+		974111FA21413AC5000C8B56 /* LoginConnectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111F921413AC5000C8B56 /* LoginConnectorTest.swift */; };
+		974111FC21413B39000C8B56 /* LoginConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111FB21413B39000C8B56 /* LoginConnector.swift */; };
 		9753A110213FCE2100DBC4C8 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A10F213FCE2100DBC4C8 /* LoginUseCase.swift */; };
 		9753A112213FD2A300DBC4C8 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A111213FD2A300DBC4C8 /* LoginService.swift */; };
 		9753A114213FD73200DBC4C8 /* LoginUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A113213FD73200DBC4C8 /* LoginUseCaseTest.swift */; };
@@ -40,6 +42,8 @@
 		974111EF21410475000C8B56 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		974111F2214114C8000C8B56 /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		974111F521412809000C8B56 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		974111F921413AC5000C8B56 /* LoginConnectorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConnectorTest.swift; sourceTree = "<group>"; };
+		974111FB21413B39000C8B56 /* LoginConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConnector.swift; sourceTree = "<group>"; };
 		9753A10F213FCE2100DBC4C8 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		9753A111213FD2A300DBC4C8 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		9753A113213FD73200DBC4C8 /* LoginUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseTest.swift; sourceTree = "<group>"; };
@@ -94,15 +98,16 @@
 			path = Values;
 			sourceTree = "<group>";
 		};
-		974111F821413515000C8B56 /* Login */ = {
+		974111F821413515000C8B56 /* LoginTests */ = {
 			isa = PBXGroup;
 			children = (
 				9771ADC6213EB2C7003B2CA1 /* LoginViewControllerTest.swift */,
 				97BEAF9E213E7A6300AAA342 /* LoginCredentialsCheckTest.swift */,
 				9753A113213FD73200DBC4C8 /* LoginUseCaseTest.swift */,
 				9753A11D2140114000DBC4C8 /* LoginPresenterTest.swift */,
+				974111F921413AC5000C8B56 /* LoginConnectorTest.swift */,
 			);
-			path = Login;
+			path = LoginTests;
 			sourceTree = "<group>";
 		};
 		9753A117213FDBF000DBC4C8 /* Login */ = {
@@ -115,6 +120,7 @@
 				9771ADC8213EB524003B2CA1 /* LoginViewController.swift */,
 				9753A10F213FCE2100DBC4C8 /* LoginUseCase.swift */,
 				9753A11B2140101E00DBC4C8 /* LoginPresenter.swift */,
+				974111FB21413B39000C8B56 /* LoginConnector.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -171,7 +177,7 @@
 		97BEAF92213E783500AAA342 /* EmployeesAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				974111F821413515000C8B56 /* Login */,
+				974111F821413515000C8B56 /* LoginTests */,
 				97BEAF95213E783500AAA342 /* Info.plist */,
 			);
 			path = EmployeesAppTests;
@@ -286,6 +292,7 @@
 				9753A11C2140101E00DBC4C8 /* LoginPresenter.swift in Sources */,
 				97BEAF7F213E783400AAA342 /* AppDelegate.swift in Sources */,
 				9753A112213FD2A300DBC4C8 /* LoginService.swift in Sources */,
+				974111FC21413B39000C8B56 /* LoginConnector.swift in Sources */,
 				97BEAFA1213E7FFF00AAA342 /* LoginCredentialsCheck.swift in Sources */,
 				974111F021410475000C8B56 /* LoginView.swift in Sources */,
 				9753A110213FCE2100DBC4C8 /* LoginUseCase.swift in Sources */,
@@ -298,6 +305,7 @@
 			files = (
 				9753A11E2140114000DBC4C8 /* LoginPresenterTest.swift in Sources */,
 				9771ADC7213EB2C7003B2CA1 /* LoginViewControllerTest.swift in Sources */,
+				974111FA21413AC5000C8B56 /* LoginConnectorTest.swift in Sources */,
 				9753A114213FD73200DBC4C8 /* LoginUseCaseTest.swift in Sources */,
 				97BEAF9F213E7A6300AAA342 /* LoginCredentialsCheckTest.swift in Sources */,
 			);

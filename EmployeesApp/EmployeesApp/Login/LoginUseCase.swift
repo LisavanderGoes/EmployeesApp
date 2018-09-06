@@ -9,6 +9,7 @@ class LoginUseCase {
     
     private let loginService : LoginService
     private let loginUseCaseOutput : LoginUseCaseOutput
+
     
     init(loginService: LoginService, loginUseCaseOutput: LoginUseCaseOutput){
         self.loginService = loginService

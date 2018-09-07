@@ -119,16 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				974111F1214114A3000C8B56 /* Structs */,
-				9753A119213FDC2D00DBC4C8 /* Protocols */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		9753A119213FDC2D00DBC4C8 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		97BEAF72213E783400AAA342 = {

@@ -21,7 +21,6 @@
 		97BEAF7F213E783400AAA342 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAF7E213E783400AAA342 /* AppDelegate.swift */; };
 		97BEAF86213E783500AAA342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97BEAF85213E783500AAA342 /* Assets.xcassets */; };
 		97BEAF89213E783500AAA342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BEAF87213E783500AAA342 /* LaunchScreen.storyboard */; };
-		97BEAF9F213E7A6300AAA342 /* LoginCredentialsCheckTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAF9E213E7A6300AAA342 /* LoginCredentialsCheckTest.swift */; };
 		97BEAFA1213E7FFF00AAA342 /* FakeAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAFA0213E7FFF00AAA342 /* FakeAuthenticationService.swift */; };
 		A6A00C7321415CCB00B20891 /* AuthenticationServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A00C7221415CCB00B20891 /* AuthenticationServiceSpy.swift */; };
 		A6A00C7521415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A00C7421415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift */; };
@@ -63,7 +62,6 @@
 		97BEAF8A213E783500AAA342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97BEAF8F213E783500AAA342 /* EmployeesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BEAF95213E783500AAA342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97BEAF9E213E7A6300AAA342 /* LoginCredentialsCheckTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentialsCheckTest.swift; sourceTree = "<group>"; };
 		97BEAFA0213E7FFF00AAA342 /* FakeAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthenticationService.swift; sourceTree = "<group>"; };
 		A6A00C7221415CCB00B20891 /* AuthenticationServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceSpy.swift; sourceTree = "<group>"; };
 		A6A00C7421415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationUseCaseOutputSpy.swift; sourceTree = "<group>"; };
@@ -248,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				A6A00C7121415CA200B20891 /* Helpers */,
-				97BEAF9E213E7A6300AAA342 /* LoginCredentialsCheckTest.swift */,
 				9753A113213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift */,
 			);
 			path = "Application Logic";
@@ -434,7 +431,6 @@
 				9771ADC7213EB2C7003B2CA1 /* LoginViewControllerTest.swift in Sources */,
 				A6A00C7521415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift in Sources */,
 				9753A114213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift in Sources */,
-				97BEAF9F213E7A6300AAA342 /* LoginCredentialsCheckTest.swift in Sources */,
 				A6D719832142A8F400CF9134 /* WeakRef+AuthenticationViewTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

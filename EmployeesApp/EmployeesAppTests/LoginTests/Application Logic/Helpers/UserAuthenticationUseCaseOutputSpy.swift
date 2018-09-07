@@ -8,6 +8,12 @@ import Foundation
 
 class UserAuthenticationUseCaseOutputSpy: UserAuthenticationUseCaseOutput {
     
+    var authenticationStartedIsCalled = false
+    
+    func authenticationStarted(){
+        authenticationStartedIsCalled = true
+    }
+    
     var authenticationSuccededCalled = false
     
     func authenticationSucceded() {

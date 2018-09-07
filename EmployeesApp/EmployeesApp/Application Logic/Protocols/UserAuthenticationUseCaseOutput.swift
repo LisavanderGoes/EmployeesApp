@@ -5,6 +5,7 @@
 import Foundation
 
 protocol UserAuthenticationUseCaseOutput {
+    func authenticationStarted()
     func authenticationSucceded()
     func authenticationFailed(reason: String)
 }

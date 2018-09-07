@@ -6,6 +6,10 @@
 import Foundation
 
 class UserAuthenticationPresenter: UserAuthenticationUseCaseOutput {
+    func authenticationStarted() {
+        
+    }
+    
     
     private let loginView: AuthenticationView!
     

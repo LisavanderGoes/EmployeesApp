@@ -26,6 +26,7 @@ class UserAuthenticationUseCase {
     
     func authenticateUser(username: String, password: String) {
         if ongoingAuthenticationTask == nil {
+            output.authenticationStarted()
             ongoingAuthenticationTask = service.authenticateUser(
                 username: username,
                 password: password,

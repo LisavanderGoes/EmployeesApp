@@ -81,13 +81,26 @@ class UserAuthenticationUseCaseTest : XCTestCase {
         XCTAssertNil(ongoingTask)
     }
     
-    func test_authenticateUser_removeReferenceWhenAuthenticationFails(){
+    func test_authenticateUser_removeReferenceWhenAuthenticationFails() {
         authenticateUser()
         weak var ongoingTask = service.returnedAuthenticationTask
         service.returnedAuthenticationTask = nil
         XCTAssertNotNil(ongoingTask)
         service.capturedFailureClosure?("")
         XCTAssertNil(ongoingTask)
+    }
+    
+    func test_authenticateUser_notifiesOutputWhenAuthenticationStarted() {
+        authenticateUser()
+        XCTAssertTrue(output.authenticationStartedIsCalled)
+    }
+    
+    func test_authenticateUser_doesNotNotifyOutpuAboutAuthenticationStartedWhenStillOngoing() {
+        authenticateUser()
+        XCTAssertTrue(output.authenticationStartedIsCalled)
+        output.authenticationStartedIsCalled = false
+        authenticateUser()
+        XCTAssertFalse(output.authenticationStartedIsCalled)
     }
     
     // MARK: Helpers

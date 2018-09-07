@@ -80,4 +80,10 @@ class LoginViewControllerTest: XCTestCase {
         sut.showLoadingIndicator()
         XCTAssertFalse(sut.loadingIndicator.isHidden)
     }
+    
+    func test_hideLoadingIndicator_hidesLoadingIndicator() {
+        sut.loadingIndicator.isHidden = false
+        sut.hideLoadingIndicator()
+        XCTAssertTrue(sut.loadingIndicator.isHidden)
+    }
 }

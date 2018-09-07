@@ -33,4 +33,8 @@ class LoginViewController: UIViewController {
     func showLoadingIndicator(){
         loadingIndicator.isHidden = false
     }
+    
+    func hideLoadingIndicator(){
+        loadingIndicator.isHidden = true
+    }
 }

@@ -56,6 +56,11 @@ class UserAuthenticationPresenterTest : XCTestCase{
         XCTAssertTrue(authenticationView.showLoadingIndicatorIsCalled)
     }
     
+    func test_authenticationStarted_disableLoginButton() {
+        sut.authenticationStarted()
+        XCTAssertTrue(authenticationView.disableLoginButtonIsCalled)
+    }
+    
     // MARK: Helpers
     func authenticationFailed(reason: String = "") {
         sut.authenticationFailed(reason: reason)
@@ -81,5 +86,11 @@ class AuthenticationViewSpy: AuthenticationView {
 
     func hideLoadingIndicator() {
         hideLoadingIndicatorIsCalled = true
+    }
+    
+    var disableLoginButtonIsCalled = false
+    
+    func disableLoginButton() {
+        disableLoginButtonIsCalled = true
     }
 }

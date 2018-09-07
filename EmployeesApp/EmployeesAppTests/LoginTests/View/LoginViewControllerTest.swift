@@ -81,8 +81,15 @@ class LoginViewControllerTest: XCTestCase {
         XCTAssertFalse(sut.loadingIndicator.isHidden)
     }
     
-    func test_hideLoadingIndicator_hidesLoadingIndicator() {
-        sut.loadingIndicator.isHidden = false
+    //MARK: stopAnimationLoadingIndicator
+    func test_stopAnimationLoadingIndicator_stopsAnimationLoadingIndicator() {
+        sut.loadingIndicator.startAnimating()
+        sut.stopAnimationLoadingIndicator()
+        XCTAssertFalse(sut.loadingIndicator.isAnimating)
+    }
+    
+    func test_stopAnimationLoadingIndicator_hidesLoadingIndicator() {
+        sut.loadingIndicator.startAnimating()
         sut.stopAnimationLoadingIndicator()
         XCTAssertTrue(sut.loadingIndicator.isHidden)
     }

@@ -45,7 +45,7 @@ class UserAuthenticationPresenterTest : XCTestCase{
         XCTAssertEqual(authenticationView.capturedMessage, failReason)
     }
     
-    func test_authenticationFailed_hideLoadingIndicator() {
+    func test_authenticationFailed_stopAnimationLoadingIndicator() {
         authenticationFailed()
         XCTAssertTrue(authenticationView.stopAnimationIndicatorIsCalled)
     }

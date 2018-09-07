@@ -5,7 +5,7 @@
 
 import Foundation
 
-class LoginPresenter: UserAuthenticationUseCaseOutput {
+class UserAuthenticationPresenter: UserAuthenticationUseCaseOutput {
     
     private let loginView : LoginView!
     

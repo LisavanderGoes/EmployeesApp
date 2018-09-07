@@ -7,16 +7,14 @@ import Foundation
 import XCTest
 @testable import EmployeesApp
 
-class LoginPresenterTest : XCTestCase{
+class UserAuthenticationPresenterTest : XCTestCase{
     
-    var loginView : LoginViewSpy!
-    
-    var sut : LoginPresenter!
+    var loginView: LoginViewSpy!
+    var sut: UserAuthenticationPresenter!
     
     override func setUp(){
         loginView = LoginViewSpy()
-        
-        sut = LoginPresenter(loginView: loginView)
+        sut = UserAuthenticationPresenter(loginView: loginView)
     }
     
     func test_checkHasSucceed_couldGetMessage() {

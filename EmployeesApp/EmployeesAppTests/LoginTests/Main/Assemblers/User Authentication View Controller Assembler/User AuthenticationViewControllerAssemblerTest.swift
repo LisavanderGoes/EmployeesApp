@@ -34,7 +34,6 @@ class UserAuthenticationViewControllerAssemblerTest: XCTestCase {
         weak var weakRefferenceToViewController = dependencyFactory.returnedViewController
         dependencyFactory.returnedViewController = nil
         XCTAssertNil(weakRefferenceToViewController)
-        XCTFail("something is wrong with this test...")
     }
 }
 

@@ -20,12 +20,12 @@ class UserAuthenticationPresenter: UserAuthenticationUseCaseOutput {
     
     func authenticationSucceded() {
         authenticationView.show(message: "Succes")
-        authenticationView.hideLoadingIndicator()
+        authenticationView.stopAnimationLoadingIndicator()
     }
     
     func authenticationFailed(reason: String) {
         authenticationView.show(message: reason)
-        authenticationView.hideLoadingIndicator()
+        authenticationView.stopAnimationLoadingIndicator()
         authenticationView.enableLoginButton()
     }
 }

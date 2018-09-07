@@ -30,7 +30,7 @@ class UserAuthenticationPresenterTest : XCTestCase{
     
     func test_authenticationSucceded_hideLoadingIndicator() {
         sut.authenticationSucceded()
-        XCTAssertTrue(authenticationView.hideLoadingIndicatorIsCalled)
+        XCTAssertTrue(authenticationView.stopAnimationIndicatorIsCalled)
     }
 
     // MARK: authenticationFailed related
@@ -47,7 +47,7 @@ class UserAuthenticationPresenterTest : XCTestCase{
     
     func test_authenticationFailed_hideLoadingIndicator() {
         authenticationFailed()
-        XCTAssertTrue(authenticationView.hideLoadingIndicatorIsCalled)
+        XCTAssertTrue(authenticationView.stopAnimationIndicatorIsCalled)
     }
     
     func test_authenticationFailed_enableLoginButton() {
@@ -73,6 +73,7 @@ class UserAuthenticationPresenterTest : XCTestCase{
 }
 
 class AuthenticationViewSpy: AuthenticationView {
+ 
     var capturedMessage: String!
     var showIsCalled = false
     
@@ -87,10 +88,10 @@ class AuthenticationViewSpy: AuthenticationView {
         showLoadingIndicatorIsCalled = true
     }
     
-    var hideLoadingIndicatorIsCalled = false
+    var stopAnimationIndicatorIsCalled = false
 
-    func hideLoadingIndicator() {
-        hideLoadingIndicatorIsCalled = true
+    func stopAnimationLoadingIndicator() {
+        stopAnimationIndicatorIsCalled = true
     }
     
     var disableLoginButtonIsCalled = false

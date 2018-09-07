@@ -8,7 +8,7 @@ import Foundation
 protocol AuthenticationView {
     func show(message: String)
     func showLoadingIndicator()
-    func hideLoadingIndicator()
+    func stopAnimationLoadingIndicator()
     func disableLoginButton()
     func enableLoginButton()
 }

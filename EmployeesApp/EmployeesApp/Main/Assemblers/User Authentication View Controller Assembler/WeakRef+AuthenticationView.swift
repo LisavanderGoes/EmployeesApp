@@ -15,8 +15,8 @@ extension WeakRef: AuthenticationView where T: AuthenticationView {
         object?.showLoadingIndicator()
     }
     
-    func hideLoadingIndicator() {
-        object?.hideLoadingIndicator()
+    func stopAnimationLoadingIndicator() {
+        object?.stopAnimationLoadingIndicator()
     }
     
     func disableLoginButton() {

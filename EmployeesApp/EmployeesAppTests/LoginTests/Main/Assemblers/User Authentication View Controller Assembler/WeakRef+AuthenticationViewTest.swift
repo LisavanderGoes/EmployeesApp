@@ -33,8 +33,8 @@ class WeakRef_AuthenticationViewTest: XCTestCase {
     }
     
     func test_hideLoadingIndicator() {
-        sut.hideLoadingIndicator()
-        XCTAssertTrue(view.hideLoadingIndicatorIsCalled)
+        sut.stopAnimationLoadingIndicator()
+        XCTAssertTrue(view.stopAnimationIndicatorIsCalled)
     }
     
     func test_disableLoginButton() {

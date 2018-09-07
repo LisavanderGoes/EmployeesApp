@@ -10,5 +10,5 @@ import Foundation
 
 protocol AuthenticationView {
     func show(message: String)
-    func showLoadingIndicator()
+    func hideLoadingIndicator()
 }

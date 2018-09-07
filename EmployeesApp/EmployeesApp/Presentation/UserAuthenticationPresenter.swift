@@ -15,7 +15,7 @@ class UserAuthenticationPresenter: UserAuthenticationUseCaseOutput {
     
     func authenticationSucceded() {
         loginView.show(message: "Succes")
-        loginView.showLoadingIndicator()
+        loginView.hideLoadingIndicator()
     }
     
     func authenticationFailed(reason: String) {

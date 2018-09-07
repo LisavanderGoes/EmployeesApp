@@ -38,9 +38,9 @@ class UserAuthenticationPresenterTest : XCTestCase{
         XCTAssertEqual(loginView.capturedMessage, failReason)
     }
     
-    func test_authenticationSucceded_showsLoadingIndicator() {
+    func test_authenticationSucceded_hideLoadingIndicator() {
         sut.authenticationSucceded()
-        XCTAssertTrue(loginView.showLoadingIndicatorIsCalled)
+        XCTAssertTrue(loginView.hideLoadingIndicatorIsCalled)
     }
 }
 
@@ -53,9 +53,9 @@ class AuthenticationViewSpy: AuthenticationView {
         capturedMessage = message
     }
     
-    var showLoadingIndicatorIsCalled: Bool = false
+    var hideLoadingIndicatorIsCalled: Bool = false
 
-    func showLoadingIndicator() {
-        showLoadingIndicatorIsCalled = true
+    func hideLoadingIndicator() {
+        hideLoadingIndicatorIsCalled = true
     }
 }

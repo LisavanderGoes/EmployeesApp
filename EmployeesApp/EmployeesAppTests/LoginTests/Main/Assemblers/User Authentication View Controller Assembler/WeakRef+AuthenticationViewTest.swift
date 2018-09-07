@@ -28,8 +28,8 @@ class WeakRef_AuthenticationViewTest: XCTestCase {
     }
     
     func test_showLoadingIndicator() {
-        sut.showLoadingIndicator()
-        XCTAssertTrue(view.showLoadingIndicatorIsCalled)
+        sut.startAnimationLoadingIndicator()
+        XCTAssertTrue(view.startAnimationIndicatorIsCalled)
     }
     
     func test_hideLoadingIndicator() {

@@ -76,8 +76,8 @@ class LoginViewControllerTest: XCTestCase {
         XCTAssertEqual(sut.messageLabel.text, "My message")
     }
     
-    func test_showLoadingIndicator_showsLoadingIndicator() {
-        sut.showLoadingIndicator()
+    func test_startAnimationLoadingIndicator_showsLoadingIndicator() {
+        sut.startAnimationLoadingIndicator()
         XCTAssertFalse(sut.loadingIndicator.isHidden)
     }
     

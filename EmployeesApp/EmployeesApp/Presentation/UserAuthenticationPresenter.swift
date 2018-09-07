@@ -14,7 +14,7 @@ class UserAuthenticationPresenter: UserAuthenticationUseCaseOutput {
     }
     
     func authenticationStarted() {
-        authenticationView.showLoadingIndicator()
+        authenticationView.startAnimationLoadingIndicator()
         authenticationView.disableLoginButton()
     }
     

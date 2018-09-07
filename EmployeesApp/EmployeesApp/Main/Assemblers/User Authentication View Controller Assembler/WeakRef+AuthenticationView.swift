@@ -11,8 +11,8 @@ extension WeakRef: AuthenticationView where T: AuthenticationView {
         object?.show(message: message)
     }
     
-    func showLoadingIndicator() {
-        object?.showLoadingIndicator()
+    func startAnimationLoadingIndicator() {
+        object?.startAnimationLoadingIndicator()
     }
     
     func stopAnimationLoadingIndicator() {

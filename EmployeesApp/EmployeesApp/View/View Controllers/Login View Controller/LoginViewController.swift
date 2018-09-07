@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        //loadingIndicator.isHidden = true
+        loadingIndicator.isHidden = true
     }
     
     var loginClosure: ((String, String) -> Void)?
@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         messageLabel.text = message
     }
     
-    func showLoadingIndicator() {
+    func startAnimationLoadingIndicator() {
         loadingIndicator.isHidden = false
     }
     

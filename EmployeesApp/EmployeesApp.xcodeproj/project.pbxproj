@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		974111F021410475000C8B56 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111EF21410475000C8B56 /* AuthenticationView.swift */; };
-		974111F621412809000C8B56 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111F521412809000C8B56 /* Strings.swift */; };
 		9753A110213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A10F213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift */; };
 		9753A112213FD2A300DBC4C8 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A111213FD2A300DBC4C8 /* AuthenticationService.swift */; };
 		9753A114213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A113213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift */; };
@@ -45,7 +44,6 @@
 
 /* Begin PBXFileReference section */
 		974111EF21410475000C8B56 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
-		974111F521412809000C8B56 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9753A10F213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationUseCase.swift; sourceTree = "<group>"; };
 		9753A111213FD2A300DBC4C8 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		9753A113213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationUseCaseTest.swift; sourceTree = "<group>"; };
@@ -92,21 +90,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		974111F4214127FA000C8B56 /* Values */ = {
-			isa = PBXGroup;
-			children = (
-				974111F521412809000C8B56 /* Strings.swift */,
-			);
-			path = Values;
-			sourceTree = "<group>";
-		};
 		974111F821413515000C8B56 /* LoginTests */ = {
 			isa = PBXGroup;
 			children = (
-				A6C256EA2141572C00267E92 /* Main */,
-				A6C256E92141572400267E92 /* Presentation */,
-				A6C256E82141571B00267E92 /* Application Logic */,
 				A6C256E72141571300267E92 /* View */,
+				A6C256E82141571B00267E92 /* Application Logic */,
+				A6C256E92141572400267E92 /* Presentation */,
+				A6C256EA2141572C00267E92 /* Main */,
 			);
 			path = LoginTests;
 			sourceTree = "<group>";
@@ -132,11 +122,10 @@
 		97BEAF7D213E783400AAA342 /* EmployeesApp */ = {
 			isa = PBXGroup;
 			children = (
-				A6C256E4214156CA00267E92 /* Presentation */,
-				A6C256E3214156AF00267E92 /* Application Logic */,
 				A6C256E2214156AA00267E92 /* View */,
+				A6C256E3214156AF00267E92 /* Application Logic */,
+				A6C256E4214156CA00267E92 /* Presentation */,
 				A6C256E1214156A300267E92 /* Main */,
-				974111F4214127FA000C8B56 /* Values */,
 				97BEAF7E213E783400AAA342 /* AppDelegate.swift */,
 				97BEAF8A213E783500AAA342 /* Info.plist */,
 			);
@@ -407,7 +396,6 @@
 				A6C256EC214157E900267E92 /* LoginViewController+LoginView.swift in Sources */,
 				A6B35902214288600083E982 /* UserAuthenticationViewControllerAssembler.swift in Sources */,
 				9753A116213FDB7B00DBC4C8 /* UserAuthenticationUseCaseOutput.swift in Sources */,
-				974111F621412809000C8B56 /* Strings.swift in Sources */,
 				9771ADC9213EB524003B2CA1 /* LoginViewController.swift in Sources */,
 				A6D7197D2142A68400CF9134 /* WeakRef.swift in Sources */,
 				9753A11C2140101E00DBC4C8 /* UserAuthenticationPresenter.swift in Sources */,

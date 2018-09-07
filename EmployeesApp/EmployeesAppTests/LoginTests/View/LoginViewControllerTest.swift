@@ -7,7 +7,7 @@ import Foundation
 import XCTest
 @testable import EmployeesApp
 
-class LoginViewControllerTest : XCTestCase{
+class LoginViewControllerTest: XCTestCase {
     
     var sut: LoginViewController!
     
@@ -16,61 +16,53 @@ class LoginViewControllerTest : XCTestCase{
         _ = sut.view
     }
     
-    func test_viewDidLoad_() {
-        XCTAssertTrue(sut.isViewLoaded)
-    }
-    
-    func test_viewDidLoad_usernameTextFieldIsConnected(){
+    func test_viewDidLoad_usernameTextFieldIsConnected() {
         XCTAssertNotNil(sut.usernameTextField)
     }
     
-    func test_viewDidLoad_passwordTextFieldIsConnected(){
+    func test_viewDidLoad_passwordTextFieldIsConnected() {
         XCTAssertNotNil(sut.passwordTextField)
     }
     
-    func test_viewDidLoad_messageLabelIsConnected(){
+    func test_viewDidLoad_messageLabelIsConnected() {
         XCTAssertNotNil(sut.messageLabel)
     }
     
-    func test_viewDidLoad_loginButtonIsConnected(){
+    func test_viewDidLoad_loginButtonIsConnected() {
         XCTAssertNotNil(sut.loginButton)
     }
     
-    func test_viewDidLoad_loginClosureIsCalled(){
+    func test_viewDidLoad_loginClosureIsCalled() {
         var isLoginClosureCalled = false
-        sut.loginClosure = { (_, _) in
-            isLoginClosureCalled = true}
+        sut.loginClosure = { _, _ in
+            isLoginClosureCalled = true
+        }
         sut.loginButton.sendActions(for: .touchUpInside)
-        
         XCTAssertTrue(isLoginClosureCalled)
     }
     
-    func test_loginClosure_loginButtonTapped_usernameIsCapturedUsername(){
-        var capturedUsername : String!
-
-        sut.loginClosure = { (username, _ ) in
-            capturedUsername = username}
+    func test_loginClosure_loginButtonTapped_usernameIsCapturedUsername() {
+        var capturedUsername: String?
+        sut.loginClosure = { username, _  in
+            capturedUsername = username
+        }
         sut.usernameTextField.text = "name"
         sut.loginButton.sendActions(for: .touchUpInside)
-
         XCTAssertEqual(capturedUsername, "name")
     }
 
-    func test_loginClosure_loginButtonTapped_passwordIsCapturedPassword(){
-        var capturedPassword : String!
-
-        sut.loginClosure = { (_, password ) in
-            capturedPassword = password}
+    func test_loginClosure_loginButtonTapped_passwordIsCapturedPassword() {
+        var capturedPassword: String?
+        sut.loginClosure = { _, password in
+            capturedPassword = password
+        }
         sut.passwordTextField.text = "password"
         sut.loginButton.sendActions(for: .touchUpInside)
-
         XCTAssertEqual(capturedPassword, "password")
     }
     
-    func test_show_doesShowMessage(){
-        
+    func test_show_doesShowMessage() {
         sut.show(message: "My message")
         XCTAssertEqual(sut.messageLabel.text, "My message")
     }
-    
 }

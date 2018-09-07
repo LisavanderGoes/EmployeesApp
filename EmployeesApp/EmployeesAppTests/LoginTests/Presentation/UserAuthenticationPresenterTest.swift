@@ -9,35 +9,42 @@ import XCTest
 
 class UserAuthenticationPresenterTest : XCTestCase{
     
-    var loginView: LoginViewSpy!
+    var loginView: AuthenticationViewSpy!
     var sut: UserAuthenticationPresenter!
     
     override func setUp(){
-        loginView = LoginViewSpy()
+        loginView = AuthenticationViewSpy()
         sut = UserAuthenticationPresenter(loginView: loginView)
     }
     
-    func test_checkHasSucceed_couldGetMessage() {
-        
-//        sut.checkHasSucceed()
-        
-//        XCTAssertEqual(loginView.capturedMessage, "Succes")
-        XCTFail()
+    func test_authenticationSucceded_showsMessageOnView() {
+        sut.authenticationSucceded()
+        XCTAssertTrue(loginView.showIsCalled)
     }
     
-    func test_checkHasFailed_couldGetMessage() {
-//
-//        sut.checkHasFailed(reason: "You failed!")
-//
-//        XCTAssertEqual(loginView.capturedMessage, "You failed!")
-        XCTFail()
+    func test_authenticationSucceded_showsCorrectMessageOnView(){
+        sut.authenticationSucceded()
+        XCTAssertEqual(loginView.capturedMessage, "Succes")
+    }
+    
+    func test_authenticationFailed_showsMessageOnView() {
+        sut.authenticationFailed(reason: "")
+        XCTAssertTrue(loginView.showIsCalled)
+    }
+    
+    func test_authenticationFailed_showsCorrectMessageOnView() {
+        let failReason = "You failed!"
+        sut.authenticationFailed(reason: failReason)
+        XCTAssertEqual(loginView.capturedMessage, failReason)
     }
 }
 
-class LoginViewSpy : LoginView {
+class AuthenticationViewSpy : LoginView {
     var capturedMessage : String!
+    var showIsCalled : Bool = false
     
     func show(message: String) {
+        showIsCalled = true
         capturedMessage = message
     }
 }

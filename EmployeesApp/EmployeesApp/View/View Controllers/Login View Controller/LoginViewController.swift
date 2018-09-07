@@ -30,11 +30,15 @@ class LoginViewController: UIViewController {
         messageLabel.text = message
     }
     
-    func showLoadingIndicator(){
+    func showLoadingIndicator() {
         loadingIndicator.isHidden = false
     }
     
-    func hideLoadingIndicator(){
+    func hideLoadingIndicator() {
         loadingIndicator.isHidden = true
+    }
+    
+    func disableLoginButton() {
+        loginButton.isEnabled = false
     }
 }

@@ -86,4 +86,9 @@ class LoginViewControllerTest: XCTestCase {
         sut.hideLoadingIndicator()
         XCTAssertTrue(sut.loadingIndicator.isHidden)
     }
+    
+    func test_disableLoginButton_disablesLoginButton() {
+        sut.disableLoginButton()
+        XCTAssertFalse(sut.loginButton.isEnabled)
+    }
 }

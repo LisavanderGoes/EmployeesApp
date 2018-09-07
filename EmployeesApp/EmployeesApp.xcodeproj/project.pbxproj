@@ -30,6 +30,8 @@
 		A6C256EC214157E900267E92 /* LoginViewController+LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */; };
 		A6D7197D2142A68400CF9134 /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7197C2142A68400CF9134 /* WeakRef.swift */; };
 		A6D7197F2142A69300CF9134 /* WeakRefTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7197E2142A69300CF9134 /* WeakRefTest.swift */; };
+		A6D719832142A8F400CF9134 /* WeakRef+AuthenticationViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D719822142A8F400CF9134 /* WeakRef+AuthenticationViewTest.swift */; };
+		A6D719852142A95900CF9134 /* WeakRef+AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D719842142A95900CF9134 /* WeakRef+AuthenticationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+LoginView.swift"; sourceTree = "<group>"; };
 		A6D7197C2142A68400CF9134 /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
 		A6D7197E2142A69300CF9134 /* WeakRefTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefTest.swift; sourceTree = "<group>"; };
+		A6D719822142A8F400CF9134 /* WeakRef+AuthenticationViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeakRef+AuthenticationViewTest.swift"; sourceTree = "<group>"; };
+		A6D719842142A95900CF9134 /* WeakRef+AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeakRef+AuthenticationView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 			children = (
 				A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */,
 				A6B35901214288600083E982 /* UserAuthenticationViewControllerAssembler.swift */,
+				A6D719842142A95900CF9134 /* WeakRef+AuthenticationView.swift */,
 			);
 			path = "User Authentication View Controller Assembler";
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				A6B358FF2142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift */,
+				A6D719822142A8F400CF9134 /* WeakRef+AuthenticationViewTest.swift */,
 			);
 			path = "User Authentication View Controller Assembler";
 			sourceTree = "<group>";
@@ -409,6 +415,7 @@
 				A6D7197D2142A68400CF9134 /* WeakRef.swift in Sources */,
 				9753A11C2140101E00DBC4C8 /* UserAuthenticationPresenter.swift in Sources */,
 				97BEAF7F213E783400AAA342 /* AppDelegate.swift in Sources */,
+				A6D719852142A95900CF9134 /* WeakRef+AuthenticationView.swift in Sources */,
 				9753A112213FD2A300DBC4C8 /* AuthenticationService.swift in Sources */,
 				97BEAFA1213E7FFF00AAA342 /* FakeAuthenticationService.swift in Sources */,
 				974111F021410475000C8B56 /* AuthenticationView.swift in Sources */,
@@ -428,6 +435,7 @@
 				A6A00C7521415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift in Sources */,
 				9753A114213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift in Sources */,
 				97BEAF9F213E7A6300AAA342 /* LoginCredentialsCheckTest.swift in Sources */,
+				A6D719832142A8F400CF9134 /* WeakRef+AuthenticationViewTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

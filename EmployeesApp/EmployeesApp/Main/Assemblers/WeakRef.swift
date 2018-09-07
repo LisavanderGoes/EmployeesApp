@@ -7,7 +7,7 @@ import Foundation
 
 class WeakRef<T: AnyObject> {
     
-    private weak var object: T?
+    private(set) weak var object: T?
     
     init(_ object: T) {
         self.object = object

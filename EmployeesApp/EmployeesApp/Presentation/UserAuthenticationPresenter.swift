@@ -7,14 +7,15 @@ import Foundation
 
 class UserAuthenticationPresenter: UserAuthenticationUseCaseOutput {
     
-    private let loginView : LoginView!
+    private let loginView: AuthenticationView!
     
-    init(loginView: LoginView){
+    init(loginView: AuthenticationView) {
         self.loginView = loginView
     }
     
     func authenticationSucceded() {
         loginView.show(message: "Succes")
+        loginView.showLoadingIndicator()
     }
     
     func authenticationFailed(reason: String) {

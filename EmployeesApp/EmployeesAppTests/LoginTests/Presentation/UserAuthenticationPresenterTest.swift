@@ -12,7 +12,7 @@ class UserAuthenticationPresenterTest : XCTestCase{
     var loginView: AuthenticationViewSpy!
     var sut: UserAuthenticationPresenter!
     
-    override func setUp(){
+    override func setUp() {
         loginView = AuthenticationViewSpy()
         sut = UserAuthenticationPresenter(loginView: loginView)
     }
@@ -22,7 +22,7 @@ class UserAuthenticationPresenterTest : XCTestCase{
         XCTAssertTrue(loginView.showIsCalled)
     }
     
-    func test_authenticationSucceded_showsCorrectMessageOnView(){
+    func test_authenticationSucceded_showsCorrectMessageOnView() {
         sut.authenticationSucceded()
         XCTAssertEqual(loginView.capturedMessage, "Succes")
     }
@@ -37,14 +37,25 @@ class UserAuthenticationPresenterTest : XCTestCase{
         sut.authenticationFailed(reason: failReason)
         XCTAssertEqual(loginView.capturedMessage, failReason)
     }
+    
+    func test_authenticationSucceded_showsLoadingIndicator() {
+        sut.authenticationSucceded()
+        XCTAssertTrue(loginView.showLoadingIndicatorIsCalled)
+    }
 }
 
-class AuthenticationViewSpy : LoginView {
-    var capturedMessage : String!
-    var showIsCalled : Bool = false
+class AuthenticationViewSpy: AuthenticationView {
+    var capturedMessage: String!
+    var showIsCalled: Bool = false
     
     func show(message: String) {
         showIsCalled = true
         capturedMessage = message
+    }
+    
+    var showLoadingIndicatorIsCalled: Bool = false
+
+    func showLoadingIndicator() {
+        showLoadingIndicatorIsCalled = true
     }
 }

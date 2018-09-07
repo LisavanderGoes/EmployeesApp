@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol LoginView {
+protocol AuthenticationView {
     func show(message: String)
-    
+    func showLoadingIndicator()
 }

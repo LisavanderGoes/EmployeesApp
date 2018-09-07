@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		974111F021410475000C8B56 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111EF21410475000C8B56 /* LoginView.swift */; };
+		974111F021410475000C8B56 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111EF21410475000C8B56 /* AuthenticationView.swift */; };
 		974111F3214114C8000C8B56 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111F2214114C8000C8B56 /* LoginCredentials.swift */; };
 		974111F621412809000C8B56 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111F521412809000C8B56 /* Strings.swift */; };
 		974111FA21413AC5000C8B56 /* LoginConnectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111F921413AC5000C8B56 /* LoginConnectorTest.swift */; };
@@ -42,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		974111EF21410475000C8B56 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		974111EF21410475000C8B56 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		974111F2214114C8000C8B56 /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		974111F521412809000C8B56 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		974111F921413AC5000C8B56 /* LoginConnectorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConnectorTest.swift; sourceTree = "<group>"; };
@@ -275,7 +275,7 @@
 		A6C256EE2141591E00267E92 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				974111EF21410475000C8B56 /* LoginView.swift */,
+				974111EF21410475000C8B56 /* AuthenticationView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -392,7 +392,7 @@
 				9753A112213FD2A300DBC4C8 /* AuthenticationService.swift in Sources */,
 				974111FC21413B39000C8B56 /* LoginConnector.swift in Sources */,
 				97BEAFA1213E7FFF00AAA342 /* FakeAuthenticationService.swift in Sources */,
-				974111F021410475000C8B56 /* LoginView.swift in Sources */,
+				974111F021410475000C8B56 /* AuthenticationView.swift in Sources */,
 				9753A110213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

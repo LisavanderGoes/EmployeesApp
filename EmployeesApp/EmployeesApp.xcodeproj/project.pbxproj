@@ -26,6 +26,8 @@
 		97BEAFA1213E7FFF00AAA342 /* FakeAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAFA0213E7FFF00AAA342 /* FakeAuthenticationService.swift */; };
 		A6A00C7321415CCB00B20891 /* AuthenticationServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A00C7221415CCB00B20891 /* AuthenticationServiceSpy.swift */; };
 		A6A00C7521415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A00C7421415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift */; };
+		A6B359002142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B358FF2142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift */; };
+		A6B35902214288600083E982 /* UserAuthenticationViewControllerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B35901214288600083E982 /* UserAuthenticationViewControllerAssembler.swift */; };
 		A6C256EC214157E900267E92 /* LoginViewController+LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		97BEAFA0213E7FFF00AAA342 /* FakeAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthenticationService.swift; sourceTree = "<group>"; };
 		A6A00C7221415CCB00B20891 /* AuthenticationServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceSpy.swift; sourceTree = "<group>"; };
 		A6A00C7421415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationUseCaseOutputSpy.swift; sourceTree = "<group>"; };
+		A6B358FF2142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User AuthenticationViewControllerAssemblerTest.swift"; sourceTree = "<group>"; };
+		A6B35901214288600083E982 /* UserAuthenticationViewControllerAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationViewControllerAssembler.swift; sourceTree = "<group>"; };
 		A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+LoginView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,10 +174,27 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		A6C256E1214156A300267E92 /* Main */ = {
+		A6B358FD214287380083E982 /* User Authentication View Controller Assembler */ = {
 			isa = PBXGroup;
 			children = (
 				A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */,
+				A6B35901214288600083E982 /* UserAuthenticationViewControllerAssembler.swift */,
+			);
+			path = "User Authentication View Controller Assembler";
+			sourceTree = "<group>";
+		};
+		A6B358FE2142875D0083E982 /* User Authentication View Controller Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				A6B358FF2142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift */,
+			);
+			path = "User Authentication View Controller Assembler";
+			sourceTree = "<group>";
+		};
+		A6C256E1214156A300267E92 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A6B358FD214287380083E982 /* User Authentication View Controller Assembler */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -253,6 +274,7 @@
 		A6C256EA2141572C00267E92 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A6B358FE2142875D0083E982 /* User Authentication View Controller Assembler */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -378,6 +400,7 @@
 			files = (
 				974111F3214114C8000C8B56 /* LoginCredentials.swift in Sources */,
 				A6C256EC214157E900267E92 /* LoginViewController+LoginView.swift in Sources */,
+				A6B35902214288600083E982 /* UserAuthenticationViewControllerAssembler.swift in Sources */,
 				9753A116213FDB7B00DBC4C8 /* UserAuthenticationUseCaseOutput.swift in Sources */,
 				974111F621412809000C8B56 /* Strings.swift in Sources */,
 				9771ADC9213EB524003B2CA1 /* LoginViewController.swift in Sources */,
@@ -396,6 +419,7 @@
 			files = (
 				A6A00C7321415CCB00B20891 /* AuthenticationServiceSpy.swift in Sources */,
 				9753A11E2140114000DBC4C8 /* UserAuthenticationPresenterTest.swift in Sources */,
+				A6B359002142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift in Sources */,
 				9771ADC7213EB2C7003B2CA1 /* LoginViewControllerTest.swift in Sources */,
 				A6A00C7521415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift in Sources */,
 				9753A114213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift in Sources */,

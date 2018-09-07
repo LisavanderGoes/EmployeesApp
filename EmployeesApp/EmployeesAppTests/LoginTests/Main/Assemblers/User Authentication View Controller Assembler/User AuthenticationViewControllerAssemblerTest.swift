@@ -28,6 +28,14 @@ class UserAuthenticationViewControllerAssemblerTest: XCTestCase {
         dependencyFactory.returnedViewController?.loginClosure?("", "")
         XCTAssertTrue(dependencyFactory.returnedUseCase?.authenticateUserIsCalled ?? false)
     }
+    
+    func test_assembleUserAuthenticationViewController_presenterWeakRefToViewController() {
+        _ = sut.assembleUserAuthenticationViewController()
+        weak var weakRefferenceToViewController = dependencyFactory.returnedViewController
+        dependencyFactory.returnedViewController = nil
+        XCTAssertNil(weakRefferenceToViewController)
+        XCTFail("something is wrong with this test...")
+    }
 }
 
 import UIKit

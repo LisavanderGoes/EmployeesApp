@@ -15,7 +15,7 @@ class UserAuthenticationViewControllerAssembler {
     
     func assembleUserAuthenticationViewController() -> UIViewController {
         let viewController = dependencyFactory.makeViewController()
-        let presenter = dependencyFactory.makePresenter(view: viewController)
+        let presenter = dependencyFactory.makePresenter(view: WeakRef(viewController))
         let useCase = dependencyFactory.makeUseCase(
             output: presenter
         )

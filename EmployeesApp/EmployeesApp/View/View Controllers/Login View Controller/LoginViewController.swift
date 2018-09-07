@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     @IBAction func loginButtonTapped() {
         let capturedUsername = usernameTextField.text ?? ""
@@ -19,9 +20,17 @@ class LoginViewController: UIViewController {
         loginClosure?(capturedUsername, capturedPassword)
     }
     
+    override func viewDidLoad() {
+        loadingIndicator.isHidden = true
+    }
+    
     var loginClosure: ((String, String) -> Void)?
     
     func show(message: String) {
         messageLabel.text = message
+    }
+    
+    func showLoadingIndicator(){
+        loadingIndicator.isHidden = false
     }
 }

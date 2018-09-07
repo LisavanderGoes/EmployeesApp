@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="EmployeesApp" customModuleProvider="target">
             <connections>
+                <outlet property="loadingIndicator" destination="zS0-RL-FjH" id="jcp-wU-50D"/>
                 <outlet property="loginButton" destination="dRu-ms-DVM" id="RPv-B8-dVu"/>
                 <outlet property="messageLabel" destination="Jxl-da-jUW" id="Ylm-OD-fqI"/>
                 <outlet property="passwordTextField" destination="UeW-HJ-Qh5" id="cnP-Xg-8eH"/>
@@ -60,6 +61,10 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-RL-FjH">
+                    <rect key="frame" x="177" y="350" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

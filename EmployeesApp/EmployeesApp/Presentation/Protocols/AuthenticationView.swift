@@ -10,4 +10,5 @@ protocol AuthenticationView {
     func showLoadingIndicator()
     func hideLoadingIndicator()
     func disableLoginButton()
+    func enableLoginButton()
 }

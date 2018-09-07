@@ -20,5 +20,6 @@ class UserAuthenticationPresenter: UserAuthenticationUseCaseOutput {
     
     func authenticationFailed(reason: String) {
         loginView.show(message: reason)
+        loginView.hideLoadingIndicator()
     }
 }

@@ -28,19 +28,28 @@ class UserAuthenticationPresenterTest : XCTestCase{
     }
     
     func test_authenticationFailed_showsMessageOnView() {
-        sut.authenticationFailed(reason: "")
+        authenticationFailed()
         XCTAssertTrue(loginView.showIsCalled)
     }
     
     func test_authenticationFailed_showsCorrectMessageOnView() {
         let failReason = "You failed!"
-        sut.authenticationFailed(reason: failReason)
+        authenticationFailed(reason: failReason)
         XCTAssertEqual(loginView.capturedMessage, failReason)
     }
     
     func test_authenticationSucceded_hideLoadingIndicator() {
         sut.authenticationSucceded()
         XCTAssertTrue(loginView.hideLoadingIndicatorIsCalled)
+    }
+    
+    func test_authenticationFailed_hideLoadingIndicator() {
+        authenticationFailed()
+        XCTAssertTrue(loginView.hideLoadingIndicatorIsCalled)
+    }
+    
+    func authenticationFailed(reason: String = ""){
+        sut.authenticationFailed(reason: reason)
     }
 }
 

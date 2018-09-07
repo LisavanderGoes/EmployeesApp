@@ -6,24 +6,24 @@
 import Foundation
 
 class UserAuthenticationPresenter: UserAuthenticationUseCaseOutput {
-    func authenticationStarted() {
-        
-    }
     
-    
-    private let loginView: AuthenticationView!
+    private let authenticationView: AuthenticationView!
     
     init(loginView: AuthenticationView) {
-        self.loginView = loginView
+        self.authenticationView = loginView
+    }
+    
+    func authenticationStarted() {
+        authenticationView.showLoadingIndicator()
     }
     
     func authenticationSucceded() {
-        loginView.show(message: "Succes")
-        loginView.hideLoadingIndicator()
+        authenticationView.show(message: "Succes")
+        authenticationView.hideLoadingIndicator()
     }
     
     func authenticationFailed(reason: String) {
-        loginView.show(message: reason)
-        loginView.hideLoadingIndicator()
+        authenticationView.show(message: reason)
+        authenticationView.hideLoadingIndicator()
     }
 }

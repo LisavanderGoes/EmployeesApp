@@ -9,46 +9,55 @@ import XCTest
 
 class UserAuthenticationPresenterTest : XCTestCase{
     
-    var loginView: AuthenticationViewSpy!
+    var authenticationView: AuthenticationViewSpy!
     var sut: UserAuthenticationPresenter!
     
     override func setUp() {
-        loginView = AuthenticationViewSpy()
-        sut = UserAuthenticationPresenter(loginView: loginView)
+        authenticationView = AuthenticationViewSpy()
+        sut = UserAuthenticationPresenter(loginView: authenticationView)
     }
     
+    // MARK: authenticationSucceded related
     func test_authenticationSucceded_showsMessageOnView() {
         sut.authenticationSucceded()
-        XCTAssertTrue(loginView.showIsCalled)
+        XCTAssertTrue(authenticationView.showIsCalled)
     }
     
     func test_authenticationSucceded_showsCorrectMessageOnView() {
         sut.authenticationSucceded()
-        XCTAssertEqual(loginView.capturedMessage, "Succes")
+        XCTAssertEqual(authenticationView.capturedMessage, "Succes")
     }
     
+    func test_authenticationSucceded_hideLoadingIndicator() {
+        sut.authenticationSucceded()
+        XCTAssertTrue(authenticationView.hideLoadingIndicatorIsCalled)
+    }
+
+    // MARK: authenticationFailed related
     func test_authenticationFailed_showsMessageOnView() {
         authenticationFailed()
-        XCTAssertTrue(loginView.showIsCalled)
+        XCTAssertTrue(authenticationView.showIsCalled)
     }
     
     func test_authenticationFailed_showsCorrectMessageOnView() {
         let failReason = "You failed!"
         authenticationFailed(reason: failReason)
-        XCTAssertEqual(loginView.capturedMessage, failReason)
-    }
-    
-    func test_authenticationSucceded_hideLoadingIndicator() {
-        sut.authenticationSucceded()
-        XCTAssertTrue(loginView.hideLoadingIndicatorIsCalled)
+        XCTAssertEqual(authenticationView.capturedMessage, failReason)
     }
     
     func test_authenticationFailed_hideLoadingIndicator() {
         authenticationFailed()
-        XCTAssertTrue(loginView.hideLoadingIndicatorIsCalled)
+        XCTAssertTrue(authenticationView.hideLoadingIndicatorIsCalled)
     }
     
-    func authenticationFailed(reason: String = ""){
+    // MARK: authenticationStarted related
+    func test_authenticationStarted_showLoadingIndicator() {
+        sut.authenticationStarted()
+        XCTAssertTrue(authenticationView.showLoadingIndicatorIsCalled)
+    }
+    
+    // MARK: Helpers
+    func authenticationFailed(reason: String = "") {
         sut.authenticationFailed(reason: reason)
     }
 }
@@ -60,6 +69,12 @@ class AuthenticationViewSpy: AuthenticationView {
     func show(message: String) {
         showIsCalled = true
         capturedMessage = message
+    }
+    
+    var showLoadingIndicatorIsCalled = false
+    
+    func showLoadingIndicator() {
+        showLoadingIndicatorIsCalled = true
     }
     
     var hideLoadingIndicatorIsCalled: Bool = false

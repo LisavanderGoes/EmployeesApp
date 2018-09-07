@@ -7,28 +7,27 @@ import UIKit
 
 class FakeAuthenticationService: AuthenticationService {
     
-    var dataLoginCredentials: [LoginCredentials] = []
-    
     func authenticateUser(
         username: String,
         password: String,
         succeed: @escaping () -> Void,
         failed: @escaping (String) -> Void
     ) -> ServiceTask {
-        
-        var succeeds = 0
-        
-        if !dataLoginCredentials.isEmpty{
-            for loginCredentials in dataLoginCredentials{
-                if (username.elementsEqual(loginCredentials.username) && password.elementsEqual(loginCredentials.password)){succeeds = succeeds + 1}
+        delay(seconds: 1.5, closure: {
+            if username == "lisa" && password == "webiq" {
+                succeed()
+            } else {
+                failed("Oeps...")
             }
-            if succeeds > 0 {succeed()}else{failed(Strings.loginCredentialsCheckFailed)}
-        } else {
-            failed(Strings.dataLoginCredentialsIsEmptyMessage)
-        }
-        
+        })
         return FakeServiceTask()
     }
+}
+
+private func delay(seconds: TimeInterval, closure: @escaping () -> Void) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: {
+        closure()
+    })
 }
 
 class FakeServiceTask: ServiceTask {

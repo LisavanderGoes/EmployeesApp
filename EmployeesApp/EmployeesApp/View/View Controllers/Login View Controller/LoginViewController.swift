@@ -31,6 +31,7 @@ class LoginViewController: UIViewController {
     }
     
     func startAnimationLoadingIndicator() {
+        loadingIndicator.startAnimating()
         loadingIndicator.isHidden = false
     }
     

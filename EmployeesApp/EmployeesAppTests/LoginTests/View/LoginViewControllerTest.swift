@@ -91,4 +91,10 @@ class LoginViewControllerTest: XCTestCase {
         sut.disableLoginButton()
         XCTAssertFalse(sut.loginButton.isEnabled)
     }
+    
+    func test_enableLoginButton_enablesLoginButton() {
+        sut.loginButton.isEnabled = false
+        sut.enableLoginButton()
+        XCTAssertTrue(sut.loginButton.isEnabled)
+    }
 }

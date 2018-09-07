@@ -10,8 +10,6 @@
 		974111F021410475000C8B56 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111EF21410475000C8B56 /* AuthenticationView.swift */; };
 		974111F3214114C8000C8B56 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111F2214114C8000C8B56 /* LoginCredentials.swift */; };
 		974111F621412809000C8B56 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111F521412809000C8B56 /* Strings.swift */; };
-		974111FA21413AC5000C8B56 /* LoginConnectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111F921413AC5000C8B56 /* LoginConnectorTest.swift */; };
-		974111FC21413B39000C8B56 /* LoginConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111FB21413B39000C8B56 /* LoginConnector.swift */; };
 		9753A110213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A10F213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift */; };
 		9753A112213FD2A300DBC4C8 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A111213FD2A300DBC4C8 /* AuthenticationService.swift */; };
 		9753A114213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A113213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift */; };
@@ -45,8 +43,6 @@
 		974111EF21410475000C8B56 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		974111F2214114C8000C8B56 /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		974111F521412809000C8B56 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		974111F921413AC5000C8B56 /* LoginConnectorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConnectorTest.swift; sourceTree = "<group>"; };
-		974111FB21413B39000C8B56 /* LoginConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConnector.swift; sourceTree = "<group>"; };
 		9753A10F213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationUseCase.swift; sourceTree = "<group>"; };
 		9753A111213FD2A300DBC4C8 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		9753A113213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationUseCaseTest.swift; sourceTree = "<group>"; };
@@ -177,7 +173,6 @@
 		A6C256E1214156A300267E92 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				974111FB21413B39000C8B56 /* LoginConnector.swift */,
 				A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */,
 			);
 			path = Main;
@@ -258,7 +253,6 @@
 		A6C256EA2141572C00267E92 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				974111F921413AC5000C8B56 /* LoginConnectorTest.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -390,7 +384,6 @@
 				9753A11C2140101E00DBC4C8 /* UserAuthenticationPresenter.swift in Sources */,
 				97BEAF7F213E783400AAA342 /* AppDelegate.swift in Sources */,
 				9753A112213FD2A300DBC4C8 /* AuthenticationService.swift in Sources */,
-				974111FC21413B39000C8B56 /* LoginConnector.swift in Sources */,
 				97BEAFA1213E7FFF00AAA342 /* FakeAuthenticationService.swift in Sources */,
 				974111F021410475000C8B56 /* AuthenticationView.swift in Sources */,
 				9753A110213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift in Sources */,
@@ -405,7 +398,6 @@
 				9753A11E2140114000DBC4C8 /* UserAuthenticationPresenterTest.swift in Sources */,
 				9771ADC7213EB2C7003B2CA1 /* LoginViewControllerTest.swift in Sources */,
 				A6A00C7521415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift in Sources */,
-				974111FA21413AC5000C8B56 /* LoginConnectorTest.swift in Sources */,
 				9753A114213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift in Sources */,
 				97BEAF9F213E7A6300AAA342 /* LoginCredentialsCheckTest.swift in Sources */,
 			);

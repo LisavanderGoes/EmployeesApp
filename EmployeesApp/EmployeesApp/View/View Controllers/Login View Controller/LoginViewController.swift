@@ -41,4 +41,8 @@ class LoginViewController: UIViewController {
     func disableLoginButton() {
         loginButton.isEnabled = false
     }
+    
+    func enableLoginButton() {
+        loginButton.isEnabled = true
+    }
 }

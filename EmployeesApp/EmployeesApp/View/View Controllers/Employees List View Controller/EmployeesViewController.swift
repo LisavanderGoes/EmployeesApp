@@ -6,20 +6,26 @@
 import Foundation
 import UIKit
 
+class EmployeeTableViewCell: UITableViewCell {
+    @IBOutlet var nameLabel: UITableViewCell!
+}
+
 class EmployeesViewController: UIViewController, UITableViewDataSource {
     
-    @IBOutlet weak var employeesTableView: UITableView!
-    var employeesList: [String]?
-    private var tableViewCell: UITableViewCell!
+    @IBOutlet weak var tableView: UITableView!
+    private var employeesList = [String]()
+    
+    convenience init(employeesList: [String]) {
+        self.init()
+        self.employeesList = employeesList
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if employeesList != nil {
-            return employeesList!.count
-        }
-        return 0
+        return employeesList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableViewCell
+
+        return EmployeeTableViewCell()
     }
 }

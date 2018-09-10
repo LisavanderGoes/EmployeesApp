@@ -10,41 +10,28 @@ import XCTest
 class EmployeesViewControllerTest: XCTestCase {
     
     var sut: EmployeesViewController!
-    var viewControllerSpy: EmployeesViewControllerSpy!
-    
-    override func setUp() {
-        sut = EmployeesViewController()
-        _ = sut.view
-        
-        viewControllerSpy = EmployeesViewControllerSpy()
-    }
     
     func test_viewDidLoad_connectEmployeesTableView() {
-        XCTAssertNotNil(sut.employeesTableView)
+        XCTAssertNotNil(makeSUT().tableView)
     }
     
     func test_tableView_numberOfRowsInSection() {
-        let numberOfRowsInSection = sut.tableView(sut.employeesTableView, numberOfRowsInSection: 0)
-        XCTAssertEqual(numberOfRowsInSection, 0)
+        XCTAssertEqual(makeSUT().tableView.numberOfRows(inSection: 0), 0)
+        XCTAssertEqual(makeSUT(["E1"]).tableView.numberOfRows(inSection: 0), 1)
+        XCTAssertEqual(makeSUT(["E1", "E2"]).tableView.numberOfRows(inSection: 0), 2)
     }
     
-    func test_tableView_numberOfRowsInSection_withOneEmployee_returnOne() {
-        
-        let employeesList = ["One employee"]
-        
-        sut.employeesList = employeesList
-        
-        let numberOfRowsInSection = sut.tableView(sut.employeesTableView, numberOfRowsInSection: 0)
-        XCTAssertEqual(numberOfRowsInSection, employeesList.count)
-    }
+//    func test_tableView_cellForAt_() {
+//        let cell = sut.employeesTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? EmployeeTableViewCell
+//
+//        XCTAssertNotNil(cell)
+//    }
     
-    func test_tableView_numberOfRowsInSection_withTwoEmployee_returnTwo() {
-        
-        let employeesList = ["One employee", "Another employee"]
-        
-        sut.employeesList = employeesList
-        
-        let numberOfRowsInSection = sut.tableView(sut.employeesTableView, numberOfRowsInSection: 0)
-        XCTAssertEqual(numberOfRowsInSection, employeesList.count)
+    //MARK: Helpers
+    
+    func makeSUT(_ list: [String] = []) -> EmployeesViewController {
+        sut = EmployeesViewController(employeesList: list)
+        _ = sut.view
+        return sut
     }
 }

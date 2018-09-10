@@ -38,17 +38,13 @@ class EmployeesViewControllerTest: XCTestCase {
         XCTAssertEqual(numberOfRowsInSection, employeesList.count)
     }
     
-}
-
-class EmployeesViewControllerSpy: EmployeesViewController {
-    
-    var capturedNumberOfRowsInSection: Int?
-    var numberOfRowsInSectionIsCalled = false
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        numberOfRowsInSectionIsCalled = true
-        capturedNumberOfRowsInSection = super.tableView(tableView, numberOfRowsInSection: section)
-        return capturedNumberOfRowsInSection!
+    func test_tableView_numberOfRowsInSection_withTwoEmployee_returnTwo() {
+        
+        let employeesList = ["One employee", "Another employee"]
+        
+        sut.employeesList = employeesList
+        
+        let numberOfRowsInSection = sut.tableView(sut.employeesTableView, numberOfRowsInSection: 0)
+        XCTAssertEqual(numberOfRowsInSection, employeesList.count)
     }
-    
 }

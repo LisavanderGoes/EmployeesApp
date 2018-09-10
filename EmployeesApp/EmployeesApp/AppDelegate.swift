@@ -1,7 +1,4 @@
 //
-//  AppDelegate.swift
-//  EmployeesApp
-//
 //  Created by WebIQ Stagiaire on 04-09-18.
 //  Copyright © 2018 Lisa van der Goes. All rights reserved.
 //
@@ -21,4 +18,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

@@ -7,7 +7,7 @@ import Foundation
 import UIKit
 
 class EmployeeTableViewCell: UITableViewCell {
-    @IBOutlet var nameLabel: UITableViewCell!
+    @IBOutlet weak var nameLabel: UILabel!
 }
 
 class EmployeesViewController: UIViewController, UITableViewDataSource {
@@ -25,7 +25,8 @@ class EmployeesViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        return EmployeeTableViewCell()
+        let cell = UITableViewCell()
+        cell.textLabel?.text = employeesList[indexPath.row]
+        return cell
     }
 }

@@ -7,5 +7,7 @@ import Foundation
 
 
 protocol PresentableEmployee {
-    
+    var name: String { get }
+    var occupation: String { get }
+    var emailAddress: String { get }
 }

@@ -8,13 +8,13 @@ import UIKit
 
 class EmployeeListLayoutCellBuilderSpy: EmployeeListLayout.CellBuilder {
     
-    var returnedCell: UITableViewCell!
+    var returnedCell: EmployeeCell!
     var capturedEmployee: PresentableEmployee?
     var capturedTableView: UITableView?
     
     override func makeCell(
         for employee: PresentableEmployee,
-        for tableView: UITableView) -> UITableViewCell {
+        for tableView: UITableView) -> EmployeeCell {
         returnedCell = super.makeCell(
             for: employee,
             for: tableView

@@ -10,8 +10,14 @@ extension EmployeeListLayout {
         func makeCell(
             for employee: PresentableEmployee,
             for tableView: UITableView
-        ) -> UITableViewCell {
-            return UITableViewCell()
+        ) -> EmployeeCell {
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: "EmployeeCell"
+            ) as! EmployeeCell
+            cell.set(name: employee.name)
+            cell.set(occupation: employee.occupation)
+            cell.set(emailAddress: employee.emailAddress)
+            return cell
         }
     }
 }

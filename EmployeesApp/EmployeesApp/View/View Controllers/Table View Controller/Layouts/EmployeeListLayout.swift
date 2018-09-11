@@ -17,6 +17,7 @@ class EmployeeListLayout: NSObject, TableViewLayout, UITableViewDataSource {
     
     func configure(_ tableView: UITableView) {
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "EmployeeCell", bundle: Bundle.main), forCellReuseIdentifier: "EmployeeCell")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

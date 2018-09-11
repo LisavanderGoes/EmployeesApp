@@ -46,6 +46,8 @@
 		A6B8DB5B2147EB3400941BA2 /* EmployeeCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB5A2147EB3400941BA2 /* EmployeeCellTest.swift */; };
 		A6B8DB5E2147EBF200941BA2 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB5D2147EBF200941BA2 /* EmployeeCell.swift */; };
 		A6B8DB602147EC6500941BA2 /* EmployeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B8DB5F2147EC6500941BA2 /* EmployeeCell.xib */; };
+		A6B8DB692147F4CD00941BA2 /* EmployeeListLayoutCellBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB682147F4CD00941BA2 /* EmployeeListLayoutCellBuilderTest.swift */; };
+		A6B8DB6B2147F74500941BA2 /* PresentableEmployeeSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB6A2147F74500941BA2 /* PresentableEmployeeSpy.swift */; };
 		A6C256EC214157E900267E92 /* LoginViewController+LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */; };
 		A6D7197D2142A68400CF9134 /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7197C2142A68400CF9134 /* WeakRef.swift */; };
 		A6D7197F2142A69300CF9134 /* WeakRefTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7197E2142A69300CF9134 /* WeakRefTest.swift */; };
@@ -107,6 +109,8 @@
 		A6B8DB5A2147EB3400941BA2 /* EmployeeCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCellTest.swift; sourceTree = "<group>"; };
 		A6B8DB5D2147EBF200941BA2 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 		A6B8DB5F2147EC6500941BA2 /* EmployeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeCell.xib; sourceTree = "<group>"; };
+		A6B8DB682147F4CD00941BA2 /* EmployeeListLayoutCellBuilderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListLayoutCellBuilderTest.swift; sourceTree = "<group>"; };
+		A6B8DB6A2147F74500941BA2 /* PresentableEmployeeSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableEmployeeSpy.swift; sourceTree = "<group>"; };
 		A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+LoginView.swift"; sourceTree = "<group>"; };
 		A6D7197C2142A68400CF9134 /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
 		A6D7197E2142A69300CF9134 /* WeakRefTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefTest.swift; sourceTree = "<group>"; };
@@ -302,6 +306,7 @@
 			children = (
 				A6B8DB472147CDF900941BA2 /* Helpers */,
 				A6B8DB442147BEA600941BA2 /* EmployeeListLayoutTest.swift */,
+				A6B8DB682147F4CD00941BA2 /* EmployeeListLayoutCellBuilderTest.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				A6B8DB482147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift */,
+				A6B8DB6A2147F74500941BA2 /* PresentableEmployeeSpy.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -627,9 +633,11 @@
 				A6A00C7521415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift in Sources */,
 				A6B8DB532147E92C00941BA2 /* AuthenticationViewSpy.swift in Sources */,
 				A6B8DB562147E97E00941BA2 /* UserAuthenticationViewControllerAssemblerDependencyFactorySpy.swift in Sources */,
+				A6B8DB6B2147F74500941BA2 /* PresentableEmployeeSpy.swift in Sources */,
 				97DE0CAA2146511800413125 /* EmployeesViewControllerTest.swift in Sources */,
 				A6B8DB5B2147EB3400941BA2 /* EmployeeCellTest.swift in Sources */,
 				9753A114213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift in Sources */,
+				A6B8DB692147F4CD00941BA2 /* EmployeeListLayoutCellBuilderTest.swift in Sources */,
 				A6D719832142A8F400CF9134 /* WeakRef+AuthenticationViewTest.swift in Sources */,
 				A6B8DB372147B56600941BA2 /* TableViewControllerTest.swift in Sources */,
 			);

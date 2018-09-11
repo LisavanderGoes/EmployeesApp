@@ -34,6 +34,9 @@
 		A6B8DB392147B67100941BA2 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B8DB382147B67100941BA2 /* TableViewController.xib */; };
 		A6B8DB3C2147B7D200941BA2 /* TableViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB3B2147B7D200941BA2 /* TableViewLayout.swift */; };
 		A6B8DB3F2147BC2C00941BA2 /* TableViewLayoutSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB3E2147BC2C00941BA2 /* TableViewLayoutSpy.swift */; };
+		A6B8DB432147BE7B00941BA2 /* EmployeeListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB422147BE7B00941BA2 /* EmployeeListLayout.swift */; };
+		A6B8DB452147BEA600941BA2 /* EmployeeListLayoutTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB442147BEA600941BA2 /* EmployeeListLayoutTest.swift */; };
+		A6B8DB492147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB482147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift */; };
 		A6C256EC214157E900267E92 /* LoginViewController+LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */; };
 		A6D7197D2142A68400CF9134 /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7197C2142A68400CF9134 /* WeakRef.swift */; };
 		A6D7197F2142A69300CF9134 /* WeakRefTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7197E2142A69300CF9134 /* WeakRefTest.swift */; };
@@ -83,6 +86,9 @@
 		A6B8DB382147B67100941BA2 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		A6B8DB3B2147B7D200941BA2 /* TableViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewLayout.swift; sourceTree = "<group>"; };
 		A6B8DB3E2147BC2C00941BA2 /* TableViewLayoutSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewLayoutSpy.swift; sourceTree = "<group>"; };
+		A6B8DB422147BE7B00941BA2 /* EmployeeListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListLayout.swift; sourceTree = "<group>"; };
+		A6B8DB442147BEA600941BA2 /* EmployeeListLayoutTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListLayoutTest.swift; sourceTree = "<group>"; };
+		A6B8DB482147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListLayoutCellBuilderSpy.swift; sourceTree = "<group>"; };
 		A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+LoginView.swift"; sourceTree = "<group>"; };
 		A6D7197C2142A68400CF9134 /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
 		A6D7197E2142A69300CF9134 /* WeakRefTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefTest.swift; sourceTree = "<group>"; };
@@ -217,6 +223,7 @@
 		A6B8DB322147B47600941BA2 /* Table View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A6B8DB412147BE5500941BA2 /* Layouts */,
 				A6B8DB3A2147B7B100941BA2 /* Protocols */,
 				A6B8DB332147B4A600941BA2 /* TableViewController.swift */,
 				A6B8DB382147B67100941BA2 /* TableViewController.xib */,
@@ -227,6 +234,7 @@
 		A6B8DB352147B54100941BA2 /* Table View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A6B8DB462147CDF200941BA2 /* Layouts */,
 				A6B8DB3D2147BC1000941BA2 /* Helpers */,
 				A6B8DB362147B56600941BA2 /* TableViewControllerTest.swift */,
 			);
@@ -255,6 +263,31 @@
 				9771ADC6213EB2C7003B2CA1 /* LoginViewControllerTest.swift */,
 			);
 			path = "Login View Controller";
+			sourceTree = "<group>";
+		};
+		A6B8DB412147BE5500941BA2 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				A6B8DB422147BE7B00941BA2 /* EmployeeListLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		A6B8DB462147CDF200941BA2 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				A6B8DB472147CDF900941BA2 /* Helpers */,
+				A6B8DB442147BEA600941BA2 /* EmployeeListLayoutTest.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		A6B8DB472147CDF900941BA2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A6B8DB482147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A6C256E1214156A300267E92 /* Main */ = {
@@ -500,6 +533,7 @@
 				9753A112213FD2A300DBC4C8 /* AuthenticationService.swift in Sources */,
 				97BEAFA1213E7FFF00AAA342 /* FakeAuthenticationService.swift in Sources */,
 				974111F021410475000C8B56 /* AuthenticationView.swift in Sources */,
+				A6B8DB432147BE7B00941BA2 /* EmployeeListLayout.swift in Sources */,
 				9753A110213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift in Sources */,
 				97DE0CAF214652FD00413125 /* EmployeesViewController.swift in Sources */,
 			);
@@ -511,9 +545,11 @@
 			files = (
 				A6B8DB3F2147BC2C00941BA2 /* TableViewLayoutSpy.swift in Sources */,
 				A6A00C7321415CCB00B20891 /* AuthenticationServiceSpy.swift in Sources */,
+				A6B8DB492147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift in Sources */,
 				A6D7197F2142A69300CF9134 /* WeakRefTest.swift in Sources */,
 				9753A11E2140114000DBC4C8 /* UserAuthenticationPresenterTest.swift in Sources */,
 				A6B359002142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift in Sources */,
+				A6B8DB452147BEA600941BA2 /* EmployeeListLayoutTest.swift in Sources */,
 				9771ADC7213EB2C7003B2CA1 /* LoginViewControllerTest.swift in Sources */,
 				A6A00C7521415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift in Sources */,
 				97DE0CAA2146511800413125 /* EmployeesViewControllerTest.swift in Sources */,

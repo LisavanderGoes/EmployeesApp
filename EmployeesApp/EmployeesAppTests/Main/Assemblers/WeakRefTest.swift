@@ -10,7 +10,7 @@ class WeakRefTest: XCTestCase {
     
     func test_holdsWeakReferenceToObject() {
         var object: Object? = Object()
-        let sut = WeakRef(object!)
+        _ = WeakRef(object!)
         weak var weakReferenceToObject = object
         XCTAssertNotNil(weakReferenceToObject)
         object = nil

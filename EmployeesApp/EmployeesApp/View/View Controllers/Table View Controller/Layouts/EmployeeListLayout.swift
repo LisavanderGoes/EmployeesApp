@@ -7,10 +7,10 @@ import UIKit
 
 class EmployeeListLayout: NSObject, TableViewLayout, UITableViewDataSource {
     
-    private var employeeList: [String]!
+    private var employeeList: [PresentableEmployee]!
     private var cellbuilder: CellBuilder!
     
-    init(employeeList: [String], cellBuilder: CellBuilder) {
+    init(employeeList: [PresentableEmployee], cellBuilder: CellBuilder) {
         self.employeeList = employeeList
         self.cellbuilder = cellBuilder
     }

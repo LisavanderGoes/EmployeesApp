@@ -25,7 +25,7 @@ class EmployeeListLayoutTest: XCTestCase {
     }
     
     func test_tableView_numberOfRowsInSection() {
-        let employeeList = [""]
+        let employeeList = [EmployeeSpy()]
         let sut = makeSUT(list: employeeList)
         
         sut.configure(tableView)
@@ -41,12 +41,18 @@ class EmployeeListLayoutTest: XCTestCase {
         XCTAssertTrue(cellBuilder.returnedCell === returndedCell)
     }
     
+    //MARK: Helpers
+    
     private func makeSUT(
-        list: [String] = [""]
+        list: [PresentableEmployee] = [EmployeeSpy()]
     ) -> EmployeeListLayout {
         return EmployeeListLayout(
             employeeList: list,
             cellBuilder: cellBuilder
         )
     }
+}
+
+struct EmployeeSpy: PresentableEmployee {
+    
 }

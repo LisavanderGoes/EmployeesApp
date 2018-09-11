@@ -37,6 +37,7 @@
 		A6B8DB432147BE7B00941BA2 /* EmployeeListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB422147BE7B00941BA2 /* EmployeeListLayout.swift */; };
 		A6B8DB452147BEA600941BA2 /* EmployeeListLayoutTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB442147BEA600941BA2 /* EmployeeListLayoutTest.swift */; };
 		A6B8DB492147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB482147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift */; };
+		A6B8DB4C2147CFE900941BA2 /* PresentableEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB4B2147CFE900941BA2 /* PresentableEmployee.swift */; };
 		A6C256EC214157E900267E92 /* LoginViewController+LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */; };
 		A6D7197D2142A68400CF9134 /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7197C2142A68400CF9134 /* WeakRef.swift */; };
 		A6D7197F2142A69300CF9134 /* WeakRefTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7197E2142A69300CF9134 /* WeakRefTest.swift */; };
@@ -89,6 +90,7 @@
 		A6B8DB422147BE7B00941BA2 /* EmployeeListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListLayout.swift; sourceTree = "<group>"; };
 		A6B8DB442147BEA600941BA2 /* EmployeeListLayoutTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListLayoutTest.swift; sourceTree = "<group>"; };
 		A6B8DB482147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListLayoutCellBuilderSpy.swift; sourceTree = "<group>"; };
+		A6B8DB4B2147CFE900941BA2 /* PresentableEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableEmployee.swift; sourceTree = "<group>"; };
 		A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+LoginView.swift"; sourceTree = "<group>"; };
 		A6D7197C2142A68400CF9134 /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
 		A6D7197E2142A69300CF9134 /* WeakRefTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefTest.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 		A6B8DB412147BE5500941BA2 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				A6B8DB4A2147CFD700941BA2 /* Protocols */,
 				A6B8DB422147BE7B00941BA2 /* EmployeeListLayout.swift */,
 			);
 			path = Layouts;
@@ -288,6 +291,14 @@
 				A6B8DB482147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A6B8DB4A2147CFD700941BA2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A6B8DB4B2147CFE900941BA2 /* PresentableEmployee.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		A6C256E1214156A300267E92 /* Main */ = {
@@ -522,6 +533,7 @@
 			files = (
 				A6C256EC214157E900267E92 /* LoginViewController+LoginView.swift in Sources */,
 				A6B8DB342147B4A600941BA2 /* TableViewController.swift in Sources */,
+				A6B8DB4C2147CFE900941BA2 /* PresentableEmployee.swift in Sources */,
 				A6B35902214288600083E982 /* UserAuthenticationViewControllerAssembler.swift in Sources */,
 				9753A116213FDB7B00DBC4C8 /* UserAuthenticationUseCaseOutput.swift in Sources */,
 				9771ADC9213EB524003B2CA1 /* LoginViewController.swift in Sources */,

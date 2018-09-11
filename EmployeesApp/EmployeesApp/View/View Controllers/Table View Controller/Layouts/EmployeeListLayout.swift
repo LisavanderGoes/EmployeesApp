@@ -5,18 +5,21 @@
 
 import UIKit
 
-class EmployeeListLayout: NSObject, TableViewLayout, UITableViewDataSource {
+class EmployeeListLayout: NSObject, TableViewLayout, UITableViewDataSource, UITableViewDelegate {
     
     private var employeeList: [PresentableEmployee]!
     private var cellbuilder: CellBuilder!
+    private var output: EmployeeListLayoutOutput!
     
-    init(employeeList: [PresentableEmployee], cellBuilder: CellBuilder) {
+    init(employeeList: [PresentableEmployee], cellBuilder: CellBuilder, output: EmployeeListLayoutOutput) {
         self.employeeList = employeeList
         self.cellbuilder = cellBuilder
+        self.output = output
     }
     
     func configure(_ tableView: UITableView) {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(UINib(nibName: "EmployeeCell", bundle: Bundle.main), forCellReuseIdentifier: "EmployeeCell")
     }
     
@@ -30,4 +33,14 @@ class EmployeeListLayout: NSObject, TableViewLayout, UITableViewDataSource {
             for: tableView
         )
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let employee = employeeList[0]
+        
+        output.didSelectRow(employee: employee)
+    }
+}
+
+protocol EmployeeListLayoutOutput {
+    func didSelectRow(employee: PresentableEmployee) -> Void
 }

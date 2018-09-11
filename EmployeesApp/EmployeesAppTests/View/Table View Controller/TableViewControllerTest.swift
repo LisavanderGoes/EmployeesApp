@@ -3,11 +3,10 @@
 //  Copyright © 2018 Lisa van der Goes. All rights reserved.
 //
 
-import Foundation
 import XCTest
 @testable import EmployeesApp
 
-class TableViewControllerTest: XCTestCase{
+class TableViewControllerTest: XCTestCase {
     
     var sut: TableViewController!
     var tableViewLayoutSpy: TableViewLayoutSpy!
@@ -29,5 +28,4 @@ class TableViewControllerTest: XCTestCase{
     func test_viewDidLoad_capturedTableView() {
         XCTAssertEqual(tableViewLayoutSpy.capturedTableView, sut.tableView)
     }
-    
 }

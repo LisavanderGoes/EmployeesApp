@@ -14,5 +14,4 @@ class TableViewLayoutSpy: TableViewLayout{
         configureIsCalled = true
         capturedTableView = tableView
     }
-    
 }

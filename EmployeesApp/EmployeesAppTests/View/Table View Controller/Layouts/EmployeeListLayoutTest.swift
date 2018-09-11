@@ -25,7 +25,7 @@ class EmployeeListLayoutTest: XCTestCase {
     }
     
     func test_tableView_numberOfRowsInSection() {
-        let employeeList = [EmployeeSpy()]
+        let employeeList = [PresentableEmployeeSpy()]
         let sut = makeSUT(list: employeeList)
         
         sut.configure(tableView)
@@ -41,10 +41,28 @@ class EmployeeListLayoutTest: XCTestCase {
         XCTAssertTrue(cellBuilder.returnedCell === returndedCell)
     }
     
-    //MARK: Helpers
+    func test_tableView_cellFromRowAt_passesRightEmployeeToCellBuilder() {
+        let employees = [PresentableEmployeeSpy(), PresentableEmployeeSpy()]
+        let sut = makeSUT(list: employees)
+        
+        employees.enumerated().forEach { (index, employee) in
+            _ = sut.tableView(UITableView(), cellForRowAt: IndexPath(row: index, section: 0))
+            XCTAssertTrue(
+                cellBuilder.capturedEmployee as! PresentableEmployeeSpy === employee,
+                "Failed for index: \(index)"
+            )
+        }
+    }
     
+    func test_tableView_cellForRow_passesRightTableViewToCellBuilder() {
+        let sut = makeSUT()
+        _ = sut.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: 0))
+        XCTAssertTrue(tableView === cellBuilder.capturedTableView)
+    }
+    
+    //MARK: Helpers
     private func makeSUT(
-        list: [PresentableEmployee] = [EmployeeSpy()]
+        list: [PresentableEmployee] = [PresentableEmployeeSpy()]
     ) -> EmployeeListLayout {
         return EmployeeListLayout(
             employeeList: list,
@@ -53,6 +71,4 @@ class EmployeeListLayoutTest: XCTestCase {
     }
 }
 
-struct EmployeeSpy: PresentableEmployee {
-    
-}
+class PresentableEmployeeSpy: PresentableEmployee {}

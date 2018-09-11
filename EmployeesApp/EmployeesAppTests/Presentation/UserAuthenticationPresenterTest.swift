@@ -1,9 +1,8 @@
-
+//
 //  Created by WebIQ Stagiaire on 05-09-18.
 //  Copyright © 2018 Lisa van der Goes. All rights reserved.
 //
 
-import Foundation
 import XCTest
 @testable import EmployeesApp
 
@@ -69,40 +68,5 @@ class UserAuthenticationPresenterTest : XCTestCase{
     // MARK: Helpers
     func authenticationFailed(reason: String = "") {
         sut.authenticationFailed(reason: reason)
-    }
-}
-
-class AuthenticationViewSpy: AuthenticationView {
- 
-    var capturedMessage: String!
-    var showIsCalled = false
-    
-    func show(message: String) {
-        showIsCalled = true
-        capturedMessage = message
-    }
-    
-    var startAnimationIndicatorIsCalled = false
-    
-    func startAnimationLoadingIndicator() {
-        startAnimationIndicatorIsCalled = true
-    }
-    
-    var stopAnimationIndicatorIsCalled = false
-
-    func stopAnimationLoadingIndicator() {
-        stopAnimationIndicatorIsCalled = true
-    }
-    
-    var disableLoginButtonIsCalled = false
-    
-    func disableLoginButton() {
-        disableLoginButtonIsCalled = true
-    }
-    
-    var enableLoginButtonIsCalled = false
-    
-    func enableLoginButton() {
-        enableLoginButtonIsCalled = true
     }
 }

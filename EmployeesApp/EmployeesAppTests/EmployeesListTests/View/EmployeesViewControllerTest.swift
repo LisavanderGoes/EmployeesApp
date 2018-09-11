@@ -3,7 +3,6 @@
 //  Copyright © 2018 Lisa van der Goes. All rights reserved.
 //
 
-import Foundation
 import XCTest
 @testable import EmployeesApp
 

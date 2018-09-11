@@ -24,14 +24,9 @@ class EmployeeListLayout: NSObject, TableViewLayout, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return cellbuilder.makeCell()
-    }
-}
-
-extension EmployeeListLayout {
-    class CellBuilder {
-        func makeCell() -> UITableViewCell {
-            return UITableViewCell()
-        }
+        return cellbuilder.makeCell(
+            for: employeeList[indexPath.row],
+            for: tableView
+        )
     }
 }

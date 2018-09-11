@@ -23,36 +23,3 @@ class UserAuthenticationViewControllerAssembler {
         return viewController
     }
 }
-
-extension UserAuthenticationViewControllerAssembler {
-    
-    class DependencyFactory {
-    
-        private let service: AuthenticationService
-        
-        init(service: AuthenticationService) {
-            self.service = service
-        }
-        
-        func makeViewController() -> LoginViewController {
-            return LoginViewController()
-        }
-        
-        func makeUseCase(
-            output: UserAuthenticationPresenter
-        ) -> UserAuthenticationUseCase {
-            return UserAuthenticationUseCase(
-                service: service,
-                output: output
-            )
-        }
-        
-        func makePresenter(
-            view: AuthenticationView
-        ) -> UserAuthenticationPresenter {
-            return UserAuthenticationPresenter(
-                loginView: view
-            )
-        }
-    }
-}

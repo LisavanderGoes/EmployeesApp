@@ -43,6 +43,9 @@
 		A6B8DB532147E92C00941BA2 /* AuthenticationViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB522147E92C00941BA2 /* AuthenticationViewSpy.swift */; };
 		A6B8DB562147E97E00941BA2 /* UserAuthenticationViewControllerAssemblerDependencyFactorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB552147E97E00941BA2 /* UserAuthenticationViewControllerAssemblerDependencyFactorySpy.swift */; };
 		A6B8DB582147E9B000941BA2 /* UserAuthenticationUseCaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB572147E9B000941BA2 /* UserAuthenticationUseCaseSpy.swift */; };
+		A6B8DB5B2147EB3400941BA2 /* EmployeeCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB5A2147EB3400941BA2 /* EmployeeCellTest.swift */; };
+		A6B8DB5E2147EBF200941BA2 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B8DB5D2147EBF200941BA2 /* EmployeeCell.swift */; };
+		A6B8DB602147EC6500941BA2 /* EmployeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6B8DB5F2147EC6500941BA2 /* EmployeeCell.xib */; };
 		A6C256EC214157E900267E92 /* LoginViewController+LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */; };
 		A6D7197D2142A68400CF9134 /* WeakRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7197C2142A68400CF9134 /* WeakRef.swift */; };
 		A6D7197F2142A69300CF9134 /* WeakRefTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7197E2142A69300CF9134 /* WeakRefTest.swift */; };
@@ -101,6 +104,9 @@
 		A6B8DB522147E92C00941BA2 /* AuthenticationViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewSpy.swift; sourceTree = "<group>"; };
 		A6B8DB552147E97E00941BA2 /* UserAuthenticationViewControllerAssemblerDependencyFactorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationViewControllerAssemblerDependencyFactorySpy.swift; sourceTree = "<group>"; };
 		A6B8DB572147E9B000941BA2 /* UserAuthenticationUseCaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationUseCaseSpy.swift; sourceTree = "<group>"; };
+		A6B8DB5A2147EB3400941BA2 /* EmployeeCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCellTest.swift; sourceTree = "<group>"; };
+		A6B8DB5D2147EBF200941BA2 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
+		A6B8DB5F2147EC6500941BA2 /* EmployeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeCell.xib; sourceTree = "<group>"; };
 		A6C256EB214157E900267E92 /* LoginViewController+LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+LoginView.swift"; sourceTree = "<group>"; };
 		A6D7197C2142A68400CF9134 /* WeakRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRef.swift; sourceTree = "<group>"; };
 		A6D7197E2142A69300CF9134 /* WeakRefTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefTest.swift; sourceTree = "<group>"; };
@@ -237,6 +243,7 @@
 		A6B8DB322147B47600941BA2 /* Table View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A6B8DB5C2147EBDB00941BA2 /* Cells */,
 				A6B8DB412147BE5500941BA2 /* Layouts */,
 				A6B8DB3A2147B7B100941BA2 /* Protocols */,
 				A6B8DB332147B4A600941BA2 /* TableViewController.swift */,
@@ -248,6 +255,7 @@
 		A6B8DB352147B54100941BA2 /* Table View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A6B8DB592147EB0A00941BA2 /* Cells */,
 				A6B8DB462147CDF200941BA2 /* Layouts */,
 				A6B8DB3D2147BC1000941BA2 /* Helpers */,
 				A6B8DB362147B56600941BA2 /* TableViewControllerTest.swift */,
@@ -329,6 +337,23 @@
 				A6B8DB572147E9B000941BA2 /* UserAuthenticationUseCaseSpy.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A6B8DB592147EB0A00941BA2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A6B8DB5A2147EB3400941BA2 /* EmployeeCellTest.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A6B8DB5C2147EBDB00941BA2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A6B8DB5D2147EBF200941BA2 /* EmployeeCell.swift */,
+				A6B8DB5F2147EC6500941BA2 /* EmployeeCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		A6C256E1214156A300267E92 /* Main */ = {
@@ -540,6 +565,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97BEAF89213E783500AAA342 /* LaunchScreen.storyboard in Resources */,
+				A6B8DB602147EC6500941BA2 /* EmployeeCell.xib in Resources */,
 				97DE0CB72146AC9100413125 /* EmployeeTableViewCell.xib in Resources */,
 				97BEAF86213E783500AAA342 /* Assets.xcassets in Resources */,
 				A6B8DB392147B67100941BA2 /* TableViewController.xib in Resources */,
@@ -571,6 +597,7 @@
 				A6D7197D2142A68400CF9134 /* WeakRef.swift in Sources */,
 				9753A11C2140101E00DBC4C8 /* UserAuthenticationPresenter.swift in Sources */,
 				97BEAF7F213E783400AAA342 /* AppDelegate.swift in Sources */,
+				A6B8DB5E2147EBF200941BA2 /* EmployeeCell.swift in Sources */,
 				A6B8DB3C2147B7D200941BA2 /* TableViewLayout.swift in Sources */,
 				A6D719852142A95900CF9134 /* WeakRef+AuthenticationView.swift in Sources */,
 				9753A112213FD2A300DBC4C8 /* AuthenticationService.swift in Sources */,
@@ -601,6 +628,7 @@
 				A6B8DB532147E92C00941BA2 /* AuthenticationViewSpy.swift in Sources */,
 				A6B8DB562147E97E00941BA2 /* UserAuthenticationViewControllerAssemblerDependencyFactorySpy.swift in Sources */,
 				97DE0CAA2146511800413125 /* EmployeesViewControllerTest.swift in Sources */,
+				A6B8DB5B2147EB3400941BA2 /* EmployeeCellTest.swift in Sources */,
 				9753A114213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift in Sources */,
 				A6D719832142A8F400CF9134 /* WeakRef+AuthenticationViewTest.swift in Sources */,
 				A6B8DB372147B56600941BA2 /* TableViewControllerTest.swift in Sources */,

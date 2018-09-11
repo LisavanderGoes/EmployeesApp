@@ -21,7 +21,6 @@
 		97BEAF86213E783500AAA342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97BEAF85213E783500AAA342 /* Assets.xcassets */; };
 		97BEAF89213E783500AAA342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BEAF87213E783500AAA342 /* LaunchScreen.storyboard */; };
 		97BEAFA1213E7FFF00AAA342 /* FakeAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAFA0213E7FFF00AAA342 /* FakeAuthenticationService.swift */; };
-		97DE0CAA2146511800413125 /* EmployeesViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DE0CA92146511800413125 /* EmployeesViewControllerTest.swift */; };
 		A6A00C7321415CCB00B20891 /* AuthenticationServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A00C7221415CCB00B20891 /* AuthenticationServiceSpy.swift */; };
 		A6A00C7521415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A00C7421415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift */; };
 		A6B359002142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B358FF2142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift */; };
@@ -81,7 +80,6 @@
 		97BEAF8F213E783500AAA342 /* EmployeesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BEAF95213E783500AAA342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97BEAFA0213E7FFF00AAA342 /* FakeAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthenticationService.swift; sourceTree = "<group>"; };
-		97DE0CA92146511800413125 /* EmployeesViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewControllerTest.swift; sourceTree = "<group>"; };
 		A6A00C7221415CCB00B20891 /* AuthenticationServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceSpy.swift; sourceTree = "<group>"; };
 		A6A00C7421415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationUseCaseOutputSpy.swift; sourceTree = "<group>"; };
 		A6B358FF2142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User AuthenticationViewControllerAssemblerTest.swift"; sourceTree = "<group>"; };
@@ -168,26 +166,9 @@
 				A6C256E82141571B00267E92 /* Application Logic */,
 				A6C256E92141572400267E92 /* Presentation */,
 				A6C256EA2141572C00267E92 /* Main */,
-				97DE0CB02146613E00413125 /* EmployeesListTests */,
 				97BEAF95213E783500AAA342 /* Info.plist */,
 			);
 			path = EmployeesAppTests;
-			sourceTree = "<group>";
-		};
-		97DE0CB02146613E00413125 /* EmployeesListTests */ = {
-			isa = PBXGroup;
-			children = (
-				97DE0CB12146614E00413125 /* View */,
-			);
-			path = EmployeesListTests;
-			sourceTree = "<group>";
-		};
-		97DE0CB12146614E00413125 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				97DE0CA92146511800413125 /* EmployeesViewControllerTest.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		A6A00C7121415CA200B20891 /* Helpers */ = {
@@ -606,7 +587,6 @@
 				A6B8DB532147E92C00941BA2 /* AuthenticationViewSpy.swift in Sources */,
 				A6B8DB562147E97E00941BA2 /* UserAuthenticationViewControllerAssemblerDependencyFactorySpy.swift in Sources */,
 				A6B8DB6B2147F74500941BA2 /* PresentableEmployeeSpy.swift in Sources */,
-				97DE0CAA2146511800413125 /* EmployeesViewControllerTest.swift in Sources */,
 				A6B8DB5B2147EB3400941BA2 /* EmployeeCellTest.swift in Sources */,
 				9753A114213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift in Sources */,
 				A6B8DB692147F4CD00941BA2 /* EmployeeListLayoutCellBuilderTest.swift in Sources */,

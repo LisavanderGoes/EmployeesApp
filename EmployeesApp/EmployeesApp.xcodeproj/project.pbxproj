@@ -14,6 +14,8 @@
 		973C2D052148FD2D00E73B1A /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2D042148FD2D00E73B1A /* Employee.swift */; };
 		973C2D082148FE1F00E73B1A /* Occupation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2D072148FE1F00E73B1A /* Occupation.swift */; };
 		973C2D0B2148FF9500E73B1A /* Employee+PresentableEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2D0A2148FF9500E73B1A /* Employee+PresentableEmployee.swift */; };
+		973C2D0E2149172B00E73B1A /* EmployeeTableViewControllerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2D0D2149172B00E73B1A /* EmployeeTableViewControllerAssembler.swift */; };
+		973C2D112149200F00E73B1A /* EmployeeTableViewControllerAssemblerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2D102149200F00E73B1A /* EmployeeTableViewControllerAssemblerTest.swift */; };
 		974111F021410475000C8B56 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111EF21410475000C8B56 /* AuthenticationView.swift */; };
 		9753A110213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A10F213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift */; };
 		9753A112213FD2A300DBC4C8 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A111213FD2A300DBC4C8 /* AuthenticationService.swift */; };
@@ -75,6 +77,8 @@
 		973C2D042148FD2D00E73B1A /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		973C2D072148FE1F00E73B1A /* Occupation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occupation.swift; sourceTree = "<group>"; };
 		973C2D0A2148FF9500E73B1A /* Employee+PresentableEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+PresentableEmployee.swift"; sourceTree = "<group>"; };
+		973C2D0D2149172B00E73B1A /* EmployeeTableViewControllerAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewControllerAssembler.swift; sourceTree = "<group>"; };
+		973C2D102149200F00E73B1A /* EmployeeTableViewControllerAssemblerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewControllerAssemblerTest.swift; sourceTree = "<group>"; };
 		974111EF21410475000C8B56 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		9753A10F213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationUseCase.swift; sourceTree = "<group>"; };
 		9753A111213FD2A300DBC4C8 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
@@ -165,12 +169,21 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
-		973C2D092148FF6500E73B1A /* Extensions */ = {
+		973C2D0C2149168B00E73B1A /* Employee Table View Controller Assembler */ = {
 			isa = PBXGroup;
 			children = (
 				973C2D0A2148FF9500E73B1A /* Employee+PresentableEmployee.swift */,
+				973C2D0D2149172B00E73B1A /* EmployeeTableViewControllerAssembler.swift */,
 			);
-			path = Extensions;
+			path = "Employee Table View Controller Assembler";
+			sourceTree = "<group>";
+		};
+		973C2D0F21491FA900E73B1A /* Employee Table View Controller Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				973C2D102149200F00E73B1A /* EmployeeTableViewControllerAssemblerTest.swift */,
+			);
+			path = "Employee Table View Controller Assembler";
 			sourceTree = "<group>";
 		};
 		97BEAF72213E783400AAA342 = {
@@ -371,7 +384,6 @@
 		A6C256E1214156A300267E92 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				973C2D092148FF6500E73B1A /* Extensions */,
 				A6D719812142A6A600CF9134 /* Assemblers */,
 			);
 			path = Main;
@@ -479,6 +491,7 @@
 		A6D719802142A69B00CF9134 /* Assemblers */ = {
 			isa = PBXGroup;
 			children = (
+				973C2D0F21491FA900E73B1A /* Employee Table View Controller Assembler */,
 				A6D7197E2142A69300CF9134 /* WeakRefTest.swift */,
 				A6B358FE2142875D0083E982 /* User Authentication View Controller Assembler */,
 			);
@@ -488,6 +501,7 @@
 		A6D719812142A6A600CF9134 /* Assemblers */ = {
 			isa = PBXGroup;
 			children = (
+				973C2D0C2149168B00E73B1A /* Employee Table View Controller Assembler */,
 				A6D7197C2142A68400CF9134 /* WeakRef.swift */,
 				A6B358FD214287380083E982 /* User Authentication View Controller Assembler */,
 			);
@@ -618,6 +632,7 @@
 				9753A112213FD2A300DBC4C8 /* AuthenticationService.swift in Sources */,
 				97BEAFA1213E7FFF00AAA342 /* FakeAuthenticationService.swift in Sources */,
 				974111F021410475000C8B56 /* AuthenticationView.swift in Sources */,
+				973C2D0E2149172B00E73B1A /* EmployeeTableViewControllerAssembler.swift in Sources */,
 				A6B8DB502147E8A500941BA2 /* UserAuthenticationViewControllerAssembler+DependencyFactory.swift in Sources */,
 				A6B8DB432147BE7B00941BA2 /* EmployeeListLayout.swift in Sources */,
 				9753A110213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift in Sources */,
@@ -647,6 +662,7 @@
 				A6D719832142A8F400CF9134 /* WeakRef+AuthenticationViewTest.swift in Sources */,
 				A6B8DB372147B56600941BA2 /* TableViewControllerTest.swift in Sources */,
 				973C2CFF2148F19200E73B1A /* EmployeeSelectionControllerTest.swift in Sources */,
+				973C2D112149200F00E73B1A /* EmployeeTableViewControllerAssemblerTest.swift in Sources */,
 				973C2CFD2148F10600E73B1A /* EmployeeListLayoutSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

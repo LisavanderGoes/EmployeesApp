@@ -11,6 +11,8 @@
 		973C2CFD2148F10600E73B1A /* EmployeeListLayoutSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2CFC2148F10600E73B1A /* EmployeeListLayoutSpy.swift */; };
 		973C2CFF2148F19200E73B1A /* EmployeeSelectionControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2CFE2148F19200E73B1A /* EmployeeSelectionControllerTest.swift */; };
 		973C2D012148F4DB00E73B1A /* EmployeeSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2D002148F4DB00E73B1A /* EmployeeSelectionController.swift */; };
+		973C2D052148FD2D00E73B1A /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2D042148FD2D00E73B1A /* Employee.swift */; };
+		973C2D082148FE1F00E73B1A /* Occupation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2D072148FE1F00E73B1A /* Occupation.swift */; };
 		974111F021410475000C8B56 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111EF21410475000C8B56 /* AuthenticationView.swift */; };
 		9753A110213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A10F213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift */; };
 		9753A112213FD2A300DBC4C8 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A111213FD2A300DBC4C8 /* AuthenticationService.swift */; };
@@ -70,6 +72,8 @@
 		973C2CFC2148F10600E73B1A /* EmployeeListLayoutSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListLayoutSpy.swift; sourceTree = "<group>"; };
 		973C2CFE2148F19200E73B1A /* EmployeeSelectionControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSelectionControllerTest.swift; sourceTree = "<group>"; };
 		973C2D002148F4DB00E73B1A /* EmployeeSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSelectionController.swift; sourceTree = "<group>"; };
+		973C2D042148FD2D00E73B1A /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		973C2D072148FE1F00E73B1A /* Occupation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occupation.swift; sourceTree = "<group>"; };
 		974111EF21410475000C8B56 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		9753A10F213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationUseCase.swift; sourceTree = "<group>"; };
 		9753A111213FD2A300DBC4C8 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
@@ -136,6 +140,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		973C2D022148FCEB00E73B1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				973C2D032148FD0000E73B1A /* Employee Model */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		973C2D032148FD0000E73B1A /* Employee Model */ = {
+			isa = PBXGroup;
+			children = (
+				973C2D062148FE0D00E73B1A /* Enum */,
+				973C2D042148FD2D00E73B1A /* Employee.swift */,
+			);
+			path = "Employee Model";
+			sourceTree = "<group>";
+		};
+		973C2D062148FE0D00E73B1A /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				973C2D072148FE1F00E73B1A /* Occupation.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		97BEAF72213E783400AAA342 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +186,7 @@
 		97BEAF7D213E783400AAA342 /* EmployeesApp */ = {
 			isa = PBXGroup;
 			children = (
+				973C2D022148FCEB00E73B1A /* Model */,
 				A6C256E2214156AA00267E92 /* View */,
 				A6C256E3214156AF00267E92 /* Application Logic */,
 				A6C256E4214156CA00267E92 /* Presentation */,
@@ -560,9 +590,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				973C2D082148FE1F00E73B1A /* Occupation.swift in Sources */,
 				973C2CFB2148F0B300E73B1A /* EmployeeListLayoutOutput.swift in Sources */,
 				A6C256EC214157E900267E92 /* LoginViewController+LoginView.swift in Sources */,
 				A6B8DB342147B4A600941BA2 /* TableViewController.swift in Sources */,
+				973C2D052148FD2D00E73B1A /* Employee.swift in Sources */,
 				A6B8DB4C2147CFE900941BA2 /* PresentableEmployee.swift in Sources */,
 				A6B35902214288600083E982 /* UserAuthenticationViewControllerAssembler.swift in Sources */,
 				9753A116213FDB7B00DBC4C8 /* UserAuthenticationUseCaseOutput.swift in Sources */,

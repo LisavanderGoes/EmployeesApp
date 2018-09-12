@@ -40,7 +40,3 @@ class EmployeeListLayout: NSObject, TableViewLayout, UITableViewDataSource, UITa
         output.didSelectRow(employee: employee)
     }
 }
-
-protocol EmployeeListLayoutOutput {
-    func didSelectRow(employee: PresentableEmployee) -> Void
-}

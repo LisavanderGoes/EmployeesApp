@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		973C2CFB2148F0B300E73B1A /* EmployeeListLayoutOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2CFA2148F0B300E73B1A /* EmployeeListLayoutOutput.swift */; };
+		973C2CFD2148F10600E73B1A /* EmployeeListLayoutSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2CFC2148F10600E73B1A /* EmployeeListLayoutSpy.swift */; };
+		973C2CFF2148F19200E73B1A /* EmployeeSelectionControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2CFE2148F19200E73B1A /* EmployeeSelectionControllerTest.swift */; };
+		973C2D012148F4DB00E73B1A /* EmployeeSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2D002148F4DB00E73B1A /* EmployeeSelectionController.swift */; };
 		974111F021410475000C8B56 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974111EF21410475000C8B56 /* AuthenticationView.swift */; };
 		9753A110213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A10F213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift */; };
 		9753A112213FD2A300DBC4C8 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9753A111213FD2A300DBC4C8 /* AuthenticationService.swift */; };
@@ -62,6 +66,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		973C2CFA2148F0B300E73B1A /* EmployeeListLayoutOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListLayoutOutput.swift; sourceTree = "<group>"; };
+		973C2CFC2148F10600E73B1A /* EmployeeListLayoutSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListLayoutSpy.swift; sourceTree = "<group>"; };
+		973C2CFE2148F19200E73B1A /* EmployeeSelectionControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSelectionControllerTest.swift; sourceTree = "<group>"; };
+		973C2D002148F4DB00E73B1A /* EmployeeSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSelectionController.swift; sourceTree = "<group>"; };
 		974111EF21410475000C8B56 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		9753A10F213FCE2100DBC4C8 /* UserAuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationUseCase.swift; sourceTree = "<group>"; };
 		9753A111213FD2A300DBC4C8 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
@@ -254,6 +262,7 @@
 				A6B8DB4A2147CFD700941BA2 /* Protocols */,
 				A6B8DB422147BE7B00941BA2 /* EmployeeListLayout.swift */,
 				A6B8DB4D2147E83D00941BA2 /* EmployeeListLayout+CellBuilder.swift */,
+				973C2D002148F4DB00E73B1A /* EmployeeSelectionController.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -264,6 +273,7 @@
 				A6B8DB472147CDF900941BA2 /* Helpers */,
 				A6B8DB442147BEA600941BA2 /* EmployeeListLayoutTest.swift */,
 				A6B8DB682147F4CD00941BA2 /* EmployeeListLayoutCellBuilderTest.swift */,
+				973C2CFE2148F19200E73B1A /* EmployeeSelectionControllerTest.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -273,6 +283,7 @@
 			children = (
 				A6B8DB482147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift */,
 				A6B8DB6A2147F74500941BA2 /* PresentableEmployeeSpy.swift */,
+				973C2CFC2148F10600E73B1A /* EmployeeListLayoutSpy.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -281,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				A6B8DB4B2147CFE900941BA2 /* PresentableEmployee.swift */,
+				973C2CFA2148F0B300E73B1A /* EmployeeListLayoutOutput.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -548,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				973C2CFB2148F0B300E73B1A /* EmployeeListLayoutOutput.swift in Sources */,
 				A6C256EC214157E900267E92 /* LoginViewController+LoginView.swift in Sources */,
 				A6B8DB342147B4A600941BA2 /* TableViewController.swift in Sources */,
 				A6B8DB4C2147CFE900941BA2 /* PresentableEmployee.swift in Sources */,
@@ -560,6 +573,7 @@
 				A6B8DB5E2147EBF200941BA2 /* EmployeeCell.swift in Sources */,
 				A6B8DB3C2147B7D200941BA2 /* TableViewLayout.swift in Sources */,
 				A6D719852142A95900CF9134 /* WeakRef+AuthenticationView.swift in Sources */,
+				973C2D012148F4DB00E73B1A /* EmployeeSelectionController.swift in Sources */,
 				9753A112213FD2A300DBC4C8 /* AuthenticationService.swift in Sources */,
 				97BEAFA1213E7FFF00AAA342 /* FakeAuthenticationService.swift in Sources */,
 				974111F021410475000C8B56 /* AuthenticationView.swift in Sources */,
@@ -592,6 +606,8 @@
 				A6B8DB692147F4CD00941BA2 /* EmployeeListLayoutCellBuilderTest.swift in Sources */,
 				A6D719832142A8F400CF9134 /* WeakRef+AuthenticationViewTest.swift in Sources */,
 				A6B8DB372147B56600941BA2 /* TableViewControllerTest.swift in Sources */,
+				973C2CFF2148F19200E73B1A /* EmployeeSelectionControllerTest.swift in Sources */,
+				973C2CFD2148F10600E73B1A /* EmployeeListLayoutSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -101,17 +101,3 @@ class EmployeeListLayoutTest: XCTestCase {
         )
     }
 }
-
-class EmployeeListLayoutOutputSpy: EmployeeListLayoutOutput {
-    
-    var didSelectRowIsCalled = false
-    var capturedEmployee: PresentableEmployee?
-    
-    func didSelectRow(employee: PresentableEmployee) {
-        didSelectRowIsCalled = true
-        capturedEmployee = employee
-    }
-}
-
-
-

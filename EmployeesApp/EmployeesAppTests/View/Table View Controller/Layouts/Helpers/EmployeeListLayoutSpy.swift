@@ -9,9 +9,9 @@ import Foundation
 class EmployeeListLayoutOutputSpy: EmployeeListLayoutOutput {
     
     var didSelectRowIsCalled = false
-    var capturedEmployee: PresentableEmployee?
+    var capturedEmployee: Employee?
     
-    func didSelectRow(employee: PresentableEmployee) {
+    func didSelectRow(employee: Employee) {
         didSelectRowIsCalled = true
         capturedEmployee = employee
     }

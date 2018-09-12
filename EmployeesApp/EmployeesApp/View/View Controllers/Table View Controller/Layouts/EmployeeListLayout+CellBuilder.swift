@@ -8,7 +8,7 @@ import UIKit
 extension EmployeeListLayout {
     class CellBuilder {
         func makeCell(
-            for employee: PresentableEmployee,
+            for employee: Employee,
             for tableView: UITableView
         ) -> EmployeeCell {
             let cell = tableView.dequeueReusableCell(

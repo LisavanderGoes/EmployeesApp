@@ -9,11 +9,11 @@ import UIKit
 class EmployeeListLayoutCellBuilderSpy: EmployeeListLayout.CellBuilder {
     
     var returnedCell: EmployeeCell!
-    var capturedEmployee: PresentableEmployee?
+    var capturedEmployee: Employee?
     var capturedTableView: UITableView?
     
     override func makeCell(
-        for employee: PresentableEmployee,
+        for employee: Employee,
         for tableView: UITableView) -> EmployeeCell {
         returnedCell = super.makeCell(
             for: employee,

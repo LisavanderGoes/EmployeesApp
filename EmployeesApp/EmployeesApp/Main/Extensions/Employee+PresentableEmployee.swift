@@ -5,6 +5,8 @@
 
 import Foundation
 
-protocol EmployeeListLayoutOutput {
-    func didSelectRow(employee: Employee) -> Void
+extension Employee: PresentableEmployee {
+    var occupation: String {
+        return occupationCase.rawValue
+    }
 }

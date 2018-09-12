@@ -7,6 +7,6 @@ import Foundation
 
 struct Employee {
     var name: String
-    var occupation: Occupation
+    var occupationCase: Occupation
     var emailAddress: String
 }

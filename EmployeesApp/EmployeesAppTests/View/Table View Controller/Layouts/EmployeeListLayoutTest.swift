@@ -27,7 +27,7 @@ class EmployeeListLayoutTest: XCTestCase {
     }
     
     func test_tableView_numberOfRowsInSection_withOneEmployee() {
-        let employeeList = [PresentableEmployeeSpy()]
+        let employeeList = [makeEmployee()]
         let sut = makeSUT(list: employeeList)
         
         sut.configure(tableView)
@@ -45,13 +45,13 @@ class EmployeeListLayoutTest: XCTestCase {
     }
     
     func test_tableView_cellFromRowAt_passesRightEmployeeToCellBuilder() {
-        let employees = [PresentableEmployeeSpy(), PresentableEmployeeSpy()]
+        let employees = [makeEmployee(), makeEmployee()]
         let sut = makeSUT(list: employees)
         sut.configure(tableView)
         
         employees.enumerated().forEach { (index, employee) in
             _ = sut.tableView(tableView, cellForRowAt: IndexPath(row: index, section: 0))
-            XCTAssertEqual(cellBuilder.capturedEmployee as! PresentableEmployeeSpy, employee, "Failed for Index \(index)")
+            XCTAssertEqual(cellBuilder.capturedEmployee, employee, "Failed for Index \(index)")
         }
     }
     
@@ -70,7 +70,7 @@ class EmployeeListLayoutTest: XCTestCase {
     }
     
     func test_tableView_didSelectRowAt_didSelectRow(){
-        let employees = [PresentableEmployeeSpy()]
+        let employees = [makeEmployee()]
         let sut = makeSUT(list: employees)
         sut.configure(tableView)
         let indexPath = IndexPath(row: 0, section: 0)
@@ -80,24 +80,28 @@ class EmployeeListLayoutTest: XCTestCase {
     }
     
     func test_tableView_didSelectRowAt_didSelectRow_withRightEmployee(){
-        let employees = [PresentableEmployeeSpy(), PresentableEmployeeSpy()]
+        let employees = [makeEmployee(), makeEmployee()]
         let sut = makeSUT(list: employees)
         sut.configure(tableView)
         
         employees.enumerated().forEach { (index, employee) in
             let indexPath = IndexPath(row: 0, section: 0)
             sut.tableView(tableView, didSelectRowAt: indexPath)
-            XCTAssertEqual(output.capturedEmployee as! PresentableEmployeeSpy, employee, "Failed for Index \(index)")
+            XCTAssertEqual(output.capturedEmployee, employee, "Failed for Index \(index)")
         }
     }
     
     //MARK: Helpers
     private func makeSUT(
-        list: [PresentableEmployee] = [PresentableEmployeeSpy()]
+        list: [Employee] = [Employee(name: "name", occupationCase: Occupation.Backend_Developer, emailAddress: "emailAddress")]
     ) -> EmployeeListLayout {
         return EmployeeListLayout(
             employeeList: list,
             cellBuilder: cellBuilder, output: output
         )
+    }
+    
+    func makeEmployee(name: String = "", occupation: String = "", emailAddress: String = "") -> Employee {
+        return Employee(name: name, occupationCase: Occupation.Backend_Developer, emailAddress: emailAddress)
     }
 }

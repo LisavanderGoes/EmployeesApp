@@ -7,13 +7,13 @@ import Foundation
 
 class EmployeeSelectionController: EmployeeListLayoutOutput {
     
-    var closure: ((PresentableEmployee) -> Void)!
+    var closure: ((Employee) -> Void)!
     
-    init(closure: @escaping (PresentableEmployee) -> Void) {
+    init(closure: @escaping (Employee) -> Void) {
         self.closure = closure
     }
     
-    func didSelectRow(employee: PresentableEmployee) {
+    func didSelectRow(employee: Employee) {
         closure(employee)
     }
 }

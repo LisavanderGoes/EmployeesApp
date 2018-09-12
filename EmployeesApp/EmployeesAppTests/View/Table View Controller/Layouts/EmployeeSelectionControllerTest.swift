@@ -10,22 +10,28 @@ class EmployeeSelectionControllerTest: XCTestCase {
     
     func test_didSelectRow_employeeSelectionClosureIsCalled() {
         var isEmployeeSelectionClosureCalled = false
-        let closure: (PresentableEmployee) -> Void = { _ in
+        let closure: (Employee) -> Void = { _ in
             isEmployeeSelectionClosureCalled = true
         }
         let sut = EmployeeSelectionController(closure: closure)
-        sut.didSelectRow(employee: PresentableEmployeeSpy())
+        sut.didSelectRow(employee: Employee(name: "", occupationCase: Occupation.Backend_Developer, emailAddress: ""))
         XCTAssertTrue(isEmployeeSelectionClosureCalled)
     }
     
     func test_closure_withRightEmployee() {
-        var capturedEmployee: PresentableEmployee?
-        let closure: (PresentableEmployee) -> Void = { employee in
+        var capturedEmployee: Employee?
+        let closure: (Employee) -> Void = { employee in
             capturedEmployee = employee
         }
         let sut = EmployeeSelectionController(closure: closure)
-        let employee = PresentableEmployeeSpy()
+        let employee = Employee(name: "", occupationCase: Occupation.Backend_Developer, emailAddress: "")
         sut.didSelectRow(employee: employee)
-        XCTAssertEqual(capturedEmployee as! PresentableEmployeeSpy, employee)
+        XCTAssertEqual(capturedEmployee, employee)
+    }
+}
+
+extension Employee: Equatable {
+    public static func ==(lhs: Employee, rhs: Employee) -> Bool {
+        return lhs.name == rhs.name && lhs.occupation == rhs.occupation && lhs.emailAddress == rhs.emailAddress
     }
 }

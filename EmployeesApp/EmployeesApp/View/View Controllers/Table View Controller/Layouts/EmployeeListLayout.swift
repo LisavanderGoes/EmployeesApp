@@ -7,11 +7,11 @@ import UIKit
 
 class EmployeeListLayout: NSObject, TableViewLayout, UITableViewDataSource, UITableViewDelegate {
     
-    private var employeeList: [PresentableEmployee]!
+    private var employeeList: [Employee]!
     private var cellbuilder: CellBuilder!
     private var output: EmployeeListLayoutOutput!
     
-    init(employeeList: [PresentableEmployee], cellBuilder: CellBuilder, output: EmployeeListLayoutOutput) {
+    init(employeeList: [Employee], cellBuilder: CellBuilder, output: EmployeeListLayoutOutput) {
         self.employeeList = employeeList
         self.cellbuilder = cellBuilder
         self.output = output
@@ -24,6 +24,7 @@ class EmployeeListLayout: NSObject, TableViewLayout, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return employeeList.count
     }
     

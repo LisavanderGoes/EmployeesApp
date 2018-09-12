@@ -22,26 +22,30 @@ class EmployeeListLayoutCellBuilderTest: XCTestCase {
     
     func test_makeCell_setName() {
         let name = "name"
-        let employeeSpy = PresentableEmployeeSpy(name: name)
+        let employeeSpy = makeEmployee(name: name)
         let returnedCell = sut.makeCell(for: employeeSpy, for: tableView)
         
         XCTAssertEqual(returnedCell.nameLabel.text, name)
     }
     
     func test_makeCell_setOccupation() {
-        let occupation = "occupation"
-        let employeeSpy = PresentableEmployeeSpy(occupation: occupation)
+        let occupation = Occupation.Backend_Developer
+        let employeeSpy = makeEmployee(occupation: occupation)
         let returnedCell = sut.makeCell(for: employeeSpy, for: tableView)
         
-        XCTAssertEqual(returnedCell.occupationLabel.text, occupation)
+        XCTAssertEqual(returnedCell.occupationLabel.text, occupation.rawValue)
     }
     
     func test_makeCell_setEmailAddress() {
         let emailAddress = "emailAddress"
-        let employeeSpy = PresentableEmployeeSpy(emailAddress: emailAddress)
+        let employeeSpy = makeEmployee(emailAddress: emailAddress)
         let returnedCell = sut.makeCell(for: employeeSpy, for: tableView)
         
         XCTAssertEqual(returnedCell.emailAddressLabel.text, emailAddress)
     }
-
+    
+    //MARK: Helpers
+    func makeEmployee(name: String = "", occupation: Occupation = Occupation.Backend_Developer, emailAddress: String = "") -> Employee {
+        return Employee(name: name, occupationCase: occupation, emailAddress: emailAddress)
+    }
 }

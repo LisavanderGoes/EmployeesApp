@@ -21,13 +21,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vaO-BA-pGa">
-                    <rect key="frame" x="54" y="256" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vaO-BA-pGa">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vaO-BA-pGa" secondAttribute="trailing" id="0CV-1F-5xs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vaO-BA-pGa" secondAttribute="bottom" id="XWg-ju-SXO"/>
+                <constraint firstItem="vaO-BA-pGa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XuX-xn-NwK"/>
+                <constraint firstItem="vaO-BA-pGa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="fmT-rA-Yuz"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
     </objects>

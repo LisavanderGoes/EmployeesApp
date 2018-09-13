@@ -23,7 +23,6 @@ class EmployeeListLayoutCellBuilderSpy: EmployeeListLayout<EmployeeListLayoutOut
         )
         capturedEmployee = employee
         capturedTableView = tableView
-        tableView.inser
         return returnedCell!
     }
 }

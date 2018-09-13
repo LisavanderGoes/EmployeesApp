@@ -6,5 +6,6 @@
 import Foundation
 
 protocol EmployeeListLayoutOutput {
-    func didSelectRow(employee: Employee) -> Void
+    associatedtype EmployeeType: PresentableEmployee
+    func didSelectRow(employee: EmployeeType) -> Void
 }

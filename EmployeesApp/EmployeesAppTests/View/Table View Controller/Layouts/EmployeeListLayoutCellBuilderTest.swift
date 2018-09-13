@@ -8,7 +8,7 @@ import XCTest
 
 class EmployeeListLayoutCellBuilderTest: XCTestCase {
     
-    var sut: EmployeeListLayout.CellBuilder!
+    var sut: EmployeeListLayout<EmployeeListLayoutOutputSpy>.CellBuilder!
     var tableView: UITableView!
     
     override func setUp() {
@@ -29,11 +29,11 @@ class EmployeeListLayoutCellBuilderTest: XCTestCase {
     }
     
     func test_makeCell_setOccupation() {
-        let occupation = Occupation.Backend_Developer
+        let occupation = "Backend_Developer"
         let employeeSpy = makeEmployee(occupation: occupation)
         let returnedCell = sut.makeCell(for: employeeSpy, for: tableView)
         
-        XCTAssertEqual(returnedCell.occupationLabel.text, occupation.rawValue)
+        XCTAssertEqual(returnedCell.occupationLabel.text, occupation)
     }
     
     func test_makeCell_setEmailAddress() {
@@ -45,7 +45,7 @@ class EmployeeListLayoutCellBuilderTest: XCTestCase {
     }
     
     //MARK: Helpers
-    func makeEmployee(name: String = "", occupation: Occupation = Occupation.Backend_Developer, emailAddress: String = "") -> Employee {
-        return Employee(name: name, occupationCase: occupation, emailAddress: emailAddress)
+    func makeEmployee(name: String = "", occupation: String = "Backend_Developer", emailAddress: String = "") -> EmployeeMock {
+        return EmployeeMock(name: name, occupation: occupation, emailAddress: emailAddress)
     }
 }

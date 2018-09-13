@@ -5,15 +5,15 @@
 
 import Foundation
 
-class EmployeeSelectionController: EmployeeListLayoutOutput {
+class EmployeeSelectionController<EmployeeType: PresentableEmployee>: EmployeeListLayoutOutput {
     
-    var closure: ((Employee) -> Void)!
+    var closure: ((EmployeeType) -> Void)!
     
-    init(closure: @escaping (Employee) -> Void) {
+    init(closure: @escaping (EmployeeType) -> Void) {
         self.closure = closure
     }
     
-    func didSelectRow(employee: Employee) {
+    func didSelectRow(employee: EmployeeType) {
         closure(employee)
     }
 }

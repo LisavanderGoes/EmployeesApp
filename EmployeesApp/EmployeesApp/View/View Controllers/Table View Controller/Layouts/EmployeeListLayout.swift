@@ -5,13 +5,15 @@
 
 import UIKit
 
-class EmployeeListLayout: NSObject, TableViewLayout, UITableViewDataSource, UITableViewDelegate {
+class EmployeeListLayout<OutputType: EmployeeListLayoutOutput>: NSObject, TableViewLayout, UITableViewDataSource, UITableViewDelegate {
     
-    private var employeeList: [Employee]!
+    typealias EmployeeType = OutputType.EmployeeType
+    
+    private var employeeList: [EmployeeType]!
     private var cellbuilder: CellBuilder!
-    private var output: EmployeeListLayoutOutput!
+    private var output: OutputType!
     
-    init(employeeList: [Employee], cellBuilder: CellBuilder, output: EmployeeListLayoutOutput) {
+    init(employeeList: [EmployeeType], cellBuilder: CellBuilder, output: OutputType) {
         self.employeeList = employeeList
         self.cellbuilder = cellBuilder
         self.output = output

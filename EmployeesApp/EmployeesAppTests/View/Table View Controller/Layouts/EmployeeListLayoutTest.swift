@@ -93,15 +93,15 @@ class EmployeeListLayoutTest: XCTestCase {
     
     //MARK: Helpers
     private func makeSUT(
-        list: [Employee] = [Employee(name: "name", occupationCase: Occupation.Backend_Developer, emailAddress: "emailAddress")]
-    ) -> EmployeeListLayout {
+        list: [EmployeeMock] = [EmployeeMock(name: "name", occupation: "Backend_Developer", emailAddress: "emailAddress")]
+        ) -> EmployeeListLayout<EmployeeListLayoutOutputSpy> {
         return EmployeeListLayout(
             employeeList: list,
             cellBuilder: cellBuilder, output: output
         )
     }
     
-    func makeEmployee(name: String = "", occupation: String = "", emailAddress: String = "") -> Employee {
-        return Employee(name: name, occupationCase: Occupation.Backend_Developer, emailAddress: emailAddress)
+    func makeEmployee(name: String = "", occupation: String = "", emailAddress: String = "") -> EmployeeMock {
+        return EmployeeMock(name: name, occupation: "Backend_Developer", emailAddress: emailAddress)
     }
 }

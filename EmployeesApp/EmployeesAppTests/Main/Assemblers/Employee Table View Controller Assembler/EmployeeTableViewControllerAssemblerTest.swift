@@ -24,19 +24,3 @@ class EmployeeTableViewControllerAssemblerTest: XCTestCase {
         XCTAssertTrue(sut.assembleEmployeeTableViewController() === dependencyFactorySpy.returnedViewController)
     }
 }
-
-class EmployeeTableViewControllerAssemblerTestDependencyFactorySpy: EmployeeTableViewControllerAssembler.DependencyFactory {
-    
-    var returnedViewController: TableViewController?
-    var returnedEmployeeListLayout: EmployeeListLayout?
-    
-    override func makeEmployeeListLayout() -> EmployeeListLayout {
-        returnedEmployeeListLayout = super.makeEmployeeListLayout()
-        return returnedEmployeeListLayout!
-    }
-    
-    override func makeViewController(layout: EmployeeListLayout) -> TableViewController {
-        returnedViewController = super.makeViewController(layout: layout)
-        return returnedViewController!
-    }
-}

@@ -8,4 +8,5 @@ import Foundation
 protocol EmployeeListLayoutOutput {
     associatedtype EmployeeType: PresentableEmployee
     func didSelectRow(employee: EmployeeType) -> Void
+    func didRemoveRow(atIndex: Int)
 }

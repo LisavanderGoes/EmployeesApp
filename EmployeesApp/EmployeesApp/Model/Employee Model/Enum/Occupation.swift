@@ -6,7 +6,7 @@
 import Foundation
 
 enum Occupation: String {
-    case Backend_Developer = "Backend Developer"
-    case Frontend_Developer = "Frontend Developer"
-    case iOS_Developer = "iOS Developer"
+    case backendDeveloper = "Backend Developer"
+    case frontendDeveloper = "Frontend Developer"
+    case iosDeveloper = "iOS Developer"
 }

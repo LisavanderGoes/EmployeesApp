@@ -7,5 +7,27 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
     var window: UIWindow?
+    var applicationFlow: Application!
+    
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let navigationController = UINavigationController()
+        
+        let applicationAssembler = ApplicationAssembler(
+            dependencyFactory: ApplicationAssembler.DependencyFactory()
+        )
+    
+        applicationFlow = applicationAssembler.assembleApplication(
+            navigationController: navigationController
+        )
+
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
+        applicationFlow.start()
+    }
 }

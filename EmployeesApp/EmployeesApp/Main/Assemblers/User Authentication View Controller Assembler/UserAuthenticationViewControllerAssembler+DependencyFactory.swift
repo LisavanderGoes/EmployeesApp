@@ -20,11 +20,21 @@ extension UserAuthenticationViewControllerAssembler {
         }
         
         func makeUseCase(
-            output: UserAuthenticationPresenter
+            output: ComposedUserAuthenticationUseCaseOutput
         ) -> UserAuthenticationUseCase {
             return UserAuthenticationUseCase(
                 service: service,
                 output: output
+            )
+        }
+        
+        func makeUseCaseOutput(
+            authenticationDidSucceed: @escaping () -> Void,
+            presenter: UserAuthenticationPresenter
+        ) -> ComposedUserAuthenticationUseCaseOutput {
+            return ComposedUserAuthenticationUseCaseOutput(
+                authenticationDidSucceed: authenticationDidSucceed,
+                presenter: presenter
             )
         }
         

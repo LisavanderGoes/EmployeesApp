@@ -13,11 +13,17 @@ class UserAuthenticationViewControllerAssembler {
         self.dependencyFactory = dependencyFactory
     }
     
-    func assembleUserAuthenticationViewController() -> UIViewController {
+    func assembleUserAuthenticationViewController(
+        authenticationDidSucceed: @escaping () -> Void
+    ) -> UIViewController {
         let viewController = dependencyFactory.makeViewController()
         let presenter = dependencyFactory.makePresenter(view: WeakRef(viewController))
+        let composedUseCaseOutput = dependencyFactory.makeUseCaseOutput(
+            authenticationDidSucceed: authenticationDidSucceed,
+            presenter: presenter
+        )
         let useCase = dependencyFactory.makeUseCase(
-            output: presenter
+            output: composedUseCaseOutput
         )
         viewController.loginClosure = useCase.authenticateUser
         return viewController

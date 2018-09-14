@@ -5,29 +5,38 @@
 
 import Foundation
 
-extension EmployeeTableViewControllerAssembler {
+extension EmployeeListViewControllerAssembler {
     
     class DependencyFactory {
         
-        typealias SelectionControllerEmployee = EmployeeSelectionController<Employee>
+        typealias EmployeeListLayoutType = EmployeeListLayout<EmployeeSelectionController, EmployeeListDataSourceDataStoreAdapter>
         
-        private let employeeList: [Employee]
-        private let employeeSellectionClosure: (Employee) -> Void
-        
-        init(employeeList: [Employee], employeeSellectionClosure: @escaping (Employee) -> Void) {
-            self.employeeList = employeeList
-            self.employeeSellectionClosure = employeeSellectionClosure
-        }
-        
-        func makeViewController(layout: EmployeeListLayout<SelectionControllerEmployee>) -> TableViewController {
+        func makeViewController(layout: EmployeeListLayoutType) -> TableViewController {
             return TableViewController(layout: layout)
         }
         
-        func makeEmployeeListLayout() -> EmployeeListLayout<SelectionControllerEmployee> {
-            let cellBuilder = EmployeeListLayout<SelectionControllerEmployee>.CellBuilder()
-            let employeeListLayoutOutput = EmployeeSelectionController(closure: employeeSellectionClosure)
-            
-            return EmployeeListLayout(employeeList: employeeList, cellBuilder: cellBuilder, output: employeeListLayoutOutput)
+        func makeSelectionController(didSelectEmployee: @escaping (Employee) -> Void) -> EmployeeSelectionController {
+            return EmployeeSelectionController(closure: didSelectEmployee)
+        }
+        
+        func makeListDataSourceAdapter(dataStore: DataStore<Employee>) -> EmployeeListDataSourceDataStoreAdapter {
+            return EmployeeListDataSourceDataStoreAdapter(dataStore: dataStore)
+        }
+        
+        func makeCellBuilder() -> EmployeeListLayoutType.CellBuilder {
+            return EmployeeListLayoutType.CellBuilder()
+        }
+        
+        func makeEmployeeListLayout(
+            dataSource: EmployeeListDataSourceDataStoreAdapter,
+            cellBuilder: EmployeeListLayoutType.CellBuilder,
+            selectionController: EmployeeSelectionController
+        ) -> EmployeeListLayoutType {
+            return EmployeeListLayout(
+                dataSource: dataSource,
+                cellBuilder: cellBuilder,
+                output: selectionController
+            )
         }
     }
 }

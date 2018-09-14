@@ -5,16 +5,16 @@
 
 import UIKit
 
-class EmployeeListLayout<OutputType: EmployeeListLayoutOutput>: NSObject, TableViewLayout, UITableViewDataSource, UITableViewDelegate {
+class EmployeeListLayout<OutputType: EmployeeListLayoutOutput, DataSourceType: EmployeeListDataSource>: NSObject, TableViewLayout, UITableViewDataSource, UITableViewDelegate where OutputType.EmployeeType == DataSourceType.EmployeeType {
     
     typealias EmployeeType = OutputType.EmployeeType
     
-    private var employeeList: [EmployeeType]!
-    private var cellbuilder: CellBuilder!
-    private var output: OutputType!
+    private let dataSource: DataSourceType
+    private let cellbuilder: CellBuilder!
+    private let output: OutputType!
     
-    init(employeeList: [EmployeeType], cellBuilder: CellBuilder, output: OutputType) {
-        self.employeeList = employeeList
+    init(dataSource: DataSourceType, cellBuilder: CellBuilder, output: OutputType) {
+        self.dataSource = dataSource
         self.cellbuilder = cellBuilder
         self.output = output
     }
@@ -26,20 +26,22 @@ class EmployeeListLayout<OutputType: EmployeeListLayoutOutput>: NSObject, TableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return employeeList.count
+        return dataSource.getAmountOfEmployees()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return cellbuilder.makeCell(
-            for: employeeList[indexPath.row],
+            for: dataSource.getEmployee(forRow: indexPath.row),
             for: tableView
         )
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        dataSource.removeEmployee(forRow: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let employee = employeeList[0]
-        
-        output.didSelectRow(employee: employee)
+        output.didSelectRow(employee: dataSource.getEmployee(forRow: indexPath.row))
     }
 }

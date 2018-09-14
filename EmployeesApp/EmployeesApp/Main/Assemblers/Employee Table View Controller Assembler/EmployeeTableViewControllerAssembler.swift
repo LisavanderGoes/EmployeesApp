@@ -5,20 +5,32 @@
 
 import UIKit
 
-class EmployeeTableViewControllerAssembler {
+class EmployeeListViewControllerAssembler {
     
+    private let dataStore: DataStore<Employee>
     private let dependencyFactory: DependencyFactory
     
-    init(dependencyFactory: DependencyFactory) {
+    init(
+        dataStore: DataStore<Employee>,
+        dependencyFactory: DependencyFactory
+    ) {
+        self.dataStore = dataStore
         self.dependencyFactory = dependencyFactory
     }
     
-    func assembleEmployeeTableViewController() -> UIViewController {
-        
-        let employeeListLayout = dependencyFactory.makeEmployeeListLayout()
-        
+    func assembleEmployeeTableViewController(
+        didSelectEmployee: @escaping (Employee) -> Void
+    ) -> UIViewController {
+        let cellBuilder = dependencyFactory.makeCellBuilder()
+        let dataSource = dependencyFactory.makeListDataSourceAdapter(dataStore: dataStore)
+        let selectionController = dependencyFactory.makeSelectionController(didSelectEmployee: didSelectEmployee)
+        let employeeListLayout = dependencyFactory.makeEmployeeListLayout(
+            dataSource: dataSource,
+            cellBuilder: cellBuilder,
+            selectionController: selectionController
+        )
         let viewController = dependencyFactory.makeViewController(layout: employeeListLayout)
-        
+        dataStore.delegate = viewController.tableView
         return viewController
     }
 }

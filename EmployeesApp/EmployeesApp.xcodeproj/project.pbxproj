@@ -33,6 +33,11 @@
 		97BE8D03214F929300EFEB80 /* EmployeeSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE8D02214F929300EFEB80 /* EmployeeSelectionController.swift */; };
 		97BE8D05214F96C700EFEB80 /* EmployeeListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE8D04214F96C700EFEB80 /* EmployeeListDataSource.swift */; };
 		97BE8D07214FAD7600EFEB80 /* EmployeeListDataSourceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE8D06214FAD7600EFEB80 /* EmployeeListDataSourceSpy.swift */; };
+		97BE8D0A214FB27000EFEB80 /* EmployeeListDataSourceDataStoreAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE8D09214FB27000EFEB80 /* EmployeeListDataSourceDataStoreAdapter.swift */; };
+		97BE8D0C214FB3B200EFEB80 /* DataStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE8D0B214FB3B200EFEB80 /* DataStoreTest.swift */; };
+		97BE8D0E214FB43600EFEB80 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE8D0D214FB43600EFEB80 /* DataStore.swift */; };
+		97BE8D11214FD61900EFEB80 /* EmployeeListDataSourceDataStoreAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE8D10214FD61900EFEB80 /* EmployeeListDataSourceDataStoreAdapterTest.swift */; };
+		97BE8D14214FD91A00EFEB80 /* DataStoreOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE8D13214FD91A00EFEB80 /* DataStoreOutputSpy.swift */; };
 		97BEAF7F213E783400AAA342 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAF7E213E783400AAA342 /* AppDelegate.swift */; };
 		97BEAF86213E783500AAA342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97BEAF85213E783500AAA342 /* Assets.xcassets */; };
 		97BEAF89213E783500AAA342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BEAF87213E783500AAA342 /* LaunchScreen.storyboard */; };
@@ -103,6 +108,11 @@
 		97BE8D02214F929300EFEB80 /* EmployeeSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSelectionController.swift; sourceTree = "<group>"; };
 		97BE8D04214F96C700EFEB80 /* EmployeeListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListDataSource.swift; sourceTree = "<group>"; };
 		97BE8D06214FAD7600EFEB80 /* EmployeeListDataSourceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListDataSourceSpy.swift; sourceTree = "<group>"; };
+		97BE8D09214FB27000EFEB80 /* EmployeeListDataSourceDataStoreAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListDataSourceDataStoreAdapter.swift; sourceTree = "<group>"; };
+		97BE8D0B214FB3B200EFEB80 /* DataStoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreTest.swift; sourceTree = "<group>"; };
+		97BE8D0D214FB43600EFEB80 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		97BE8D10214FD61900EFEB80 /* EmployeeListDataSourceDataStoreAdapterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListDataSourceDataStoreAdapterTest.swift; sourceTree = "<group>"; };
+		97BE8D13214FD91A00EFEB80 /* DataStoreOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreOutputSpy.swift; sourceTree = "<group>"; };
 		97BEAF7B213E783400AAA342 /* EmployeesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BEAF7E213E783400AAA342 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97BEAF85213E783500AAA342 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -214,6 +224,7 @@
 		97BE8CFF214F858800EFEB80 /* Employee List */ = {
 			isa = PBXGroup;
 			children = (
+				97BE8D08214FB25800EFEB80 /* Adapters */,
 				973C2D002148F4DB00E73B1A /* EmployeeListLayoutOutputImp.swift */,
 				97BE8D02214F929300EFEB80 /* EmployeeSelectionController.swift */,
 			);
@@ -223,15 +234,24 @@
 		97BE8D00214F869A00EFEB80 /* Employee List */ = {
 			isa = PBXGroup;
 			children = (
-				97BE8D01214F86C600EFEB80 /* Helpers */,
 				973C2CFE2148F19200E73B1A /* EmployeeListLayoutOutputImpTest.swift */,
+				97BE8D10214FD61900EFEB80 /* EmployeeListDataSourceDataStoreAdapterTest.swift */,
 			);
 			path = "Employee List";
 			sourceTree = "<group>";
 		};
-		97BE8D01214F86C600EFEB80 /* Helpers */ = {
+		97BE8D08214FB25800EFEB80 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
+				97BE8D09214FB27000EFEB80 /* EmployeeListDataSourceDataStoreAdapter.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		97BE8D12214FD8FD00EFEB80 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				97BE8D13214FD91A00EFEB80 /* DataStoreOutputSpy.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -437,6 +457,7 @@
 			children = (
 				97BE8CFF214F858800EFEB80 /* Employee List */,
 				A6D719812142A6A600CF9134 /* Assemblers */,
+				97BE8D0D214FB43600EFEB80 /* DataStore.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -520,6 +541,8 @@
 			children = (
 				97BE8D00214F869A00EFEB80 /* Employee List */,
 				A6D719802142A69B00CF9134 /* Assemblers */,
+				97BE8D12214FD8FD00EFEB80 /* Helpers */,
+				97BE8D0B214FB3B200EFEB80 /* DataStoreTest.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -676,7 +699,9 @@
 				9753A116213FDB7B00DBC4C8 /* UserAuthenticationUseCaseOutput.swift in Sources */,
 				973C2D132149543300E73B1A /* EmployeeTableViewControllerAssembler+DependencyFactory.swift in Sources */,
 				9771ADC9213EB524003B2CA1 /* LoginViewController.swift in Sources */,
+				97BE8D0A214FB27000EFEB80 /* EmployeeListDataSourceDataStoreAdapter.swift in Sources */,
 				973C2D0B2148FF9500E73B1A /* Employee+PresentableEmployee.swift in Sources */,
+				97BE8D0E214FB43600EFEB80 /* DataStore.swift in Sources */,
 				A6D7197D2142A68400CF9134 /* WeakRef.swift in Sources */,
 				9753A11C2140101E00DBC4C8 /* UserAuthenticationPresenter.swift in Sources */,
 				97BE8D05214F96C700EFEB80 /* EmployeeListDataSource.swift in Sources */,
@@ -710,7 +735,9 @@
 				9734A6F1214A666D0084BB61 /* EmployeeTableViewControllerAssemblerTestDependencyFactorySpy.swift in Sources */,
 				A6B359002142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift in Sources */,
 				9734A6EE214A61D50084BB61 /* Employee+PresentableEmployeeTest.swift in Sources */,
+				97BE8D0C214FB3B200EFEB80 /* DataStoreTest.swift in Sources */,
 				A6B8DB452147BEA600941BA2 /* EmployeeListLayoutTest.swift in Sources */,
+				97BE8D14214FD91A00EFEB80 /* DataStoreOutputSpy.swift in Sources */,
 				9734A6EC214A58640084BB61 /* EmployeeMock.swift in Sources */,
 				9771ADC7213EB2C7003B2CA1 /* LoginViewControllerTest.swift in Sources */,
 				A6A00C7521415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift in Sources */,
@@ -719,6 +746,7 @@
 				A6B8DB5B2147EB3400941BA2 /* EmployeeCellTest.swift in Sources */,
 				9753A114213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift in Sources */,
 				A6B8DB692147F4CD00941BA2 /* EmployeeListLayoutCellBuilderTest.swift in Sources */,
+				97BE8D11214FD61900EFEB80 /* EmployeeListDataSourceDataStoreAdapterTest.swift in Sources */,
 				A6D719832142A8F400CF9134 /* WeakRef+AuthenticationViewTest.swift in Sources */,
 				A6B8DB372147B56600941BA2 /* TableViewControllerTest.swift in Sources */,
 				973C2CFF2148F19200E73B1A /* EmployeeListLayoutOutputImpTest.swift in Sources */,

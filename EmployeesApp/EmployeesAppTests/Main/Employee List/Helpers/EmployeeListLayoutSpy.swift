@@ -15,4 +15,12 @@ class EmployeeListLayoutOutputSpy: EmployeeListLayoutOutput {
         didSelectRowIsCalled = true
         capturedEmployee = employee
     }
+    
+    var removeItemIsCalled = false
+    var capturedIndexRow: Int?
+    
+    func removeItem(at index: Int) {
+        removeItemIsCalled = true
+        capturedIndexRow = index
+    }
 }

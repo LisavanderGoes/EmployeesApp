@@ -91,6 +91,24 @@ class EmployeeListLayoutTest: XCTestCase {
         }
     }
     
+    func test_tableView_commitEditngStyle_removedItem() {
+        let sut = makeSUT()
+        sut.configure(tableView)
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+        sut.tableView(tableView, commit: UITableViewCellEditingStyle.delete, forRowAt: indexPath)
+        XCTAssertTrue(output.removeItemIsCalled)
+    }
+    
+    func test_tableView_commitEditStyle_removeItem_withRightIndex() {
+        let sut = makeSUT()
+        sut.configure(tableView)
+        
+        let indexPath = IndexPath(row: 2, section: 0)
+        sut.tableView(tableView, commit: UITableViewCellEditingStyle.delete, forRowAt: indexPath)
+        XCTAssertEqual(output.capturedIndexRow, indexPath.row)
+    }
+    
     //MARK: Helpers
     private func makeSUT(
         list: [EmployeeMock] = [EmployeeMock(name: "name", occupation: "Backend_Developer", emailAddress: "emailAddress")]

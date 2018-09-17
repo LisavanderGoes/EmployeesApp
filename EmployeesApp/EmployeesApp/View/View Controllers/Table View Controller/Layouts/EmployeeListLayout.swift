@@ -42,4 +42,11 @@ class EmployeeListLayout<OutputType: EmployeeListLayoutOutput>: NSObject, TableV
         
         output.didSelectRow(employee: employee)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            output.removeItem(at: indexPath.row)
+        }
+    }
+    
 }

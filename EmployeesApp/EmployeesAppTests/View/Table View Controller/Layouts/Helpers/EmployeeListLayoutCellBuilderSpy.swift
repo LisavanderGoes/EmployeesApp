@@ -6,7 +6,7 @@
 import UIKit
 @testable import EmployeesApp
 
-class EmployeeListLayoutCellBuilderSpy: EmployeeListLayout<EmployeeListLayoutOutputSpy>.CellBuilder {
+class EmployeeListLayoutCellBuilderSpy: EmployeeListLayout<EmployeeListLayoutOutputSpy, EmployeeListDataSourceSpy>.CellBuilder {
     
     typealias EmployeeType = EmployeeMock
     

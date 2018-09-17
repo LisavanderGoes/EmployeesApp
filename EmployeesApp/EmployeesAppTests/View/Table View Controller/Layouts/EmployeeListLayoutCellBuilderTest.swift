@@ -8,7 +8,7 @@ import XCTest
 
 class EmployeeListLayoutCellBuilderTest: XCTestCase {
     
-    var sut: EmployeeListLayout<EmployeeListLayoutOutputSpy>.CellBuilder!
+    var sut: EmployeeListLayout<EmployeeListLayoutOutputSpy, EmployeeListDataSourceSpy>.CellBuilder!
     var tableView: UITableView!
     
     override func setUp() {

@@ -5,16 +5,16 @@
 
 import UIKit
 
-class EmployeeListLayout<OutputType: EmployeeListLayoutOutput>: NSObject, TableViewLayout, UITableViewDataSource, UITableViewDelegate {
+class EmployeeListLayout<OutputType: EmployeeListLayoutOutput, DataSourceType: EmployeeListDataSource>: NSObject, TableViewLayout, UITableViewDataSource, UITableViewDelegate {
     
-    typealias EmployeeType = OutputType.EmployeeType
+    typealias EmployeeType = DataSourceType.EmployeeType
     
-    private var employeeList: [EmployeeType]!
+    private var employeeListDataSource: DataSourceType!
     private var cellbuilder: CellBuilder!
     private var output: OutputType!
     
-    init(employeeList: [EmployeeType], cellBuilder: CellBuilder, output: OutputType) {
-        self.employeeList = employeeList
+    init(employeeListDataSource: DataSourceType, cellBuilder: CellBuilder, output: OutputType) {
+        self.employeeListDataSource = employeeListDataSource
         self.cellbuilder = cellBuilder
         self.output = output
     }
@@ -27,19 +27,17 @@ class EmployeeListLayout<OutputType: EmployeeListLayoutOutput>: NSObject, TableV
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return employeeList.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return cellbuilder.makeCell(
-            for: employeeList[indexPath.row],
-            for: tableView
-        )
+            for: employeeListDataSource.getEmployee(forRow: indexPath.row),
+            for: tableView)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let employee = employeeList[0]
-        
+        let employee = employeeListDataSource.getEmployee(forRow: indexPath.row) as! OutputType.EmployeeType
         output.didSelectRow(employee: employee)
     }
     

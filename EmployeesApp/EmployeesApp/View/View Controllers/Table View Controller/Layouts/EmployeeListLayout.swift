@@ -9,12 +9,12 @@ class EmployeeListLayout<OutputType: EmployeeListLayoutOutput, DataSourceType: E
     
     typealias EmployeeType = DataSourceType.EmployeeType
     
-    private var employeeListDataSource: DataSourceType!
+    private var dataSource: DataSourceType!
     private var cellbuilder: CellBuilder!
     private var output: OutputType!
     
     init(employeeListDataSource: DataSourceType, cellBuilder: CellBuilder, output: OutputType) {
-        self.employeeListDataSource = employeeListDataSource
+        self.dataSource = employeeListDataSource
         self.cellbuilder = cellBuilder
         self.output = output
     }
@@ -26,18 +26,17 @@ class EmployeeListLayout<OutputType: EmployeeListLayoutOutput, DataSourceType: E
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 1
+        return dataSource.getEmployeeCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return cellbuilder.makeCell(
-            for: employeeListDataSource.getEmployee(forRow: indexPath.row),
+            for: dataSource.getEmployee(forRow: indexPath.row),
             for: tableView)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let employee = employeeListDataSource.getEmployee(forRow: indexPath.row) as! OutputType.EmployeeType
+        let employee = dataSource.getEmployee(forRow: indexPath.row) as! OutputType.EmployeeType
         output.didSelectRow(employee: employee)
     }
     

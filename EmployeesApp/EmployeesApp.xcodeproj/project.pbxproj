@@ -32,6 +32,7 @@
 		9771ADCB213EB61A003B2CA1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9771ADCA213EB61A003B2CA1 /* LoginViewController.xib */; };
 		97BE8D03214F929300EFEB80 /* EmployeeSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE8D02214F929300EFEB80 /* EmployeeSelectionController.swift */; };
 		97BE8D05214F96C700EFEB80 /* EmployeeListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE8D04214F96C700EFEB80 /* EmployeeListDataSource.swift */; };
+		97BE8D07214FAD7600EFEB80 /* EmployeeListDataSourceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE8D06214FAD7600EFEB80 /* EmployeeListDataSourceSpy.swift */; };
 		97BEAF7F213E783400AAA342 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAF7E213E783400AAA342 /* AppDelegate.swift */; };
 		97BEAF86213E783500AAA342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97BEAF85213E783500AAA342 /* Assets.xcassets */; };
 		97BEAF89213E783500AAA342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BEAF87213E783500AAA342 /* LaunchScreen.storyboard */; };
@@ -101,6 +102,7 @@
 		9771ADCA213EB61A003B2CA1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		97BE8D02214F929300EFEB80 /* EmployeeSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSelectionController.swift; sourceTree = "<group>"; };
 		97BE8D04214F96C700EFEB80 /* EmployeeListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListDataSource.swift; sourceTree = "<group>"; };
+		97BE8D06214FAD7600EFEB80 /* EmployeeListDataSourceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListDataSourceSpy.swift; sourceTree = "<group>"; };
 		97BEAF7B213E783400AAA342 /* EmployeesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BEAF7E213E783400AAA342 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97BEAF85213E783500AAA342 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				A6B8DB482147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift */,
 				973C2CFC2148F10600E73B1A /* EmployeeListLayoutSpy.swift */,
 				9734A6EB214A58640084BB61 /* EmployeeMock.swift */,
+				97BE8D06214FAD7600EFEB80 /* EmployeeListDataSourceSpy.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -702,6 +705,7 @@
 				A6B8DB492147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift in Sources */,
 				A6D7197F2142A69300CF9134 /* WeakRefTest.swift in Sources */,
 				9753A11E2140114000DBC4C8 /* UserAuthenticationPresenterTest.swift in Sources */,
+				97BE8D07214FAD7600EFEB80 /* EmployeeListDataSourceSpy.swift in Sources */,
 				A6B8DB582147E9B000941BA2 /* UserAuthenticationUseCaseSpy.swift in Sources */,
 				9734A6F1214A666D0084BB61 /* EmployeeTableViewControllerAssemblerTestDependencyFactorySpy.swift in Sources */,
 				A6B359002142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift in Sources */,

@@ -8,4 +8,5 @@ import Foundation
 protocol EmployeeListDataSource {
     associatedtype EmployeeType: PresentableEmployee
     func getEmployee(forRow at: Int) -> EmployeeType
+    func getEmployeeCount() -> Int
 }

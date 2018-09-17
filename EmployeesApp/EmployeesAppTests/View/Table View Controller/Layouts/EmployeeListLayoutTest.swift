@@ -137,17 +137,3 @@ class EmployeeListLayoutTest: XCTestCase {
         return EmployeeListDataSourceSpy(employeeList: list)
     }
 }
-
-class EmployeeListDataSourceSpy: EmployeeListDataSource {
-    typealias EmployeeType = EmployeeListLayoutOutputSpy.EmployeeType
-    
-    var employeeList: [EmployeeMock]!
-    
-    init(employeeList: [EmployeeMock]) {
-        self.employeeList = employeeList
-    }
-    
-    func getEmployee(forRow at: Int) -> EmployeeType {
-        return employeeList[at]
-    }
-}

@@ -7,10 +7,19 @@ import Foundation
 
 class EmployeeListLayoutOutputImp<EmployeeType: PresentableEmployee>: EmployeeListLayoutOutput {
     
+    var selectionController: EmployeeSelectionController!
+    var dataStore: DataStore<EmployeeType>!
+    
+    init(selectionController: EmployeeSelectionController, dataStore: DataStore<EmployeeType>) {
+        self.selectionController = selectionController
+        self.dataStore = dataStore
+    }
+    
     func didSelectRow(employee: EmployeeType) {
-        EmployeeSelectionController().didSelectRow(employee: employee)
+        selectionController.didSelectRow(employee: employee)
     }
     
     func removeItem(at index: Int) {
+        dataStore.removeItemAt(index: index)
     }
 }

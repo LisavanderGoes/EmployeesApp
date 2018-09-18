@@ -13,9 +13,9 @@ class EmployeeListLayoutOutputImpTest: XCTestCase {
     var dataStoreSpy: DataStoreSpy!
     
     override func setUp() {
-        let list = [EmployeeMock(name: "", occupation: "", emailAddress: "")]
         selectionControllerSpy = SelectionControllerSpy()
-        dataStoreSpy = DataStoreSpy(list: list, output: DataStoreOutputSpy())
+        dataStoreSpy = DataStoreSpy()
+        dataStoreSpy.output = DataStoreOutputSpy()
         sut = EmployeeListLayoutOutputImp(
             selectionController: selectionControllerSpy,
             dataStore: dataStoreSpy

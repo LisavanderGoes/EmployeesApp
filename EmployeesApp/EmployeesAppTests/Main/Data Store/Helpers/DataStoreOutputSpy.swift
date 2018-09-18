@@ -17,10 +17,10 @@ class DataStoreOutputSpy: DataStoreOutput {
     }
     
     var didAddItem = false
-    var capturedItem: String?
+    var capturedItemIndex: Int?
     
-    func didAdd(item: Any) {
+    func didAdd(at index: Int) {
         didAddItem = true
-        capturedItem = item as? String
+        capturedItemIndex = index
     }
 }

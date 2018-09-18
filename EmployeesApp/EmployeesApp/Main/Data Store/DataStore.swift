@@ -6,20 +6,10 @@
 import Foundation
 import UIKit
 
-protocol DataStoreOutput {
-    func didRemoveItem(at index: Int)
-    func didAdd(item: Any)
-}
-
 class DataStore<T> {
     
-    private var list: [T]!
-    private let output: DataStoreOutput!
-    
-    init(list: [T], output: DataStoreOutput) {
-        self.list = list
-        self.output = output
-    }
+    private var list: [T] = []
+    var output: DataStoreOutput!
     
     func getItemAt(index: Int) -> T {
         return list[index]
@@ -31,8 +21,9 @@ class DataStore<T> {
     }
     
     func add(item: T) {
+        let index = list.count
         list.append(item)
-        output.didAdd(item: item)
+        output.didAdd(at: index)
     }
     
     func getListCount() -> Int {

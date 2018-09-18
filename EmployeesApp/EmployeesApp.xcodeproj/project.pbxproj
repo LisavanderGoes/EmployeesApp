@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		970553972150D87900401CF3 /* DataStoreOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970553962150D87900401CF3 /* DataStoreOutput.swift */; };
+		9705539C2150DA4900401CF3 /* DataStoreTableViewUpdaterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9705539B2150DA4900401CF3 /* DataStoreTableViewUpdaterAdapter.swift */; };
 		9734A6EC214A58640084BB61 /* EmployeeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9734A6EB214A58640084BB61 /* EmployeeMock.swift */; };
 		9734A6EE214A61D50084BB61 /* Employee+PresentableEmployeeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9734A6ED214A61D50084BB61 /* Employee+PresentableEmployeeTest.swift */; };
 		9734A6F1214A666D0084BB61 /* EmployeeTableViewControllerAssemblerTestDependencyFactorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9734A6F0214A666D0084BB61 /* EmployeeTableViewControllerAssemblerTestDependencyFactorySpy.swift */; };
@@ -82,6 +84,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		970553962150D87900401CF3 /* DataStoreOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreOutput.swift; sourceTree = "<group>"; };
+		9705539B2150DA4900401CF3 /* DataStoreTableViewUpdaterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreTableViewUpdaterAdapter.swift; sourceTree = "<group>"; };
 		9734A6EB214A58640084BB61 /* EmployeeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeMock.swift; sourceTree = "<group>"; };
 		9734A6ED214A61D50084BB61 /* Employee+PresentableEmployeeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+PresentableEmployeeTest.swift"; sourceTree = "<group>"; };
 		9734A6F0214A666D0084BB61 /* EmployeeTableViewControllerAssemblerTestDependencyFactorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewControllerAssemblerTestDependencyFactorySpy.swift; sourceTree = "<group>"; };
@@ -168,6 +172,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		970553942150D84E00401CF3 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				970553952150D86200401CF3 /* Protocols */,
+				97BE8D0D214FB43600EFEB80 /* DataStore.swift */,
+				9705539B2150DA4900401CF3 /* DataStoreTableViewUpdaterAdapter.swift */,
+			);
+			path = "Data Store";
+			sourceTree = "<group>";
+		};
+		970553952150D86200401CF3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				970553962150D87900401CF3 /* DataStoreOutput.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		970553982150D94A00401CF3 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				97BE8D12214FD8FD00EFEB80 /* Helpers */,
+				97BE8D0B214FB3B200EFEB80 /* DataStoreTest.swift */,
+			);
+			path = "Data Store";
+			sourceTree = "<group>";
+		};
 		9734A6EF214A664A0084BB61 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,9 +486,9 @@
 		A6C256E1214156A300267E92 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				970553942150D84E00401CF3 /* Data Store */,
 				97BE8CFF214F858800EFEB80 /* Employee List */,
 				A6D719812142A6A600CF9134 /* Assemblers */,
-				97BE8D0D214FB43600EFEB80 /* DataStore.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -539,10 +570,9 @@
 		A6C256EA2141572C00267E92 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				970553982150D94A00401CF3 /* Data Store */,
 				97BE8D00214F869A00EFEB80 /* Employee List */,
 				A6D719802142A69B00CF9134 /* Assemblers */,
-				97BE8D12214FD8FD00EFEB80 /* Helpers */,
-				97BE8D0B214FB3B200EFEB80 /* DataStoreTest.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -689,6 +719,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				973C2D082148FE1F00E73B1A /* Occupation.swift in Sources */,
+				9705539C2150DA4900401CF3 /* DataStoreTableViewUpdaterAdapter.swift in Sources */,
 				97BE8D03214F929300EFEB80 /* EmployeeSelectionController.swift in Sources */,
 				973C2CFB2148F0B300E73B1A /* EmployeeListLayoutOutput.swift in Sources */,
 				A6C256EC214157E900267E92 /* LoginViewController+LoginView.swift in Sources */,
@@ -713,6 +744,7 @@
 				9753A112213FD2A300DBC4C8 /* AuthenticationService.swift in Sources */,
 				97BEAFA1213E7FFF00AAA342 /* FakeAuthenticationService.swift in Sources */,
 				974111F021410475000C8B56 /* AuthenticationView.swift in Sources */,
+				970553972150D87900401CF3 /* DataStoreOutput.swift in Sources */,
 				973C2D0E2149172B00E73B1A /* EmployeeTableViewControllerAssembler.swift in Sources */,
 				A6B8DB502147E8A500941BA2 /* UserAuthenticationViewControllerAssembler+DependencyFactory.swift in Sources */,
 				A6B8DB432147BE7B00941BA2 /* EmployeeListLayout.swift in Sources */,

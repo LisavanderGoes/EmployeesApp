@@ -48,7 +48,7 @@ class DataStoreTest: XCTestCase {
         let list = ["string1", "string2"]
         let item = "string3"
         makeSUT(list: list).add(item: item)
-        XCTAssertEqual(output.capturedItem, item)
+        XCTAssertEqual(output.capturedItemIndex, list.count)
     }
     
     //MARK: GetListCount
@@ -59,6 +59,11 @@ class DataStoreTest: XCTestCase {
     
     //MARK: Helpers
     func makeSUT(list: [String] = ["string1"]) -> DataStore<String> {
-        return DataStore(list: list, output: output)
+        let dataStore = DataStore<String>()
+        dataStore.output = DataStoreOutputSpy()
+        list.forEach { item in
+            dataStore.add(item: item)
+        }
+        return dataStore
     }
 }

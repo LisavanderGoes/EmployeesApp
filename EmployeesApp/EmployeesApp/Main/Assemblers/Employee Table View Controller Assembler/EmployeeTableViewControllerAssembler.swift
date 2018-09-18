@@ -1,24 +1,27 @@
-////
-////  Created by WebIQ Stagiaire on 12-09-18.
-////  Copyright © 2018 Lisa van der Goes. All rights reserved.
-////
 //
-//import UIKit
+//  Created by WebIQ Stagiaire on 12-09-18.
+//  Copyright © 2018 Lisa van der Goes. All rights reserved.
 //
-//class EmployeeTableViewControllerAssembler {
-//    
-//    private let dependencyFactory: DependencyFactory
-//    
-//    init(dependencyFactory: DependencyFactory) {
-//        self.dependencyFactory = dependencyFactory
-//    }
-//    
-//    func assembleEmployeeTableViewController() -> UIViewController {
-//        
-//        let employeeListLayout = dependencyFactory.makeEmployeeListLayout()
-//        
-//        let viewController = dependencyFactory.makeViewController(layout: employeeListLayout)
-//        
-//        return viewController
-//    }
-//}
+
+import UIKit
+
+class EmployeeTableViewControllerAssembler {
+    
+    private let dependencyFactory: DependencyFactory
+    private let dataStore: DataStore<Employee>
+    
+    init(dependencyFactory: DependencyFactory, dataStore: DataStore<Employee>) {
+        self.dependencyFactory = dependencyFactory
+        self.dataStore = dataStore
+    }
+    
+    func assembleEmployeeTableViewController() -> UIViewController {
+        
+        let employeeListLayout = dependencyFactory.makeEmployeeListLayout(dataStore: dataStore)
+        
+        let viewController = dependencyFactory.makeViewController(layout: employeeListLayout)
+        
+        dataStore.output = viewController.tableView
+        return viewController
+    }
+}

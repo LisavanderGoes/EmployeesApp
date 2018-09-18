@@ -9,7 +9,7 @@ import UIKit
 class DataStore<T> {
     
     private var list: [T] = []
-    var output: DataStoreOutput?
+    var output: DataStoreOutput!
     
     func getItemAt(index: Int) -> T {
         return list[index]
@@ -17,13 +17,13 @@ class DataStore<T> {
     
     func removeItemAt(index: Int) {
         list.remove(at: index)
-        output?.didRemoveItem(at: index)
+        //output.didRemoveItem(at: index)
     }
     
     func add(item: T) {
         let index = list.count
         list.append(item)
-        output?.didAdd(at: index)
+        //output.didAdd(at: index)
     }
     
     func getListCount() -> Int {

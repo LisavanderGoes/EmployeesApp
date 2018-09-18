@@ -22,10 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let dataStore = DataStore<Employee>()
         
-        employees.forEach { employee in
-            dataStore.add(item: employee)
-        }
-        
         let employeeViewControllerAssembler =
             EmployeeTableViewControllerAssembler(
                 dependencyFactory: dependencyFactory,
@@ -33,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         
         let viewController = employeeViewControllerAssembler.assembleEmployeeTableViewController()
+        
+        employees.forEach { employee in
+            dataStore.add(item: employee)
+        }
         
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()

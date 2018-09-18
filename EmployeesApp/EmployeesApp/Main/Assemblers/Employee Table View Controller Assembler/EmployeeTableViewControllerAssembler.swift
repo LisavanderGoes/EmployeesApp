@@ -8,7 +8,7 @@ import UIKit
 class EmployeeTableViewControllerAssembler {
     
     private let dependencyFactory: DependencyFactory
-    private let dataStore: DataStore<Employee>
+    let dataStore: DataStore<Employee>
     
     init(dependencyFactory: DependencyFactory, dataStore: DataStore<Employee>) {
         self.dependencyFactory = dependencyFactory

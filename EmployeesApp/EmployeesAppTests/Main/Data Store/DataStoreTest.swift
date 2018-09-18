@@ -60,7 +60,7 @@ class DataStoreTest: XCTestCase {
     //MARK: Helpers
     func makeSUT(list: [String] = ["string1"]) -> DataStore<String> {
         let dataStore = DataStore<String>()
-        dataStore.output = DataStoreOutputSpy()
+        dataStore.output = output
         list.forEach { item in
             dataStore.add(item: item)
         }

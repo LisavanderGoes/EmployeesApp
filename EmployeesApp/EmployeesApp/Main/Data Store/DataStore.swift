@@ -9,7 +9,7 @@ import UIKit
 class DataStore<T> {
     
     private var list: [T] = []
-    var output: DataStoreOutput!
+    weak var output: DataStoreOutput!
     
     func getItemAt(index: Int) -> T {
         return list[index]

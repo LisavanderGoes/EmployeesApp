@@ -44,7 +44,7 @@ class DataStoreTest: XCTestCase {
         XCTAssertTrue(output.didAddItem)
     }
     
-    func test_addItem_withRightItem() {
+    func test_addItem_withRightIndex() {
         let list = ["string1", "string2"]
         let item = "string3"
         makeSUT(list: list).add(item: item)

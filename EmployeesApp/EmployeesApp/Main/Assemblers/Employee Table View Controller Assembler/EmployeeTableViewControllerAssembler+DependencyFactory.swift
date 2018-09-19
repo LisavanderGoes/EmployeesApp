@@ -17,18 +17,26 @@ extension EmployeeTableViewControllerAssembler {
         func makeViewController(layout: EmployeeListLayout<ListLayoutOutputImpEmployee, ListDataSourceDataStoreAdapterEmployee>) -> TableViewController {
             return TableViewController(layout: layout)
         }
+        
+        func makeSelectionController() -> EmployeeSelectionController {
+            return EmployeeSelectionController()
+        }
+        
+        func makeDataSourceAdapter(dataStore: DataStore<Employee>) -> EmployeeListDataSourceDataStoreAdapter<Employee> {
+            return EmployeeListDataSourceDataStoreAdapter(dataStore: dataStore)
+        }
+        
+        func makeListLayoutOutput(sellectionController: EmployeeSelectionController,
+                                  dataStore: DataStore<Employee>) -> EmployeeListLayoutOutputImp<Employee> {
+            return EmployeeListLayoutOutputImp(selectionController: sellectionController, dataStore: dataStore)
+        }
 
-        func makeEmployeeListLayout(dataStore: DataStore<Employee>) -> EmployeeListLayout<ListLayoutOutputImpEmployee, ListDataSourceDataStoreAdapterEmployee> {
-            
-            let employeeSelectionController = EmployeeSelectionController()
+        func makeListLayout(dataSource: EmployeeListDataSourceDataStoreAdapter<Employee>,
+                                    output: EmployeeListLayoutOutputImp<Employee>) -> EmployeeListLayout<ListLayoutOutputImpEmployee, ListDataSourceDataStoreAdapterEmployee> {
             
             let cellBuilder = EmployeeListLayout<ListLayoutOutputImpEmployee, ListDataSourceDataStoreAdapterEmployee>.CellBuilder()
             
-            let dataSourceDataStoreAdapter = EmployeeListDataSourceDataStoreAdapter(dataStore: dataStore)
-            
-            let employeeListLayoutOutput = EmployeeListLayoutOutputImp(selectionController: employeeSelectionController, dataStore: dataStore)
-
-            return EmployeeListLayout(employeeListDataSource: dataSourceDataStoreAdapter, cellBuilder: cellBuilder, output: employeeListLayoutOutput)
+            return EmployeeListLayout(employeeListDataSource: dataSource, cellBuilder: cellBuilder, output: output)
         }
     }
 }

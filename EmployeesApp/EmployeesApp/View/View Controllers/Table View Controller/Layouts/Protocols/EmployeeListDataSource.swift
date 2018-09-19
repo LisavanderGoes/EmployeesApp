@@ -10,3 +10,4 @@ protocol EmployeeListDataSource {
     func getEmployee(forRow at: Int) -> EmployeeType
     func getEmployeeCount() -> Int
 }
+

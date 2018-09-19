@@ -5,7 +5,7 @@
 
 import Foundation
 
-protocol DataStoreOutput {
+protocol DataStoreOutput: class {
     func didRemoveItem(at index: Int)
     func didAdd(at index: Int)
 }

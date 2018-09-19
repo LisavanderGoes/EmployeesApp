@@ -29,4 +29,9 @@ class EmployeeTableViewControllerAssemblerTest: XCTestCase {
     func test_assembleEmployeeTableViewController_returnsViewControllerRecievedFromDependencyFactory() {
         XCTAssertTrue(sut.assembleEmployeeTableViewController() === dependencyFactorySpy.returnedViewController)
     }
+    
+    func test_dataStore_outputIsSet() {
+        _ = sut.assembleEmployeeTableViewController()
+        XCTAssertNotNil(dataStore.output)
+    }
 }

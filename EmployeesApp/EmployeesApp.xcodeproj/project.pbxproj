@@ -44,6 +44,12 @@
 		97BEAF86213E783500AAA342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97BEAF85213E783500AAA342 /* Assets.xcassets */; };
 		97BEAF89213E783500AAA342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97BEAF87213E783500AAA342 /* LaunchScreen.storyboard */; };
 		97BEAFA1213E7FFF00AAA342 /* FakeAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BEAFA0213E7FFF00AAA342 /* FakeAuthenticationService.swift */; };
+		97F8AE2821523A2600EFAB7C /* CustomerInformationInputViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8AE2721523A2600EFAB7C /* CustomerInformationInputViewControllerTest.swift */; };
+		97F8AE2B21523B0500EFAB7C /* CustomerInformationInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8AE2A21523B0500EFAB7C /* CustomerInformationInputViewController.swift */; };
+		97F8AE2D21523BA800EFAB7C /* CustomerInformationInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97F8AE2C21523BA800EFAB7C /* CustomerInformationInputViewController.xib */; };
+		97F8AE302152464600EFAB7C /* CustomerInformationFormInputCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8AE2F2152464600EFAB7C /* CustomerInformationFormInputCollector.swift */; };
+		97F8AE322152870600EFAB7C /* CustomerInformationFormInputCollectorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8AE312152870600EFAB7C /* CustomerInformationFormInputCollectorTest.swift */; };
+		97F8AE352152874700EFAB7C /* OccupationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8AE342152874700EFAB7C /* OccupationExtension.swift */; };
 		A6A00C7321415CCB00B20891 /* AuthenticationServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A00C7221415CCB00B20891 /* AuthenticationServiceSpy.swift */; };
 		A6A00C7521415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A00C7421415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift */; };
 		A6B359002142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B358FF2142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift */; };
@@ -125,6 +131,12 @@
 		97BEAF8F213E783500AAA342 /* EmployeesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BEAF95213E783500AAA342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97BEAFA0213E7FFF00AAA342 /* FakeAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthenticationService.swift; sourceTree = "<group>"; };
+		97F8AE2721523A2600EFAB7C /* CustomerInformationInputViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInformationInputViewControllerTest.swift; sourceTree = "<group>"; };
+		97F8AE2A21523B0500EFAB7C /* CustomerInformationInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInformationInputViewController.swift; sourceTree = "<group>"; };
+		97F8AE2C21523BA800EFAB7C /* CustomerInformationInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerInformationInputViewController.xib; sourceTree = "<group>"; };
+		97F8AE2F2152464600EFAB7C /* CustomerInformationFormInputCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInformationFormInputCollector.swift; sourceTree = "<group>"; };
+		97F8AE312152870600EFAB7C /* CustomerInformationFormInputCollectorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInformationFormInputCollectorTest.swift; sourceTree = "<group>"; };
+		97F8AE342152874700EFAB7C /* OccupationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccupationExtension.swift; sourceTree = "<group>"; };
 		A6A00C7221415CCB00B20891 /* AuthenticationServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceSpy.swift; sourceTree = "<group>"; };
 		A6A00C7421415CF000B20891 /* UserAuthenticationUseCaseOutputSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthenticationUseCaseOutputSpy.swift; sourceTree = "<group>"; };
 		A6B358FF2142876D0083E982 /* User AuthenticationViewControllerAssemblerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User AuthenticationViewControllerAssemblerTest.swift"; sourceTree = "<group>"; };
@@ -218,18 +230,19 @@
 		973C2D032148FD0000E73B1A /* Employee Model */ = {
 			isa = PBXGroup;
 			children = (
-				973C2D062148FE0D00E73B1A /* Enum */,
+				973C2D062148FE0D00E73B1A /* Enums */,
 				973C2D042148FD2D00E73B1A /* Employee.swift */,
 			);
 			path = "Employee Model";
 			sourceTree = "<group>";
 		};
-		973C2D062148FE0D00E73B1A /* Enum */ = {
+		973C2D062148FE0D00E73B1A /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				97F8AE332152872700EFAB7C /* Extensions */,
 				973C2D072148FE1F00E73B1A /* Occupation.swift */,
 			);
-			path = Enum;
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		973C2D0C2149168B00E73B1A /* Employee Table View Controller Assembler */ = {
@@ -329,6 +342,33 @@
 				97BEAF95213E783500AAA342 /* Info.plist */,
 			);
 			path = EmployeesAppTests;
+			sourceTree = "<group>";
+		};
+		97F8AE26215239E900EFAB7C /* Add Employee View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				97F8AE2721523A2600EFAB7C /* CustomerInformationInputViewControllerTest.swift */,
+				97F8AE312152870600EFAB7C /* CustomerInformationFormInputCollectorTest.swift */,
+			);
+			path = "Add Employee View Controller";
+			sourceTree = "<group>";
+		};
+		97F8AE2921523AE800EFAB7C /* Customer Information Input View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				97F8AE2F2152464600EFAB7C /* CustomerInformationFormInputCollector.swift */,
+				97F8AE2A21523B0500EFAB7C /* CustomerInformationInputViewController.swift */,
+				97F8AE2C21523BA800EFAB7C /* CustomerInformationInputViewController.xib */,
+			);
+			path = "Customer Information Input View Controller";
+			sourceTree = "<group>";
+		};
+		97F8AE332152872700EFAB7C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				97F8AE342152874700EFAB7C /* OccupationExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A6A00C7121415CA200B20891 /* Helpers */ = {
@@ -525,6 +565,7 @@
 		A6C256E5214156DC00267E92 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				97F8AE2921523AE800EFAB7C /* Customer Information Input View Controller */,
 				A6B8DB322147B47600941BA2 /* Table View Controller */,
 				A6C256E6214156EB00267E92 /* Login View Controller */,
 			);
@@ -543,6 +584,7 @@
 		A6C256E72141571300267E92 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				97F8AE26215239E900EFAB7C /* Add Employee View Controller */,
 				A6B8DB402147BC4500941BA2 /* Login View Controller */,
 				A6B8DB352147B54100941BA2 /* Table View Controller */,
 			);
@@ -608,8 +650,8 @@
 			isa = PBXGroup;
 			children = (
 				973C2D0C2149168B00E73B1A /* Employee Table View Controller Assembler */,
-				A6D7197C2142A68400CF9134 /* WeakRef.swift */,
 				A6B358FD214287380083E982 /* User Authentication View Controller Assembler */,
+				A6D7197C2142A68400CF9134 /* WeakRef.swift */,
 			);
 			path = Assemblers;
 			sourceTree = "<group>";
@@ -698,6 +740,7 @@
 			files = (
 				97BEAF89213E783500AAA342 /* LaunchScreen.storyboard in Resources */,
 				A6B8DB602147EC6500941BA2 /* EmployeeCell.xib in Resources */,
+				97F8AE2D21523BA800EFAB7C /* CustomerInformationInputViewController.xib in Resources */,
 				97BEAF86213E783500AAA342 /* Assets.xcassets in Resources */,
 				A6B8DB392147B67100941BA2 /* TableViewController.xib in Resources */,
 				9771ADCB213EB61A003B2CA1 /* LoginViewController.xib in Resources */,
@@ -729,11 +772,13 @@
 				A6B35902214288600083E982 /* UserAuthenticationViewControllerAssembler.swift in Sources */,
 				9753A116213FDB7B00DBC4C8 /* UserAuthenticationUseCaseOutput.swift in Sources */,
 				973C2D132149543300E73B1A /* EmployeeTableViewControllerAssembler+DependencyFactory.swift in Sources */,
+				97F8AE302152464600EFAB7C /* CustomerInformationFormInputCollector.swift in Sources */,
 				9771ADC9213EB524003B2CA1 /* LoginViewController.swift in Sources */,
 				97BE8D0A214FB27000EFEB80 /* EmployeeListDataSourceDataStoreAdapter.swift in Sources */,
 				973C2D0B2148FF9500E73B1A /* Employee+PresentableEmployee.swift in Sources */,
 				97BE8D0E214FB43600EFEB80 /* DataStore.swift in Sources */,
 				A6D7197D2142A68400CF9134 /* WeakRef.swift in Sources */,
+				97F8AE352152874700EFAB7C /* OccupationExtension.swift in Sources */,
 				9753A11C2140101E00DBC4C8 /* UserAuthenticationPresenter.swift in Sources */,
 				97BE8D05214F96C700EFEB80 /* EmployeeListDataSource.swift in Sources */,
 				97BEAF7F213E783400AAA342 /* AppDelegate.swift in Sources */,
@@ -744,6 +789,7 @@
 				9753A112213FD2A300DBC4C8 /* AuthenticationService.swift in Sources */,
 				97BEAFA1213E7FFF00AAA342 /* FakeAuthenticationService.swift in Sources */,
 				974111F021410475000C8B56 /* AuthenticationView.swift in Sources */,
+				97F8AE2B21523B0500EFAB7C /* CustomerInformationInputViewController.swift in Sources */,
 				970553972150D87900401CF3 /* DataStoreOutput.swift in Sources */,
 				973C2D0E2149172B00E73B1A /* EmployeeTableViewControllerAssembler.swift in Sources */,
 				A6B8DB502147E8A500941BA2 /* UserAuthenticationViewControllerAssembler+DependencyFactory.swift in Sources */,
@@ -759,6 +805,7 @@
 			files = (
 				A6B8DB3F2147BC2C00941BA2 /* TableViewLayoutSpy.swift in Sources */,
 				A6A00C7321415CCB00B20891 /* AuthenticationServiceSpy.swift in Sources */,
+				97F8AE322152870600EFAB7C /* CustomerInformationFormInputCollectorTest.swift in Sources */,
 				A6B8DB492147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift in Sources */,
 				A6D7197F2142A69300CF9134 /* WeakRefTest.swift in Sources */,
 				9753A11E2140114000DBC4C8 /* UserAuthenticationPresenterTest.swift in Sources */,
@@ -783,6 +830,7 @@
 				A6B8DB372147B56600941BA2 /* TableViewControllerTest.swift in Sources */,
 				973C2CFF2148F19200E73B1A /* EmployeeListLayoutOutputImpTest.swift in Sources */,
 				973C2D112149200F00E73B1A /* EmployeeTableViewControllerAssemblerTest.swift in Sources */,
+				97F8AE2821523A2600EFAB7C /* CustomerInformationInputViewControllerTest.swift in Sources */,
 				973C2CFD2148F10600E73B1A /* EmployeeListLayoutSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

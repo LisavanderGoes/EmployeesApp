@@ -16,23 +16,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let employees = [Employee(name: "name1", occupationCase: Occupation.Backend_Developer, emailAddress: "email")]
+//        let employees = [Employee(name: "name1", occupationCase: Occupation.Backend_Developer, emailAddress: "email")]
+//
+//        let dependencyFactory = EmployeeTableViewControllerAssembler.DependencyFactory()
+//
+//        let dataStore = DataStore<Employee>()
+//
+//        let employeeViewControllerAssembler =
+//            EmployeeTableViewControllerAssembler(
+//                dependencyFactory: dependencyFactory,
+//                dataStore: dataStore
+//        )
+//
+//        employees.forEach { employee in
+//            dataStore.add(item: employee)
+//        }
+//
+//        let viewController = employeeViewControllerAssembler.assembleEmployeeTableViewController()
         
-        let dependencyFactory = EmployeeTableViewControllerAssembler.DependencyFactory()
+        let formInputCollector = CustomerInformationFormInputCollector()
         
-        let dataStore = DataStore<Employee>()
-        
-        let employeeViewControllerAssembler =
-            EmployeeTableViewControllerAssembler(
-                dependencyFactory: dependencyFactory,
-                dataStore: dataStore
-        )
-        
-        let viewController = employeeViewControllerAssembler.assembleEmployeeTableViewController()
-        
-        employees.forEach { employee in
-            dataStore.add(item: employee)
-        }
+        let viewController = CustomerInformationInputViewController(formInputCollector: formInputCollector)
         
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()

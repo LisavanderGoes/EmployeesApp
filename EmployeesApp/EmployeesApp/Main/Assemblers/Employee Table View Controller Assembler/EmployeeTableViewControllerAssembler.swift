@@ -17,7 +17,13 @@ class EmployeeTableViewControllerAssembler {
     
     func assembleEmployeeTableViewController() -> UIViewController {
         
-        let employeeListLayout = dependencyFactory.makeEmployeeListLayout(dataStore: dataStore)
+        let dataSource = dependencyFactory.makeDataSourceAdapter(dataStore: dataStore)
+        
+        let sellectionController = dependencyFactory.makeSelectionController()
+        
+        let output = dependencyFactory.makeListLayoutOutput(sellectionController: sellectionController, dataStore: dataStore)
+        
+        let employeeListLayout = dependencyFactory.makeListLayout(dataSource: dataSource, output: output)
         
         let viewController = dependencyFactory.makeViewController(layout: employeeListLayout)
         

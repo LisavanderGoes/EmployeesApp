@@ -27,9 +27,4 @@ extension Occupation {
         }
         return allCases
     }
-    
-    static func count() -> Int {
-        return allCases().count
-    }
-    
 }

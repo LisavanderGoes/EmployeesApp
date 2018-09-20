@@ -18,7 +18,6 @@ class CustomerInformationInputViewControllerTest: XCTestCase {
         sut = CustomerInformationInputViewController(formInputCollector: formInputCollectorSpy)
         _ = sut.view
         pickerView = UIPickerView()
-        sut.pickerView(pickerView, didSelectRow: 0, inComponent: 0)
     }
     
     func test_viewDidLoad_nameTextFieldIsConnected() {
@@ -52,7 +51,7 @@ class CustomerInformationInputViewControllerTest: XCTestCase {
     
     //MARK: PickerView
     func test_pickerView_numberOfRowsInComponent() {
-        XCTAssertEqual(sut.occupationPickerView.numberOfRows(inComponent: 0), Occupation.count())
+        XCTAssertEqual(sut.occupationPickerView.numberOfRows(inComponent: 0), Occupation.allCases().count)
     }
     
     func test_pickerView_titleForRow() {

@@ -13,16 +13,17 @@ class CustomerInformationInputViewController: UIViewController, UIPickerViewData
     
     private var formInputCollector: CustomerInformationFormInputCollector!
     private var occupation: Occupation?
+    private var occupationList: [Occupation]!
     
     convenience init(formInputCollector: CustomerInformationFormInputCollector) {
         self.init()
         self.formInputCollector = formInputCollector
     }
     
-    @IBAction func sumbitButtonTapped() {
+    @IBAction func submitButtonTapped() {
         let name = nameTextField.text ?? ""
         let emailAddress = emailAddressTextField.text ?? ""
-        let occupation = self.occupation!
+        let occupation = self.occupation ?? occupationList[0]
         
         formInputCollector.collectFormInput(name: name, emailAddress: emailAddress, occupation: occupation)
     }
@@ -30,6 +31,11 @@ class CustomerInformationInputViewController: UIViewController, UIPickerViewData
     override func viewDidLoad() {
         occupationPickerView.dataSource = self
         occupationPickerView.delegate = self
+        occupationList = Occupation.allCases()
+        if occupationList.isEmpty {
+            occupationPickerView.isUserInteractionEnabled = false
+            submitButton.isEnabled = false
+        }
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -37,16 +43,15 @@ class CustomerInformationInputViewController: UIViewController, UIPickerViewData
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return Occupation.count()
+        return occupationList.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return Occupation.allCases()[row].rawValue
+        return occupationList[row].rawValue
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        self.occupation = Occupation.allCases()[row]
-        //enable button
+        self.occupation = occupationList[row]
     }
 }
 

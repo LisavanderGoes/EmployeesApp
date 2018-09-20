@@ -49,6 +49,8 @@
 		97D273A521539A7500987F33 /* EmployeeInformationConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D273A421539A7500987F33 /* EmployeeInformationConverter.swift */; };
 		97D273A821539CE600987F33 /* CustomerInformationFormInputCollectorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D273A721539CE600987F33 /* CustomerInformationFormInputCollectorSpy.swift */; };
 		97D273AA21539F2C00987F33 /* EmployeeInformationConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D273A921539F2C00987F33 /* EmployeeInformationConverterTest.swift */; };
+		97D273AC2153D83600987F33 /* DataStoreNavigationUpdaterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D273AB2153D83600987F33 /* DataStoreNavigationUpdaterAdapter.swift */; };
+		97D273AE2153D98800987F33 /* DataStoreNavigationUpdaterAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D273AD2153D98800987F33 /* DataStoreNavigationUpdaterAdapterTest.swift */; };
 		97F8AE2821523A2600EFAB7C /* CustomerInformationInputViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8AE2721523A2600EFAB7C /* CustomerInformationInputViewControllerTest.swift */; };
 		97F8AE2B21523B0500EFAB7C /* CustomerInformationInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8AE2A21523B0500EFAB7C /* CustomerInformationInputViewController.swift */; };
 		97F8AE2D21523BA800EFAB7C /* CustomerInformationInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97F8AE2C21523BA800EFAB7C /* CustomerInformationInputViewController.xib */; };
@@ -141,6 +143,8 @@
 		97D273A421539A7500987F33 /* EmployeeInformationConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeInformationConverter.swift; sourceTree = "<group>"; };
 		97D273A721539CE600987F33 /* CustomerInformationFormInputCollectorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInformationFormInputCollectorSpy.swift; sourceTree = "<group>"; };
 		97D273A921539F2C00987F33 /* EmployeeInformationConverterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeInformationConverterTest.swift; sourceTree = "<group>"; };
+		97D273AB2153D83600987F33 /* DataStoreNavigationUpdaterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreNavigationUpdaterAdapter.swift; sourceTree = "<group>"; };
+		97D273AD2153D98800987F33 /* DataStoreNavigationUpdaterAdapterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreNavigationUpdaterAdapterTest.swift; sourceTree = "<group>"; };
 		97F8AE2721523A2600EFAB7C /* CustomerInformationInputViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInformationInputViewControllerTest.swift; sourceTree = "<group>"; };
 		97F8AE2A21523B0500EFAB7C /* CustomerInformationInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInformationInputViewController.swift; sourceTree = "<group>"; };
 		97F8AE2C21523BA800EFAB7C /* CustomerInformationInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerInformationInputViewController.xib; sourceTree = "<group>"; };
@@ -199,7 +203,6 @@
 			children = (
 				970553952150D86200401CF3 /* Protocols */,
 				97BE8D0D214FB43600EFEB80 /* DataStore.swift */,
-				9705539B2150DA4900401CF3 /* DataStoreTableViewUpdaterAdapter.swift */,
 			);
 			path = "Data Store";
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			children = (
 				973C2CFE2148F19200E73B1A /* EmployeeListLayoutOutputImpTest.swift */,
 				97BE8D10214FD61900EFEB80 /* EmployeeListDataSourceDataStoreAdapterTest.swift */,
+				97D273AD2153D98800987F33 /* DataStoreNavigationUpdaterAdapterTest.swift */,
 			);
 			path = "Employee List";
 			sourceTree = "<group>";
@@ -297,7 +301,9 @@
 		97BE8D08214FB25800EFEB80 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
+				9705539B2150DA4900401CF3 /* DataStoreTableViewUpdaterAdapter.swift */,
 				97BE8D09214FB27000EFEB80 /* EmployeeListDataSourceDataStoreAdapter.swift */,
+				97D273AB2153D83600987F33 /* DataStoreNavigationUpdaterAdapter.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -811,6 +817,7 @@
 				A6B35902214288600083E982 /* UserAuthenticationViewControllerAssembler.swift in Sources */,
 				9753A116213FDB7B00DBC4C8 /* UserAuthenticationUseCaseOutput.swift in Sources */,
 				973C2D132149543300E73B1A /* EmployeeTableViewControllerAssembler+DependencyFactory.swift in Sources */,
+				97D273AC2153D83600987F33 /* DataStoreNavigationUpdaterAdapter.swift in Sources */,
 				97F8AE302152464600EFAB7C /* CustomerInformationFormInputCollector.swift in Sources */,
 				9771ADC9213EB524003B2CA1 /* LoginViewController.swift in Sources */,
 				97BE8D0A214FB27000EFEB80 /* EmployeeListDataSourceDataStoreAdapter.swift in Sources */,
@@ -844,6 +851,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D273AE2153D98800987F33 /* DataStoreNavigationUpdaterAdapterTest.swift in Sources */,
 				A6B8DB3F2147BC2C00941BA2 /* TableViewLayoutSpy.swift in Sources */,
 				A6A00C7321415CCB00B20891 /* AuthenticationServiceSpy.swift in Sources */,
 				97F8AE322152870600EFAB7C /* CustomerInformationFormInputCollectorTest.swift in Sources */,

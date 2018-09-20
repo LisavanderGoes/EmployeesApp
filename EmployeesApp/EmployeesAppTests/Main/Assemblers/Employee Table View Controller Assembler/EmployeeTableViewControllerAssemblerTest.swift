@@ -27,11 +27,11 @@ class EmployeeTableViewControllerAssemblerTest: XCTestCase {
     }
     
     func test_assembleEmployeeTableViewController_returnsViewControllerRecievedFromDependencyFactory() {
-        XCTAssertTrue(sut.assembleEmployeeTableViewController() === dependencyFactorySpy.returnedViewController)
+        XCTAssertTrue(sut.assembleEmployeeTableViewController(didAddItemClosure: {}) === dependencyFactorySpy.returnedViewController)
     }
     
     func test_dataStore_outputIsSet() {
-        _ = sut.assembleEmployeeTableViewController()
+        _ = sut.assembleEmployeeTableViewController(didAddItemClosure: {})
         XCTAssertNotNil(dataStore.output)
     }
 }

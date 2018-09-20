@@ -15,7 +15,7 @@ class EmployeeTableViewControllerAssembler {
         self.dataStore = dataStore
     }
     
-    func assembleEmployeeTableViewController() -> UIViewController {
+    func assembleEmployeeTableViewController(didAddItemClosure: @escaping () -> Void) -> UIViewController {
         
         let dataSource = dependencyFactory.makeDataSourceAdapter(dataStore: dataStore)
         
@@ -24,6 +24,8 @@ class EmployeeTableViewControllerAssembler {
         let output = dependencyFactory.makeListLayoutOutput(sellectionController: sellectionController, dataStore: dataStore)
         
         let employeeListLayout = dependencyFactory.makeListLayout(dataSource: dataSource, output: output)
+        
+        _ = DataStoreNavigationUpdaterAdapter(didAddItemClosure: didAddItemClosure)
         
         let viewController = dependencyFactory.makeViewController(layout: employeeListLayout)
         

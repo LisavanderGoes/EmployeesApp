@@ -31,6 +31,8 @@ class UserAuthenticationPresenterTest : XCTestCase{
         sut.authenticationSucceded()
         XCTAssertTrue(authenticationView.stopAnimationIndicatorIsCalled)
     }
+    
+    func test_authenticationSucceded_
 
     // MARK: authenticationFailed related
     func test_authenticationFailed_showsMessageOnView() {

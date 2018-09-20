@@ -86,18 +86,3 @@ class CustomerInformationInputViewControllerTest: XCTestCase {
         XCTAssertEqual(formInputCollectorSpy.capturedOccuption, occupation)
     }
 }
-
-class CustomerInformationFormInputCollectorSpy: CustomerInformationFormInputCollector {
-    
-    var collectFormInputIsCalled = false
-    var capturedName: String?
-    var capturedEmailAddress: String?
-    var capturedOccuption: Occupation?
-    
-    override func collectFormInput(name: String, emailAddress: String, occupation: Occupation) {
-        collectFormInputIsCalled = true
-        self.capturedName = name
-        self.capturedEmailAddress = emailAddress
-        self.capturedOccuption = occupation
-    }
-}

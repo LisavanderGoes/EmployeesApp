@@ -5,18 +5,24 @@
 
 import Foundation
 
+struct EmployeeInformtion {
+    var name: String
+    var occupation: Occupation
+    var emailAddress: String
+}
+
 class CustomerInformationFormInputCollector {
     
-    var employee: Employee?
+    private var employeeInformation: EmployeeInformtion?
     
     func collectFormInput(name: String, emailAddress: String, occupation: Occupation) {
-        employee = Employee(name: name, occupationCase: occupation, emailAddress: emailAddress)
+        employeeInformation = EmployeeInformtion(name: name, occupation: occupation, emailAddress: emailAddress)
     }
     
-    func getEmployee() -> Employee {
-        guard let employee = self.employee else {
-           return Employee(name: "",
-                           occupationCase: .Backend_Developer,
+    func getEmployeeInformation() -> EmployeeInformtion? {
+        guard let employee = self.employeeInformation else {
+           return EmployeeInformtion(name: "",
+                           occupation: .Backend_Developer,
                            emailAddress: ""
             )
         }

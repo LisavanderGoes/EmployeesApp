@@ -10,11 +10,11 @@ class EmployeeListLayoutOutputImpTest: XCTestCase {
     
     var sut: EmployeeListLayoutOutputImp<EmployeeMock>!
     var selectionControllerSpy: SelectionControllerSpy!
-    var dataStoreSpy: DataStoreSpy!
+    var dataStoreSpy: DataStoreSpyEmployeeMock!
     
     override func setUp() {
         selectionControllerSpy = SelectionControllerSpy()
-        dataStoreSpy = DataStoreSpy()
+        dataStoreSpy = DataStoreSpyEmployeeMock()
         dataStoreSpy.output = DataStoreOutputSpy()
         sut = EmployeeListLayoutOutputImp(
             selectionController: selectionControllerSpy,
@@ -55,7 +55,7 @@ class SelectionControllerSpy: EmployeeSelectionController {
     }
 }
 
-class DataStoreSpy: DataStore<EmployeeMock> {
+class DataStoreSpyEmployeeMock: DataStore<EmployeeMock> {
     
     var didRemoveItem = false
     var capturedIndex: Int?

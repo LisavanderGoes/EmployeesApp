@@ -13,15 +13,15 @@ class CustomerInformationFormInputCollectorTest: XCTestCase {
         sut = CustomerInformationFormInputCollector()
     }
     
-    func test_getEmployee() {
+    func test_getEmployeeInformation() {
         let name = "name"
         let emailAddress = "email"
         let occupation = Occupation.Frontend_Developer
         
         sut.collectFormInput(name: name, emailAddress: emailAddress, occupation: occupation)
         
-        let employee = sut.getEmployee()
+        let employeeInformation = sut.getEmployeeInformation()
         
-        XCTAssertTrue(employee.name == name && employee.emailAddress == emailAddress && employee.occupationCase == occupation)
+        XCTAssertTrue(employeeInformation?.name == name && employeeInformation?.emailAddress == emailAddress && employeeInformation?.occupation == occupation)
     }
 }

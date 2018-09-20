@@ -9,30 +9,35 @@ import XCTest
 class UserAuthenticationPresenterTest : XCTestCase{
     
     var authenticationView: AuthenticationViewSpy!
-    var sut: UserAuthenticationPresenter!
     
     override func setUp() {
         authenticationView = AuthenticationViewSpy()
-        sut = UserAuthenticationPresenter(loginView: authenticationView)
     }
     
     // MARK: authenticationSucceded related
     func test_authenticationSucceded_showsMessageOnView() {
-        sut.authenticationSucceded()
+        makeSUT().authenticationSucceded()
         XCTAssertTrue(authenticationView.showIsCalled)
     }
     
     func test_authenticationSucceded_showsCorrectMessageOnView() {
-        sut.authenticationSucceded()
+        makeSUT().authenticationSucceded()
         XCTAssertEqual(authenticationView.capturedMessage, "Succes")
     }
     
     func test_authenticationSucceded_stopAnimationLoadingIndicatorr() {
-        sut.authenticationSucceded()
+        makeSUT().authenticationSucceded()
         XCTAssertTrue(authenticationView.stopAnimationIndicatorIsCalled)
     }
     
-    func test_authenticationSucceded_
+    func test_authenticationSucceded_authenticationDidSucceedClosure() {
+        var closureIsCalled = false
+        let closure = {
+            closureIsCalled = true
+        }
+        makeSUT(authenticationDidSucceed: closure).authenticationSucceded()
+        XCTAssertTrue(closureIsCalled)
+    }
 
     // MARK: authenticationFailed related
     func test_authenticationFailed_showsMessageOnView() {
@@ -58,17 +63,22 @@ class UserAuthenticationPresenterTest : XCTestCase{
     
     // MARK: authenticationStarted related
     func test_authenticationStarted_startAnimationLoadingIndicator() {
-        sut.authenticationStarted()
+        makeSUT().authenticationStarted()
         XCTAssertTrue(authenticationView.startAnimationIndicatorIsCalled)
     }
     
     func test_authenticationStarted_disableLoginButton() {
-        sut.authenticationStarted()
+        makeSUT().authenticationStarted()
         XCTAssertTrue(authenticationView.disableLoginButtonIsCalled)
     }
     
     // MARK: Helpers
     func authenticationFailed(reason: String = "") {
-        sut.authenticationFailed(reason: reason)
+        makeSUT().authenticationFailed(reason: reason)
     }
+    
+    func makeSUT(authenticationDidSucceed: @escaping () -> Void = {}) -> UserAuthenticationPresenter {
+        return UserAuthenticationPresenter(loginView: authenticationView, authenticationDidSucceed: authenticationDidSucceed)
+    }
+    
 }

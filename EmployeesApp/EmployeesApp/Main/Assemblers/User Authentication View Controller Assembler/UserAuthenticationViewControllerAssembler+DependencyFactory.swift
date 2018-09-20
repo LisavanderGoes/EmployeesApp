@@ -29,10 +29,12 @@ extension UserAuthenticationViewControllerAssembler {
         }
         
         func makePresenter(
-            view: AuthenticationView
+            view: AuthenticationView,
+            authenticationDidSucceed: @escaping () -> Void
         ) -> UserAuthenticationPresenter {
             return UserAuthenticationPresenter(
-                loginView: view
+                loginView: view,
+                authenticationDidSucceed: authenticationDidSucceed
             )
         }
     }

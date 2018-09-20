@@ -7,10 +7,12 @@ import Foundation
 
 class UserAuthenticationPresenter: UserAuthenticationUseCaseOutput {
     
-    private let authenticationView: AuthenticationView!
+    private let authenticationView: AuthenticationView
+    private var authenticationDidSucceed: () -> Void
     
-    init(loginView: AuthenticationView) {
+    init(loginView: AuthenticationView, authenticationDidSucceed: @escaping () -> Void) {
         self.authenticationView = loginView
+        self.authenticationDidSucceed = authenticationDidSucceed
     }
     
     func authenticationStarted() {
@@ -21,6 +23,7 @@ class UserAuthenticationPresenter: UserAuthenticationUseCaseOutput {
     func authenticationSucceded() {
         authenticationView.show(message: "Succes")
         authenticationView.stopAnimationLoadingIndicator()
+        authenticationDidSucceed()
     }
     
     func authenticationFailed(reason: String) {

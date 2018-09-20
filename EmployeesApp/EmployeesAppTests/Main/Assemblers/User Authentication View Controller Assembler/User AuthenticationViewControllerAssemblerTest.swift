@@ -19,17 +19,17 @@ class UserAuthenticationViewControllerAssemblerTest: XCTestCase {
     }
     
     func test_assembleUserAuthenticationViewController_returnsViewControllerRecievedFromDependencyFactory() {
-        XCTAssertTrue(sut.assembleUserAuthenticationViewController() === dependencyFactory.returnedViewController)
+        XCTAssertTrue(sut.assembleUserAuthenticationViewController(authenticationDidSucceed: { }) === dependencyFactory.returnedViewController)
     }
     
     func test_assembleUserAuthenticationViewController_connectsViewControllerToUseCase() {
-        _ = sut.assembleUserAuthenticationViewController()
+        _ = sut.assembleUserAuthenticationViewController(authenticationDidSucceed: { })
         dependencyFactory.returnedViewController?.loginClosure?("", "")
         XCTAssertTrue(dependencyFactory.returnedUseCase?.authenticateUserIsCalled ?? false)
     }
     
     func test_assembleUserAuthenticationViewController_presenterWeakRefToViewController() {
-        _ = sut.assembleUserAuthenticationViewController()
+        _ = sut.assembleUserAuthenticationViewController(authenticationDidSucceed: { })
         weak var weakRefferenceToViewController = dependencyFactory.returnedViewController
         dependencyFactory.returnedViewController = nil
         XCTAssertNil(weakRefferenceToViewController)

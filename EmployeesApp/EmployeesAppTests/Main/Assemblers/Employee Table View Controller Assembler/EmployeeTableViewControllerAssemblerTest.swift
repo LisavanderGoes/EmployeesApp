@@ -21,9 +21,9 @@ class EmployeeTableViewControllerAssemblerTest: XCTestCase {
             dataStore.add(item: employee)
         }
         
-        dependencyFactorySpy = EmployeeTableViewControllerAssemblerTestDependencyFactorySpy()
+        dependencyFactorySpy = EmployeeTableViewControllerAssemblerTestDependencyFactorySpy(dataStore: dataStore)
         
-        sut = EmployeeTableViewControllerAssembler(dependencyFactory: dependencyFactorySpy, dataStore: dataStore)
+        sut = EmployeeTableViewControllerAssembler(dependencyFactory: dependencyFactorySpy)
     }
     
     func test_assembleEmployeeTableViewController_returnsViewControllerRecievedFromDependencyFactory() {

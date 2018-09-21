@@ -8,20 +8,18 @@ import UIKit
 class EmployeeTableViewControllerAssembler {
     
     private let dependencyFactory: DependencyFactory
-    let dataStore: DataStore<Employee>
     
-    init(dependencyFactory: DependencyFactory, dataStore: DataStore<Employee>) {
+    init(dependencyFactory: DependencyFactory) {
         self.dependencyFactory = dependencyFactory
-        self.dataStore = dataStore
     }
     
     func assembleEmployeeTableViewController(didAddItemClosure: @escaping () -> Void) -> UIViewController {
         
-        let dataSource = dependencyFactory.makeDataSourceAdapter(dataStore: dataStore)
+        let dataSource = dependencyFactory.makeDataSourceAdapter()
         
         let sellectionController = dependencyFactory.makeSelectionController()
         
-        let output = dependencyFactory.makeListLayoutOutput(sellectionController: sellectionController, dataStore: dataStore)
+        let output = dependencyFactory.makeListLayoutOutput(sellectionController: sellectionController)
         
         let employeeListLayout = dependencyFactory.makeListLayout(dataSource: dataSource, output: output)
         
@@ -29,7 +27,6 @@ class EmployeeTableViewControllerAssembler {
         
         let viewController = dependencyFactory.makeViewController(layout: employeeListLayout)
         
-        dataStore.output = viewController.tableView
         return viewController
     }
 }

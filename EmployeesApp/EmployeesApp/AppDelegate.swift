@@ -34,9 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //        let viewController = employeeViewControllerAssembler.assembleEmployeeTableViewController()
         
-        let formInputCollector = CustomerInformationFormInputCollector()
+        let dataStore = DataStore<Employee>()
         
-        let viewController = CustomerInformationInputViewController()
+        let dependencyFactory = AddEmployeeViewControllerAssembler.DependencyFactory(dataStore: dataStore)
+        
+        let assembler = AddEmployeeViewControllerAssembler(dependencyFactory: dependencyFactory)
+        
+        let viewController = assembler.assembleAddEmployeeViewController()
         
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()

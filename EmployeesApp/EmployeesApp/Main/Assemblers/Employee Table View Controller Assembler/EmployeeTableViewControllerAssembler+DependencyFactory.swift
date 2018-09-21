@@ -14,20 +14,27 @@ extension EmployeeTableViewControllerAssembler {
         typealias ListDataSourceDataStoreAdapterEmployee = EmployeeListDataSourceDataStoreAdapter<Employee>
         
         
+        let dataStore: DataStore<Employee>
+        
+        init(dataStore: DataStore<Employee>) {
+            self.dataStore = dataStore
+        }
+        
         func makeViewController(layout: EmployeeListLayout<ListLayoutOutputImpEmployee, ListDataSourceDataStoreAdapterEmployee>) -> TableViewController {
-            return TableViewController(layout: layout)
+            let viewController = TableViewController(layout: layout)
+            dataStore.output = viewController.tableView
+            return viewController
         }
         
         func makeSelectionController() -> EmployeeSelectionController {
             return EmployeeSelectionController()
         }
         
-        func makeDataSourceAdapter(dataStore: DataStore<Employee>) -> EmployeeListDataSourceDataStoreAdapter<Employee> {
+        func makeDataSourceAdapter() -> EmployeeListDataSourceDataStoreAdapter<Employee> {
             return EmployeeListDataSourceDataStoreAdapter(dataStore: dataStore)
         }
         
-        func makeListLayoutOutput(sellectionController: EmployeeSelectionController,
-                                  dataStore: DataStore<Employee>) -> EmployeeListLayoutOutputImp<Employee> {
+        func makeListLayoutOutput(sellectionController: EmployeeSelectionController) -> EmployeeListLayoutOutputImp<Employee> {
             return EmployeeListLayoutOutputImp(selectionController: sellectionController, dataStore: dataStore)
         }
 

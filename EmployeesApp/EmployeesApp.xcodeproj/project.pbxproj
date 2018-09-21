@@ -32,6 +32,12 @@
 		9771ADC7213EB2C7003B2CA1 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771ADC6213EB2C7003B2CA1 /* LoginViewControllerTest.swift */; };
 		9771ADC9213EB524003B2CA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9771ADC8213EB524003B2CA1 /* LoginViewController.swift */; };
 		9771ADCB213EB61A003B2CA1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9771ADCA213EB61A003B2CA1 /* LoginViewController.xib */; };
+		97A153782154D8DF00937FC4 /* BarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A153772154D8DF00937FC4 /* BarButtonItem.swift */; };
+		97A1537D2154DB7400937FC4 /* BarButtonItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1537C2154DB7400937FC4 /* BarButtonItemTest.swift */; };
+		97A153802154E16400937FC4 /* AddEmployeeViewControllerAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A1537F2154E16400937FC4 /* AddEmployeeViewControllerAssembler.swift */; };
+		97A153832154ED5B00937FC4 /* AddEmployeeViewControllerAssemblerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A153822154ED5B00937FC4 /* AddEmployeeViewControllerAssemblerTest.swift */; };
+		97A153852154F19700937FC4 /* DataStoreSpyEmployeeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A153842154F19700937FC4 /* DataStoreSpyEmployeeMock.swift */; };
+		97A153872154F1C800937FC4 /* DataStoreSpyEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A153862154F1C800937FC4 /* DataStoreSpyEmployee.swift */; };
 		97BE8D03214F929300EFEB80 /* EmployeeSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE8D02214F929300EFEB80 /* EmployeeSelectionController.swift */; };
 		97BE8D05214F96C700EFEB80 /* EmployeeListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE8D04214F96C700EFEB80 /* EmployeeListDataSource.swift */; };
 		97BE8D07214FAD7600EFEB80 /* EmployeeListDataSourceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BE8D06214FAD7600EFEB80 /* EmployeeListDataSourceSpy.swift */; };
@@ -47,7 +53,6 @@
 		97D273A02153993700987F33 /* EmployeePersisterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D2739F2153993700987F33 /* EmployeePersisterTest.swift */; };
 		97D273A3215399A300987F33 /* EmployeePersister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D273A2215399A300987F33 /* EmployeePersister.swift */; };
 		97D273A521539A7500987F33 /* EmployeeInformationConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D273A421539A7500987F33 /* EmployeeInformationConverter.swift */; };
-		97D273A821539CE600987F33 /* CustomerInformationFormInputCollectorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D273A721539CE600987F33 /* CustomerInformationFormInputCollectorSpy.swift */; };
 		97D273AA21539F2C00987F33 /* EmployeeInformationConverterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D273A921539F2C00987F33 /* EmployeeInformationConverterTest.swift */; };
 		97D273AC2153D83600987F33 /* DataStoreNavigationUpdaterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D273AB2153D83600987F33 /* DataStoreNavigationUpdaterAdapter.swift */; };
 		97D273AE2153D98800987F33 /* DataStoreNavigationUpdaterAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D273AD2153D98800987F33 /* DataStoreNavigationUpdaterAdapterTest.swift */; };
@@ -122,6 +127,12 @@
 		9771ADC6213EB2C7003B2CA1 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		9771ADC8213EB524003B2CA1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9771ADCA213EB61A003B2CA1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		97A153772154D8DF00937FC4 /* BarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItem.swift; sourceTree = "<group>"; };
+		97A1537C2154DB7400937FC4 /* BarButtonItemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemTest.swift; sourceTree = "<group>"; };
+		97A1537F2154E16400937FC4 /* AddEmployeeViewControllerAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewControllerAssembler.swift; sourceTree = "<group>"; };
+		97A153822154ED5B00937FC4 /* AddEmployeeViewControllerAssemblerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewControllerAssemblerTest.swift; sourceTree = "<group>"; };
+		97A153842154F19700937FC4 /* DataStoreSpyEmployeeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreSpyEmployeeMock.swift; sourceTree = "<group>"; };
+		97A153862154F1C800937FC4 /* DataStoreSpyEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreSpyEmployee.swift; sourceTree = "<group>"; };
 		97BE8D02214F929300EFEB80 /* EmployeeSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSelectionController.swift; sourceTree = "<group>"; };
 		97BE8D04214F96C700EFEB80 /* EmployeeListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListDataSource.swift; sourceTree = "<group>"; };
 		97BE8D06214FAD7600EFEB80 /* EmployeeListDataSourceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListDataSourceSpy.swift; sourceTree = "<group>"; };
@@ -141,7 +152,6 @@
 		97D2739F2153993700987F33 /* EmployeePersisterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeePersisterTest.swift; sourceTree = "<group>"; };
 		97D273A2215399A300987F33 /* EmployeePersister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeePersister.swift; sourceTree = "<group>"; };
 		97D273A421539A7500987F33 /* EmployeeInformationConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeInformationConverter.swift; sourceTree = "<group>"; };
-		97D273A721539CE600987F33 /* CustomerInformationFormInputCollectorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInformationFormInputCollectorSpy.swift; sourceTree = "<group>"; };
 		97D273A921539F2C00987F33 /* EmployeeInformationConverterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeInformationConverterTest.swift; sourceTree = "<group>"; };
 		97D273AB2153D83600987F33 /* DataStoreNavigationUpdaterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreNavigationUpdaterAdapter.swift; sourceTree = "<group>"; };
 		97D273AD2153D98800987F33 /* DataStoreNavigationUpdaterAdapterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreNavigationUpdaterAdapterTest.swift; sourceTree = "<group>"; };
@@ -278,6 +288,38 @@
 			path = "Employee Table View Controller Assembler";
 			sourceTree = "<group>";
 		};
+		97A153762154D7C900937FC4 /* BarButton */ = {
+			isa = PBXGroup;
+			children = (
+				97A153772154D8DF00937FC4 /* BarButtonItem.swift */,
+			);
+			path = BarButton;
+			sourceTree = "<group>";
+		};
+		97A1537B2154DB5A00937FC4 /* BarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				97A1537C2154DB7400937FC4 /* BarButtonItemTest.swift */,
+			);
+			path = BarButtonItem;
+			sourceTree = "<group>";
+		};
+		97A1537E2154E12900937FC4 /* Add Employee View Controller Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				97A1537F2154E16400937FC4 /* AddEmployeeViewControllerAssembler.swift */,
+			);
+			path = "Add Employee View Controller Assembler";
+			sourceTree = "<group>";
+		};
+		97A153812154ED4800937FC4 /* Add Employee View Controller Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				97A153822154ED5B00937FC4 /* AddEmployeeViewControllerAssemblerTest.swift */,
+			);
+			path = "Add Employee View Controller Assembler";
+			sourceTree = "<group>";
+		};
 		97BE8CFF214F858800EFEB80 /* Employee List */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +354,8 @@
 			isa = PBXGroup;
 			children = (
 				97BE8D13214FD91A00EFEB80 /* DataStoreOutputSpy.swift */,
+				97A153842154F19700937FC4 /* DataStoreSpyEmployeeMock.swift */,
+				97A153862154F1C800937FC4 /* DataStoreSpyEmployee.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -381,7 +425,6 @@
 		97D273A621539CD400987F33 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				97D273A721539CE600987F33 /* CustomerInformationFormInputCollectorSpy.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -580,6 +623,7 @@
 		A6C256E2214156AA00267E92 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				97A153762154D7C900937FC4 /* BarButton */,
 				A6C256E5214156DC00267E92 /* View Controllers */,
 				97BEAF85213E783500AAA342 /* Assets.xcassets */,
 				97BEAF87213E783500AAA342 /* LaunchScreen.storyboard */,
@@ -628,6 +672,7 @@
 		A6C256E72141571300267E92 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				97A1537B2154DB5A00937FC4 /* BarButtonItem */,
 				97F8AE26215239E900EFAB7C /* Add Employee View Controller */,
 				A6B8DB402147BC4500941BA2 /* Login View Controller */,
 				A6B8DB352147B54100941BA2 /* Table View Controller */,
@@ -684,6 +729,7 @@
 		A6D719802142A69B00CF9134 /* Assemblers */ = {
 			isa = PBXGroup;
 			children = (
+				97A153812154ED4800937FC4 /* Add Employee View Controller Assembler */,
 				973C2D0F21491FA900E73B1A /* Employee Table View Controller Assembler */,
 				A6B358FE2142875D0083E982 /* User Authentication View Controller Assembler */,
 				A6D7197E2142A69300CF9134 /* WeakRefTest.swift */,
@@ -694,6 +740,7 @@
 		A6D719812142A6A600CF9134 /* Assemblers */ = {
 			isa = PBXGroup;
 			children = (
+				97A1537E2154E12900937FC4 /* Add Employee View Controller Assembler */,
 				973C2D0C2149168B00E73B1A /* Employee Table View Controller Assembler */,
 				A6B358FD214287380083E982 /* User Authentication View Controller Assembler */,
 				A6D7197C2142A68400CF9134 /* WeakRef.swift */,
@@ -831,6 +878,7 @@
 				97BEAF7F213E783400AAA342 /* AppDelegate.swift in Sources */,
 				A6B8DB5E2147EBF200941BA2 /* EmployeeCell.swift in Sources */,
 				97D273A521539A7500987F33 /* EmployeeInformationConverter.swift in Sources */,
+				97A153802154E16400937FC4 /* AddEmployeeViewControllerAssembler.swift in Sources */,
 				A6B8DB3C2147B7D200941BA2 /* TableViewLayout.swift in Sources */,
 				A6D719852142A95900CF9134 /* WeakRef+AuthenticationView.swift in Sources */,
 				973C2D012148F4DB00E73B1A /* EmployeeListLayoutOutputImp.swift in Sources */,
@@ -839,6 +887,7 @@
 				974111F021410475000C8B56 /* AuthenticationView.swift in Sources */,
 				97F8AE2B21523B0500EFAB7C /* CustomerInformationInputViewController.swift in Sources */,
 				970553972150D87900401CF3 /* DataStoreOutput.swift in Sources */,
+				97A153782154D8DF00937FC4 /* BarButtonItem.swift in Sources */,
 				973C2D0E2149172B00E73B1A /* EmployeeTableViewControllerAssembler.swift in Sources */,
 				A6B8DB502147E8A500941BA2 /* UserAuthenticationViewControllerAssembler+DependencyFactory.swift in Sources */,
 				A6B8DB432147BE7B00941BA2 /* EmployeeListLayout.swift in Sources */,
@@ -853,11 +902,12 @@
 			files = (
 				97D273AE2153D98800987F33 /* DataStoreNavigationUpdaterAdapterTest.swift in Sources */,
 				A6B8DB3F2147BC2C00941BA2 /* TableViewLayoutSpy.swift in Sources */,
+				97A1537D2154DB7400937FC4 /* BarButtonItemTest.swift in Sources */,
+				97A153832154ED5B00937FC4 /* AddEmployeeViewControllerAssemblerTest.swift in Sources */,
 				A6A00C7321415CCB00B20891 /* AuthenticationServiceSpy.swift in Sources */,
 				97F8AE322152870600EFAB7C /* CustomerInformationFormInputCollectorTest.swift in Sources */,
 				A6B8DB492147CDFF00941BA2 /* EmployeeListLayoutCellBuilderSpy.swift in Sources */,
 				A6D7197F2142A69300CF9134 /* WeakRefTest.swift in Sources */,
-				97D273A821539CE600987F33 /* CustomerInformationFormInputCollectorSpy.swift in Sources */,
 				9753A11E2140114000DBC4C8 /* UserAuthenticationPresenterTest.swift in Sources */,
 				97BE8D07214FAD7600EFEB80 /* EmployeeListDataSourceSpy.swift in Sources */,
 				A6B8DB582147E9B000941BA2 /* UserAuthenticationUseCaseSpy.swift in Sources */,
@@ -874,7 +924,9 @@
 				A6B8DB562147E97E00941BA2 /* UserAuthenticationViewControllerAssemblerDependencyFactorySpy.swift in Sources */,
 				97D273A02153993700987F33 /* EmployeePersisterTest.swift in Sources */,
 				A6B8DB5B2147EB3400941BA2 /* EmployeeCellTest.swift in Sources */,
+				97A153872154F1C800937FC4 /* DataStoreSpyEmployee.swift in Sources */,
 				9753A114213FD73200DBC4C8 /* UserAuthenticationUseCaseTest.swift in Sources */,
+				97A153852154F19700937FC4 /* DataStoreSpyEmployeeMock.swift in Sources */,
 				A6B8DB692147F4CD00941BA2 /* EmployeeListLayoutCellBuilderTest.swift in Sources */,
 				97BE8D11214FD61900EFEB80 /* EmployeeListDataSourceDataStoreAdapterTest.swift in Sources */,
 				A6D719832142A8F400CF9134 /* WeakRef+AuthenticationViewTest.swift in Sources */,

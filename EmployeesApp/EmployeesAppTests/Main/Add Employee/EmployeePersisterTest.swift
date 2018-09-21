@@ -28,33 +28,21 @@ class EmployeePersisterTest: XCTestCase {
         formInputCollector.collectFormInput(name: employeeName, emailAddress: emailAddress, occupation: occupation)
         
         converter = EmployeeInformationConverter()
-        sut = EmployeePersister(formInputCollector: formInputCollector, converter: converter, dataStore: dataStore)
+        sut = EmployeePersister(converter: converter, dataStore: dataStore)
         
     }
     
     func test_persist_didAddItem() {
-        sut.persist()
+        sut.persist(formInputCollector: formInputCollector)
         XCTAssertTrue(dataStore.didAddItem)
     }
     
     func test_persist_didAddItem_withCorrectEmployee() {
         
-        sut.persist()
+        sut.persist(formInputCollector: formInputCollector)
         let capturedEmployee = dataStore.capturedEmployee!
         
         XCTAssertEqual(capturedEmployee.name, employeeName)
         
         XCTAssertTrue(capturedEmployee.name == employeeName && capturedEmployee.emailAddress == emailAddress && capturedEmployee.occupationCase == occupation)    }
-}
-
-class DataStoreSpyEmployee: DataStore<Employee> {
-    
-    var didAddItem = false
-    var capturedEmployee: Employee?
-    
-    override func add(item: Employee) {
-        didAddItem = true
-        capturedEmployee = item
-    }
-
 }

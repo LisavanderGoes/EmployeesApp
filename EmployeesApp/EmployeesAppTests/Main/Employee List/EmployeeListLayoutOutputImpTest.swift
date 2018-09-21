@@ -55,13 +55,3 @@ class SelectionControllerSpy: EmployeeSelectionController {
     }
 }
 
-class DataStoreSpyEmployeeMock: DataStore<EmployeeMock> {
-    
-    var didRemoveItem = false
-    var capturedIndex: Int?
-    
-    override func removeItemAt(index: Int) {
-        didRemoveItem = true
-        capturedIndex = index
-    }
-}

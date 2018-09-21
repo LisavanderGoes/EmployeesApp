@@ -10,12 +10,10 @@ import UIKit
 class CustomerInformationInputViewControllerTest: XCTestCase {
     
     var sut: CustomerInformationInputViewController!
-    var formInputCollectorSpy: CustomerInformationFormInputCollectorSpy!
     var pickerView: UIPickerView!
     
     override func setUp() {
-        formInputCollectorSpy = CustomerInformationFormInputCollectorSpy()
-        sut = CustomerInformationInputViewController(formInputCollector: formInputCollectorSpy)
+        sut = CustomerInformationInputViewController()
         _ = sut.view
         pickerView = UIPickerView()
     }
@@ -30,15 +28,6 @@ class CustomerInformationInputViewControllerTest: XCTestCase {
     
     func test_viewDidLoad_occupationPickerViewIsConnected() {
         XCTAssertNotNil(sut.occupationPickerView)
-    }
-    
-    func test_viewDidLoad_submitButtonIsConnected() {
-        XCTAssertNotNil(sut.submitButton)
-    }
-    
-    func test_viewDidLoad_collectFormInputIsCalled() {
-        sut.submitButton.sendActions(for: .touchUpInside)
-        XCTAssertTrue(formInputCollectorSpy.collectFormInputIsCalled)
     }
     
     func test_viewDidLoad_occupationPickerViewDataSourceToSelf() {
@@ -64,25 +53,21 @@ class CustomerInformationInputViewControllerTest: XCTestCase {
         XCTAssertEqual(occupationTitle, Occupation.allCases()[1].rawValue)
     }
     
-    //MARK: CollectFromInput
-    func test_collectFromInput_submitButtonTapped_nameIsCapturedName() {
+    func test_getName_returnName() {
         let name = "name"
         sut.nameTextField.text = name
-        sut.submitButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(formInputCollectorSpy.capturedName, name)
+        XCTAssertEqual(sut.getName(), name)
     }
-    
-    func test_collectFromInput_submitButtonTapped_emailAddressIsCapturedEmailAddress() {
+
+    func test_getEmailAddress_returnEmailAddress() {
         let emailAddress = "email"
         sut.emailAddressTextField.text = emailAddress
-        sut.submitButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(formInputCollectorSpy.capturedEmailAddress, emailAddress)
+        XCTAssertEqual(sut.getEmailAddress(), emailAddress)
     }
-    
-    func test_collectFromInput_submitButtonTapped_occupationIsCapturedOccupaion() {
-        let occupation = Occupation.allCases()[0]
-        sut.pickerView(pickerView, didSelectRow: 0, inComponent: 0)
-        sut.submitButton.sendActions(for: .touchUpInside)
-        XCTAssertEqual(formInputCollectorSpy.capturedOccuption, occupation)
+
+    func test_getOccupation_returnOccuption() {
+        let occupation = Occupation.allCases()[1]
+        sut.pickerView(pickerView, didSelectRow: 1, inComponent: 0)
+        XCTAssertEqual(sut.getOccupation(), occupation)
     }
 }

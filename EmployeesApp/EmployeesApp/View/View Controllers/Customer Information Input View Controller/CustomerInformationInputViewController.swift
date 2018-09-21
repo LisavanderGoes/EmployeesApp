@@ -9,24 +9,9 @@ class CustomerInformationInputViewController: UIViewController, UIPickerViewData
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var occupationPickerView: UIPickerView!
-    @IBOutlet weak var submitButton: UIButton!
     
-    private var formInputCollector: CustomerInformationFormInputCollector!
     private var occupation: Occupation?
     private var occupationList: [Occupation]!
-    
-    convenience init(formInputCollector: CustomerInformationFormInputCollector) {
-        self.init()
-        self.formInputCollector = formInputCollector
-    }
-    
-    @IBAction func submitButtonTapped() {
-        let name = nameTextField.text ?? ""
-        let emailAddress = emailAddressTextField.text ?? ""
-        let occupation = self.occupation ?? occupationList[0]
-        
-        formInputCollector.collectFormInput(name: name, emailAddress: emailAddress, occupation: occupation)
-    }
     
     override func viewDidLoad() {
         occupationPickerView.dataSource = self
@@ -34,8 +19,19 @@ class CustomerInformationInputViewController: UIViewController, UIPickerViewData
         occupationList = Occupation.allCases()
         if occupationList.isEmpty {
             occupationPickerView.isUserInteractionEnabled = false
-            submitButton.isEnabled = false
         }
+    }
+    
+    func getName() -> String {
+        return nameTextField.text ?? ""
+    }
+    
+    func getEmailAddress() -> String {
+        return emailAddressTextField.text ?? ""
+    }
+    
+    func getOccupation() -> Occupation {
+        return occupation ?? occupationList[0]
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

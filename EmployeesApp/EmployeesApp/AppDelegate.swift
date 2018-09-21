@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let formInputCollector = CustomerInformationFormInputCollector()
         
-        let viewController = CustomerInformationInputViewController(formInputCollector: formInputCollector)
+        let viewController = CustomerInformationInputViewController()
         
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()

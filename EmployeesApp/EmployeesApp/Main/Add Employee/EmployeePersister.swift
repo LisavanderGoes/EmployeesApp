@@ -7,20 +7,17 @@ import Foundation
 
 class EmployeePersister {
     
-    var formInputCollector: CustomerInformationFormInputCollector
-    var converter: EmployeeInformationConverter
-    var dataStore: DataStore<Employee>
+    private let converter: EmployeeInformationConverter
+    private let dataStore: DataStore<Employee>
     
     
-    init(formInputCollector: CustomerInformationFormInputCollector,
-         converter: EmployeeInformationConverter,
+    init(converter: EmployeeInformationConverter,
          dataStore: DataStore<Employee>) {
-        self.formInputCollector = formInputCollector
         self.converter = converter
         self.dataStore = dataStore
     }
     
-    func persist() {
+    func persist(formInputCollector: CustomerInformationFormInputCollector) {
         guard
             let collectedEmployeeInformation = formInputCollector.getEmployeeInformation(),
             let convertedEmployee = converter.convertEmployee(employeeInformation: collectedEmployeeInformation)
